@@ -4,168 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helmy Viajes | Tu aventura comienza aquí</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --azul: #003399; --rojo: #e60000; --blanco: #ffffff; --celeste: #eef2ff; --texto: #333; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; color: var(--texto); background: #fff; scroll-behavior: smooth; }
-
-        header { background: rgba(255,255,255,0.95); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .logo img { height: 55px; }
-        nav a { text-decoration: none; color: var(--azul); font-weight: 700; font-size: 0.8rem; margin-left: 20px; text-transform: uppercase; }
-
-        .hero { 
-            height: 50vh; 
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1506929197341-6cd34bc988f6?auto=format&fit=crop&w=1500&q=80') center/cover;
-            display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center;
-        }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; }
-        .hero p { font-size: 1.5rem; font-weight: 300; font-style: italic; }
-
-        .btn-vuelos-main { background: var(--rojo); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; margin-top: 20px; display: inline-block; box-shadow: 0 5px 15px rgba(230,0,0,0.3); }
-
-        section { padding: 60px 5%; }
-        .section-header { text-align: center; margin-bottom: 50px; }
-        .section-header h2 { font-size: 2.5rem; color: var(--azul); font-family: 'Playfair Display', serif; }
-
-        .destinos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #eee; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); }
-        .card img { width: 100%; height: 220px; object-fit: cover; }
-        .card-content { padding: 25px; }
-        .card-content h3 { color: var(--azul); font-size: 1.4rem; margin-bottom: 10px; }
-        .itinerary { font-size: 0.85rem; color: #666; margin-bottom: 15px; border-left: 2px solid var(--rojo); padding-left: 10px; }
+        :root { --oro: #d4af37; --azul-oscuro: #0a192f; --rojo-vivo: #ff4d4d; --blanco: #ffffff; }
         
-        .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .btn { text-align: center; padding: 10px; border-radius: 5px; text-decoration: none; font-weight: 700; font-size: 0.75rem; }
-        .btn-wa { background: #25d366; color: white; }
-        .btn-pay { background: var(--azul); color: white; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; color: #333; line-height: 1.6; overflow-x: hidden; }
 
-        /* COMENTARIOS */
-        .testimonials { background: var(--celeste); }
-        .comment-box { background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .comment-form { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; }
-        .comment-form input, .comment-form textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        /* NAVBAR ELEGANTE */
+        header { 
+            background: rgba(255, 255, 255, 0.98); 
+            padding: 15px 8%; 
+            display: flex; justify-content: space-between; align-items: center; 
+            position: fixed; width: 100%; top: 0; z-index: 2000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+        .logo img { height: 50px; transition: 0.3s; }
+        .nav-links a { text-decoration: none; color: var(--azul-oscuro); font-weight: 600; margin-left: 30px; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--rojo-vivo); }
 
-        footer { background: #0b0d17; color: white; padding: 40px 5%; text-align: center; }
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; z-index: 1000; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
+        /* HERO SECTION IMPACTANTE */
+        .hero { 
+            height: 85vh; 
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1506953823976-52e1bdc0149a?auto=format&fit=crop&w=1600&q=80') center/cover;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px;
+        }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; letter-spacing: 2px; margin-bottom: 10px; }
+        .hero p { font-size: 1.4rem; font-weight: 300; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 30px; }
+        
+        .btn-vuelos { 
+            background: var(--rojo-vivo); color: white; padding: 18px 45px; border-radius: 5px; 
+            text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.9rem;
+            transition: 0.4s; border: 2px solid transparent;
+        }
+        .btn-vuelos:hover { background: transparent; border-color: white; transform: scale(1.05); }
+
+        /* DESTINOS - DISEÑO MASONRY */
+        section { padding: 80px 8%; }
+        .section-header { text-align: left; margin-bottom: 50px; border-left: 5px solid var(--rojo-vivo); padding-left: 20px; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: var(--azul-oscuro); }
+
+        .destinos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        
+        .dest-card { position: relative; border-radius: 20px; overflow: hidden; height: 450px; cursor: pointer; transition: 0.5s; }
+        .dest-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .dest-card:hover img { transform: scale(1.1); filter: brightness(70%); }
+
+        .dest-overlay { 
+            position: absolute; bottom: 0; left: 0; width: 100%; padding: 30px; 
+            background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; 
+        }
+        .dest-overlay h3 { font-size: 1.8rem; margin-bottom: 5px; }
+        .dest-overlay p { font-size: 0.85rem; opacity: 0.9; margin-bottom: 15px; }
+        
+        .btn-card-pay { 
+            background: white; color: var(--azul-oscuro); padding: 10px 20px; border-radius: 5px; 
+            text-decoration: none; font-weight: 700; font-size: 0.75rem; display: inline-block;
+        }
+
+        /* TESTIMONIOS ESTILO SOCIAL MEDIA */
+        .reviews { background: #fdfdfd; }
+        .review-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #eee; }
+        .review-card i { color: #ffcc00; margin-bottom: 15px; display: block; }
+        
+        .add-review { max-width: 700px; margin: 50px auto 0; text-align: center; }
+        .input-box { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 10px; outline: none; }
+        .btn-submit { background: var(--azul-oscuro); color: white; border: none; padding: 15px 30px; border-radius: 10px; cursor: pointer; font-weight: 600; width: 100%; }
+
+        /* FOOTER DARK */
+        footer { background: var(--azul-oscuro); color: white; padding: 80px 8% 20px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px; margin-bottom: 50px; }
+        .footer-content h4 { color: var(--rojo-vivo); margin-bottom: 25px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; }
+        .footer-content p { font-size: 0.9rem; color: #aab4c3; margin-bottom: 10px; }
+
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 10px 25px rgba(37,211,102,0.3); transition: 0.3s; }
+        .wa-float:hover { transform: rotate(15deg) scale(1.1); }
     </style>
 </head>
 <body>
 
-<a href="https://wa.me/51997799056" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-
 <header>
     <div class="logo"><img src="IMG-20230810-WA0065.jpg" alt="Helmy Viajes"></div>
-    <nav>
-        <a href="#vuelos">Vuelos</a>
-        <a href="#destinos">Destinos</a>
-        <a href="#comentarios">Comentarios</a>
+    <nav class="nav-links">
+        <a href="#destinos">Explorar</a>
+        <a href="#comentarios">Reseñas</a>
+        <a href="https://wa.me/51997799056" target="_blank">Contacto</a>
     </nav>
 </header>
 
 <section class="hero">
-    <h1>Helmy Viajes</h1>
-    <p>"Tu aventura comienza aquí"</p>
-    <a href="TU_LINK_DE_VUELOS_AQUI" class="btn-vuelos-main" id="vuelos">BUSCAR VUELOS</a>
+    <p>Helmy Viajes</p>
+    <h1>Tu aventura comienza aquí</h1>
+    <a href="TU_LINK_DE_VUELOS" class="btn-vuelos"><i class="fas fa-plane-departure"></i> Reservar Vuelos</a>
 </section>
 
 <section id="destinos">
-    <div class="section-header"><h2>Nuestros Destinos (5 Días / 4 Noches)</h2></div>
+    <div class="section-header">
+        <h2>Paquetes 5D / 4N</h2>
+    </div>
+    
     <div class="destinos-grid">
-        
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=500">
-            <div class="card-content">
+        <div class="dest-card">
+            <img src="https://images.unsplash.com/photo-1544971582-81c1bc778d9b?auto=format&fit=crop&w=600">
+            <div class="dest-overlay">
                 <h3>Punta Cana</h3>
-                <div class="itinerary">
-                    <b>Día 1-2:</b> Arribo y Playa Bávaro.<br>
-                    <b>Día 3:</b> Isla Saona Full Day.<br>
-                    <b>Día 4-5:</b> Relax All Inclusive y retorno.
-                </div>
-                <div class="btn-group">
-                    <a href="https://wa.me/51997799056" class="btn btn-wa">WHATSAPP</a>
-                    <a href="TU_LINK_DE_PAGO" class="btn btn-pay">PAGAR TARJETA</a>
-                </div>
+                <p>Resort All Inclusive + Isla Saona + Traslados Premium.</p>
+                <a href="TU_LINK_DE_PAGO" class="btn-card-pay">COMPRAR PAQUETE</a>
             </div>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=500">
-            <div class="card-content">
-                <h3>Cusco & Machu Picchu</h3>
-                <div class="itinerary">
-                    <b>Día 1-2:</b> City Tour y Valle Sagrado.<br>
-                    <b>Día 3:</b> Ciudadela de Machu Picchu.<br>
-                    <b>Día 4-5:</b> Montaña 7 Colores y retorno.
-                </div>
-                <div class="btn-group">
-                    <a href="https://wa.me/51925807384" class="btn btn-wa">WHATSAPP</a>
-                    <a href="TU_LINK_DE_PAGO" class="btn btn-pay">PAGAR TARJETA</a>
-                </div>
+        <div class="dest-card">
+            <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?auto=format&fit=crop&w=600">
+            <div class="dest-overlay">
+                <h3>Cancún</h3>
+                <p>Hotel 5★ + Chichén Itzá + Barra Libre Ilimitada.</p>
+                <a href="TU_LINK_DE_PAGO" class="btn-card-pay">COMPRAR PAQUETE</a>
             </div>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=500">
-            <div class="card-content">
-                <h3>Sao Paulo, Brasil</h3>
-                <div class="itinerary">
-                    <b>Día 1-2:</b> City Tour y Museo MASP.<br>
-                    <b>Día 3:</b> Parque Ibirapuera.<br>
-                    <b>Día 4-5:</b> Compras en Av. Paulista y retorno.
-                </div>
-                <div class="btn-group"><a href="https://wa.me/51997799056" class="btn btn-wa">WHATSAPP</a><a href="TU_LINK_DE_PAGO" class="btn btn-pay">PAGAR TARJETA</a></div>
+        <div class="dest-card">
+            <img src="https://images.unsplash.com/photo-1593995863951-57c27e518295?auto=format&fit=crop&w=600">
+            <div class="dest-overlay">
+                <h3>Medellín</h3>
+                <p>Tour Guatapé + Piedra del Peñol + City Tour Moderno.</p>
+                <a href="TU_LINK_DE_PAGO" class="btn-card-pay">COMPRAR PAQUETE</a>
             </div>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500">
-            <div class="card-content">
-                <h3>Madrid & París</h3>
-                <div class="itinerary">
-                    <b>Incluye:</b> Vuelos, Hoteles y Tours guiados.<br>
-                    <b>Lugares:</b> Museo del Prado, Torre Eiffel, Louvre.
-                </div>
-                <div class="btn-group"><a href="https://wa.me/51925807384" class="btn btn-wa">WHATSAPP</a><a href="TU_LINK_DE_PAGO" class="btn btn-pay">PAGAR TARJETA</a></div>
+        <div class="dest-card">
+            <img src="https://images.unsplash.com/photo-1493246507139-91e8bef99c1e?auto=format&fit=crop&w=600">
+            <div class="dest-overlay">
+                <h3>Europa Clásica</h3>
+                <p>Madrid, París y Roma. Hoteles seleccionados y Guía.</p>
+                <a href="TU_LINK_DE_PAGO" class="btn-card-pay">COMPRAR PAQUETE</a>
             </div>
         </div>
-
     </div>
 </section>
 
-<section class="testimonials" id="comentarios">
-    <div class="section-header"><h2>Opiniones de Viajeros</h2></div>
-    <div id="comment-list" style="max-width:800px; margin: 0 auto 40px;">
-        <div class="comment-box"><strong>Ana P:</strong> "Increíble viaje a Cancún, Helmy se encargó de todo."</div>
-        <div class="comment-box"><strong>Luis R:</strong> "Excelente servicio en el full day Paracas."</div>
+<section class="reviews" id="comentarios">
+    <div class="section-header">
+        <h2>Voces de Pasajeros</h2>
     </div>
-    <div class="comment-form">
-        <h4>Déjanos tu comentario:</h4><br>
-        <input type="text" id="name" placeholder="Tu nombre">
-        <textarea id="text" placeholder="¿Cómo fue tu viaje?"></textarea>
-        <button onclick="postComment()" style="background:var(--azul); color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer;">Enviar Opinión</button>
+    <div class="destinos-grid" id="comment-list">
+        <div class="review-card">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <p>"La mejor decisión para mis vacaciones. Todo estuvo perfectamente organizado."</p>
+            <strong style="margin-top:15px; display:block;">- Familia Rodríguez</strong>
+        </div>
+        <div class="review-card">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <p>"Atención personalizada 24/7. Helmy Viajes superó mis expectativas."</p>
+            <strong style="margin-top:15px; display:block;">- Claudia Torres</strong>
+        </div>
+    </div>
+
+    <div class="add-review">
+        <h3 style="margin-bottom:20px;">Dinos qué te pareció tu viaje</h3>
+        <input type="text" id="p-name" class="input-box" placeholder="Tu Nombre">
+        <textarea id="p-comment" class="input-box" rows="3" placeholder="Escribe tu opinión..."></textarea>
+        <button onclick="post()" class="btn-submit">Publicar Comentario</button>
     </div>
 </section>
+
+<a href="https://wa.me/51997799056" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <footer>
-    <p><strong>HELMY VIAJES PERÚ</strong></p>
-    <p>Jr. Pablo Bermúdez 177, Oficina 102, Jesús María, Lima</p>
-    <p>925 807 384 / 997 799 056</p>
-    <br>
-    <p>© 2026 Tu aventura comienza aquí.</p>
+    <div class="footer-content">
+        <div>
+            <img src="IMG-20230810-WA0065.jpg" style="height:50px; filter: brightness(0) invert(1); margin-bottom:20px;">
+            <p>Agencia de Viajes Autorizada por MINCETUR y DIRCETUR.</p>
+        </div>
+        <div>
+            <h4>Oficina Principal</h4>
+            <p><i class="fas fa-location-dot"></i> Jr. Pablo Bermúdez 177, Of. 102</p>
+            <p>Jesús María, Lima - Perú</p>
+        </div>
+        <div>
+            <h4>Atención Directa</h4>
+            <p>925 807 384</p>
+            <p>997 799 056</p>
+        </div>
+    </div>
+    <p style="text-align:center; font-size:0.7rem; color:#4a5568; border-top: 1px solid #1a2a44; padding-top:20px;">© 2026 Helmy Viajes. Tu aventura comienza aquí.</p>
 </footer>
 
 <script>
-function postComment() {
-    let name = document.getElementById('name').value;
-    let text = document.getElementById('text').value;
-    if(name && text) {
-        let list = document.getElementById('comment-list');
-        list.innerHTML += <div class="comment-box"><strong>${name}:</strong> "${text}"</div>;
-        document.getElementById('name').value = '';
-        document.getElementById('text').value = '';
+function post() {
+    let n = document.getElementById('p-name').value;
+    let c = document.getElementById('p-comment').value;
+    if(n && c) {
+        let l = document.getElementById('comment-list');
+        l.innerHTML += <div class="review-card"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p>"${c}"</p><strong>- ${n}</strong></div>;
+        document.getElementById('p-name').value = '';
+        document.getElementById('p-comment').value = '';
+        alert("¡Gracias por tu opinión!");
     }
 }
 </script>
