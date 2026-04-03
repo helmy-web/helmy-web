@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helmy Viajes Perú | Agencia de Viajes y Turismo | Oficial</title>
+    <title>Helmy Viajes Perú | Agencia de Viajes Autorizada</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -11,193 +11,138 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; color: var(--texto); scroll-behavior: smooth; line-height: 1.6; }
 
-        /* HEADER */
         header { background: var(--blanco); padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
         .logo img { height: 60px; }
         .nav-container { display: flex; align-items: center; gap: 20px; }
-        nav a { text-decoration: none; color: var(--azul); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--rojo); }
-        .social-header a { color: var(--azul); font-size: 1.2rem; margin-left: 10px; transition: 0.3s; }
-        .social-header a:hover { color: var(--rojo); }
+        nav a { text-decoration: none; color: var(--azul); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; margin-right: 10px; }
+        .social-links a { color: var(--azul); font-size: 1.2rem; margin-left: 8px; transition: 0.3s; }
+        .social-links a:hover { color: var(--rojo); }
 
-        /* HERO */
         .hero { 
-            height: 45vh; 
-            background: linear-gradient(rgba(0,51,153,0.5), rgba(0,51,153,0.5)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=80') center/cover;
-            display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 20px;
+            height: 40vh; 
+            background: linear-gradient(rgba(0,51,153,0.6), rgba(0,51,153,0.6)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=80') center/cover;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center;
         }
 
-        /* BUSCADOR DE VUELOS */
-        .search-box { max-width: 1100px; margin: -60px auto 40px; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 15px 30px rgba(0,0,0,0.15); display: flex; flex-wrap: wrap; gap: 15px; position: relative; z-index: 10; border-top: 6px solid var(--rojo); }
-        .form-group { flex: 1; min-width: 200px; }
-        .form-group label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--azul); margin-bottom: 5px; text-transform: uppercase; }
-        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
-        .btn-search { background: var(--azul); color: white; border: none; padding: 12px 30px; border-radius: 5px; font-weight: 700; cursor: pointer; transition: 0.3s; width: 100%; margin-top: 23px; }
-        .btn-search:hover { background: var(--rojo); }
+        .search-box { max-width: 1000px; margin: -50px auto 40px; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); display: flex; flex-wrap: wrap; gap: 15px; position: relative; z-index: 10; border-top: 5px solid var(--rojo); }
+        .form-group { flex: 1; min-width: 180px; }
+        .form-group label { display: block; font-size: 0.7rem; font-weight: 700; color: var(--azul); margin-bottom: 5px; }
+        .form-group input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        .btn-search { background: var(--azul); color: white; border: none; padding: 10px; border-radius: 5px; font-weight: 700; cursor: pointer; width: 100%; margin-top: 21px; }
 
-        /* SECCIONES */
-        section { padding: 60px 5%; }
+        section { padding: 50px 5%; }
         .section-title { text-align: center; margin-bottom: 40px; }
-        .section-title h2 { color: var(--azul); font-size: 2.2rem; text-transform: uppercase; position: relative; display: inline-block; padding-bottom: 10px; }
-        .section-title h2::after { content: ''; width: 80px; height: 4px; background: var(--rojo); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+        .section-title h2 { color: var(--azul); font-size: 1.8rem; text-transform: uppercase; border-bottom: 3px solid var(--rojo); display: inline-block; padding-bottom: 5px; }
 
-        /* GRID */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s; border: 1px solid #eee; display: flex; flex-direction: column; }
-        .card:hover { transform: translateY(-10px); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-body { padding: 20px; flex-grow: 1; text-align: center; }
-        .card-body h3 { font-size: 1.2rem; color: var(--azul); margin-bottom: 15px; }
-        .btn-wa { display: block; background: var(--azul); color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 5px; font-weight: 700; transition: 0.3s; }
-        .btn-wa:hover { background: var(--rojo); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid #eee; }
+        .card img { width: 100%; height: 180px; object-fit: cover; }
+        .card-body { padding: 15px; text-align: center; }
+        .btn-wa { display: block; background: var(--rojo); color: white; text-align: center; padding: 10px; text-decoration: none; border-radius: 5px; font-weight: 700; margin-top: 10px; transition: 0.3s; }
+        .btn-wa:hover { background: var(--azul); }
 
-        /* TESTIMONIOS (AGREGADOS) */
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .testimonial-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; border-bottom: 4px solid var(--rojo); }
-        .testimonial-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; border: 3px solid var(--azul); }
-        .testimonial-text { font-style: italic; color: #555; margin-bottom: 15px; }
-        .testimonial-name { font-weight: 700; color: var(--azul); }
+        .testimonials { background: var(--gris); }
+        .testimonial-item { background: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
 
-        /* WHATSAPP FLOAT */
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; text-decoration: none; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .seals { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-top: 30px; padding: 20px; background: #fff; border-radius: 10px; }
+        .seals img { height: 60px; filter: grayscale(1); transition: 0.3s; opacity: 0.7; }
+        .seals img:hover { filter: none; opacity: 1; }
 
-        /* FOOTER & SELLOS */
-        footer { background: #111; color: white; text-align: center; padding: 50px 5%; font-size: 0.9rem; }
-        .trust-seals { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-bottom: 40px; }
-        .seal-item { max-width: 150px; text-align: center; color: rgba(255,255,255,0.7); }
-        .seal-item img { height: 60px; object-fit: contain; filter: grayscale(1) brightness(0) invert(1) opacity(0.8); margin-bottom: 10px; transition: 0.3s; }
-        .seal-item:hover img { filter: none; opacity: 1; }
-        .seal-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: rgba(255,255,255,0.8); }
-        
-        .footer-logo { height: 50px; filter: brightness(0) invert(1); margin-bottom: 20px; }
-        .social-footer a { color: white; font-size: 1.5rem; margin: 0 10px; transition: 0.3s; }
-        .social-footer a:hover { color: var(--rojo); }
-
-        @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } .nav-container { flex-direction: column; gap: 10px; } }
+        footer { background: #111; color: white; text-align: center; padding: 40px 5%; }
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
     </style>
 </head>
 <body>
 
-<a href="https://wa.me/51925807384" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/51997799056" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <header>
     <div class="logo"><img src="IMG-20230810-WA0065.jpg" alt="Helmy Viajes"></div>
     <div class="nav-container">
         <nav>
-            <a href="#vuelos">Vuelos</a>
             <a href="#fulldays">Full Days</a>
             <a href="#nacionales">Nacionales</a>
             <a href="#internacional">Internacional</a>
-            <a href="#testimonios">Testimonios</a>
         </nav>
-        <div class="social-header">
-            <a href="https://www.facebook.com/helmyviajes" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <div class="social-links">
+            <a href="https://www.facebook.com/helmyviajesperu/" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/helmyviajes" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@helmyviajes" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.tiktok.com/@_helmyviajes?_r=1&_t=ZS-95DaeD8CxJ1" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
     </div>
 </header>
 
 <section class="hero">
-    <h1 style="font-size: 3rem; font-weight: 700;">HELMY VIAJES PERÚ</h1>
-    <p style="font-size: 1.2rem;">Tu aventura comienza con seguridad y confianza</p>
+    <h1>HELMY VIAJES PERÚ</h1>
+    <p>Agencia de Viajes y Turismo - RUC 20602927238</p>
 </section>
 
 <div class="search-box" id="vuelos">
     <div class="form-group"><label>Origen</label><input type="text" placeholder="Lima (LIM)"></div>
-    <div class="form-group"><label>Destino</label><input type="text" placeholder="¿A dónde viajas?"></div>
+    <div class="form-group"><label>Destino</label><input type="text" placeholder="¿A dónde vas?"></div>
     <div class="form-group"><label>Fecha</label><input type="date"></div>
-    <div class="form-group"><button class="btn-search" onclick="window.open('https://wa.me/51925807384?text=Hola,%20deseo%20cotizar%20un%20vuelo')">BUSCAR PASAJES</button></div>
+    <div class="form-group"><button class="btn-search" onclick="window.open('https://wa.me/51997799056?text=Hola,%20deseo%20cotizar%20un%20vuelo')">COTIZAR VUELO</button></div>
 </div>
 
 <section id="fulldays">
-    <div class="section-title"><h2>Full Days <span>Perú</span></h2></div>
+    <div class="section-title"><h2>Nuestros <span>Full Days</span></h2></div>
     <div class="grid">
-        <div class="card"><img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&w=500" alt="Paracas"><div class="card-body"><h3>Paracas & Ica</h3><a href="https://wa.me/51925807384" class="btn-wa">RESERVAR</a></div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&w=500"><div class="card-body"><h3>Paracas & Ica</h3><a href="https://wa.me/51925807384" class="btn-wa">RESERVAR</a></div></div>
         
-        <div class="card">
-            <img src="dromedarius.jpg" alt="Dromedarius Desert Tour" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1589332560331-50e5677054a3?auto=format&fit=crop&w=500';">
-            <div class="card-body"><h3>Dromedarios (Excursión al Desierto)</h3><a href="https://wa.me/51925807384" class="btn-wa">RESERVAR</a></div>
-        </div>
+        <div class="card"><img src="dromedarios.jpg" alt="Dromedarios Helmy Viajes" onerror="this.src='https://images.unsplash.com/photo-1589332560331-50e5677054a3?auto=format&fit=crop&w=500'"><div class="card-body"><h3>Dromedarios</h3><a href="https://wa.me/51997799056" class="btn-wa">RESERVAR</a></div></div>
         
-        <div class="card"><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=500" alt="Cañón"><div class="card-body"><h3>Cañón de los Perdidos</h3><a href="https://wa.me/51925807384" class="btn-wa">RESERVAR</a></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1596422846543-75c6fc18a5cf?auto=format&fit=crop&w=500" alt="Antioquia"><div class="card-body"><h3>Antioquia & Cieneguilla</h3><a href="https://wa.me/51925807384" class="btn-wa">RESERVAR</a></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=500" alt="Canta"><div class="card-body"><h3>Machu Picchu Limeño</h3><a href="https://wa.me/51925807384" class="btn-wa">RESERVAR</a></div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1596422846543-75c6fc18a5cf?auto=format&fit=crop&w=500"><div class="card-body"><h3>Antioquia & Cieneguilla</h3><a href="https://wa.me/51925807384" class="btn-wa">RESERVAR</a></div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=500"><div class="card-body"><h3>Cañón de los Perdidos</h3><a href="https://wa.me/51997799056" class="btn-wa">RESERVAR</a></div></div>
     </div>
 </section>
 
 <section id="nacionales" style="background:var(--gris);">
     <div class="section-title"><h2>Paquetes <span>Nacionales</span></h2></div>
     <div class="grid">
-        <div class="card"><img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=500"><div class="card-body"><h3>Cusco (5D/4N)</h3><a href="https://wa.me/51925807384" class="btn-wa">COTIZAR</a></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1590050751117-238cb0ffbc42?auto=format&fit=crop&w=500"><div class="card-body"><h3>Arequipa (5D/4N)</h3><a href="https://wa.me/51925807384" class="btn-wa">COTIZAR</a></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=500"><div class="card-body"><h3>Máncora / Vichayito / Piura</h3><a href="https://wa.me/51925807384" class="btn-wa">COTIZAR</a></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1580193330353-83f6057a66f6?auto=format&fit=crop&w=500"><div class="card-body"><h3>Iquitos / Tarapoto / Pucallpa</h3><a href="https://wa.me/51925807384" class="btn-wa">COTIZAR</a></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1596422846543-75c6fc18a5cf?auto=format&fit=crop&w=500"><div class="card-body"><h3>Trujillo / Chiclayo / Cajamarca</h3><a href="https://wa.me/51925807384" class="btn-wa">COTIZAR</a></div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=500"><div class="card-body"><h3>Cusco / Arequipa</h3><a href="https://wa.me/51925807384" class="btn-wa">COTIZAR</a></div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500"><div class="card-body"><h3>Máncora / Vichayito</h3><a href="https://wa.me/51997799056" class="btn-wa">COTIZAR</a></div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1580193330353-83f6057a66f6?auto=format&fit=crop&w=500"><div class="card-body"><h3>Iquitos / Tarapoto</h3><a href="https://wa.me/51925807384" class="btn-wa">COTIZAR</a></div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=500"><div class="card-body"><h3>Cajamarca / Trujillo / Piura</h3><a href="https://wa.me/51997799056" class="btn-wa">COTIZAR</a></div></div>
     </div>
 </section>
 
 <section id="internacional">
     <div class="section-title"><h2>Internacional <span>& Europa</span></h2></div>
     <div class="grid">
-        <div class="card"><img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=500"><div class="card-body"><h3>Punta Cana</h3><a href="https://wa.me/51925807384" class="btn-wa">COTIZAR</a></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&w=500"><div class="card-body"><h3>Colombia (Bogotá, Medellín, Cartagena)</h3><a href="https://wa.me/51925807384" class="btn-wa">COTIZAR</a></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500"><div class="card-body"><h3>Europa Soñada</h3><a href="https://wa.me/51925807384" class="btn-wa">VER RUTAS</a></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1548546738-8509cb246ed3?auto=format&fit=crop&w=500"><div class="card-body"><h3>Cruceros Sin Visa</h3><a href="https://wa.me/51925807384" class="btn-wa">SOLICITAR</a></div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=500"><div class="card-body"><h3>Punta Cana / Cancún</h3><a href="https://wa.me/51925807384" class="btn-wa">COTIZAR</a></div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1583307466804-0322c3664720?auto=format&fit=crop&w=500"><div class="card-body"><h3>Colombia / San Andrés</h3><a href="https://wa.me/51997799056" class="btn-wa">COTIZAR</a></div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=500"><div class="card-body"><h3>Europa / Cruceros</h3><a href="https://wa.me/51925807384" class="btn-wa">COTIZAR</a></div></div>
     </div>
 </section>
 
-<section id="testimonios" style="background:var(--gris);">
-    <div class="section-title"><h2>Opiniones de <span>Nuestros Pasajeros</span></h2></div>
-    <div class="testimonials-grid">
-        <div class="testimonial-card">
-            <img src="https://i.pravatar.cc/100?img=1" alt="Pasajero Elena" class="testimonial-avatar">
-            <p class="testimonial-text">"Excelente servicio para nuestro viaje a Cusco. Muy bien organizado y siempre atentos. ¡Recomendado!"</p>
-            <p class="testimonial-name">- Elena R.</p>
-        </div>
-        <div class="testimonial-card">
-            <img src="https://i.pravatar.cc/100?img=5" alt="Pasajero Juan" class="testimonial-avatar">
-            <p class="testimonial-text">"El full day a Paracas fue increíble. Puntuales y divertidos. Los guías sabían mucho."</p>
-            <p class="testimonial-name">- Juan T.</p>
-        </div>
-        <div class="testimonial-card">
-            <img src="https://i.pravatar.cc/100?img=10" alt="Pasajera Rosa" class="testimonial-avatar">
-            <p class="testimonial-text">"Compré mis pasajes aéreos aquí y me ayudaron con todo el proceso. Muy amables."</p>
-            <p class="testimonial-name">- Rosa M.</p>
-        </div>
+<section class="testimonials">
+    <div class="section-title"><h2>Lo que dicen <span>nuestros pasajeros</span></h2></div>
+    <div class="grid">
+        <div class="testimonial-item"><p>"Excelente atención de Helmy Viajes en mi viaje a Punta Cana. Todo coordinado al detalle."</p><strong>- Carlos M.</strong></div>
+        <div class="testimonial-item"><p>"Los full days son muy organizados. Paracas e Ica fue una experiencia increíble."</p><strong>- Ana R.</strong></div>
+        <div class="testimonial-item"><p>"Agencia confiable y segura. Compré mis pasajes y todo fue muy rápido."</p><strong>- Jorge L.</strong></div>
     </div>
 </section>
+
+<div class="seals">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Logo_Mincetur.png" alt="MINCETUR">
+    <img src="https://www.camaralima.org.pe/wp-content/uploads/2019/12/logo-ccl.png" alt="Cámara Comercio">
+    <p style="font-size: 0.8rem; color: #999; width: 100%; text-align: center;">Agencia Autorizada por DIRCETUR y MINCETUR</p>
+</div>
 
 <footer>
-    <div class="trust-seals">
-        <div class="seal-item">
-            <img src="https://via.placeholder.com/150x60?text=MINCETUR" alt="Logo MINCETUR" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1610440333763-7e44a0e9b251?auto=format&fit=crop&h=60';">
-            <p class="seal-label">Agencia Autorizada MINCETUR</p>
-        </div>
-        <div class="seal-item">
-            <img src="https://via.placeholder.com/150x60?text=DIRCETUR" alt="Logo DIRCETUR" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1610440333763-7e44a0e9b251?auto=format&fit=crop&h=60';">
-            <p class="seal-label">DIRCETUR Oficial</p>
-        </div>
-        <div class="seal-item">
-            <img src="https://via.placeholder.com/150x60?text=CÁMARA+COMERCIO" alt="Logo Cámara Comercio Lima" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1610440333763-7e44a0e9b251?auto=format&fit=crop&h=60';">
-            <p class="seal-label">Cámara de Comercio de Lima</p>
-        </div>
-    </div>
-
-    <img src="IMG-20230810-WA0065.jpg" class="footer-logo"><br>
-    <p><strong>HELMY VIAJES PERÚ</strong></p>
-    <p>RUC: 20602927238</p>
-    <p>Jr. Pablo Bermúdez 177, Lima</p>
-    <p>WhatsApp: 925 807 384</p>
+    <img src="IMG-20230810-WA0065.jpg" style="height:40px; filter: brightness(0) invert(1); margin-bottom:10px;"><br>
+    <p><strong>HELMY VIAJES PERÚ</strong> - RUC 20602927238</p>
+    <p>Jr. Pablo Bermúdez 177, Oficina 304, Jesús María, Lima</p>
+    <p>WhatsApp: 925 807 384 / 997 799 056</p>
     
-    <div class="social-footer" style="margin-top:20px; margin-bottom:20px;">
-        <a href="https://www.facebook.com/helmyviajes" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/helmyviajes" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@helmyviajes" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <div class="social-links" style="margin-top:15px;">
+        <a href="https://www.facebook.com/helmyviajesperu/" target="_blank" style="color:white;"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/helmyviajes" target="_blank" style="color:white;"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@_helmyviajes?_r=1&_t=ZS-95DaeD8CxJ1" target="_blank" style="color:white;"><i class="fab fa-tiktok"></i></a>
     </div>
-
     <br>
-    <p>© 2026 Todos los derechos reservados.</p>
+    <p>© 2026 Helmy Viajes - Tu aventura comienza aquí.</p>
 </footer>
 
 </body>
