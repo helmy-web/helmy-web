@@ -19,7 +19,7 @@
 
         .hero { 
             height: 50vh; 
-            background: linear-gradient(rgba(0,51,153,0.5), rgba(0,51,153,0.5)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=80') center/cover;
+            background: linear-gradient(rgba(0,51,153,0.5), rgba(0,51,153,0.5)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=80')
             display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center;
         }
         .hero h1 { font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
@@ -59,22 +59,11 @@
 
         .seals { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; padding: 40px 5%; background: white; }
         .seals img { height: 50px; opacity: 0.7; }
-<section style="padding: 30px 5%; background: #fff; border-top: 1px solid #eee; text-align: center;">
-    <p style="font-weight: 700; color: var(--azul); margin-bottom: 20px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Medios de Pago y Bancos Autorizados</p>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; opacity: 0.8;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" style="height: 25px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" style="height: 35px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_del_Banco_de_Cr%C3%A9dito_del_Per%C3%BA.svg" alt="BCP" style="height: 30px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/BBVA_2019.svg" alt="BBVA" style="height: 25px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Interbank_logo.svg" alt="Interbank" style="height: 30px;">
-        <div style="display: flex; gap: 10px; align-items: center;">
-             <img src="https://vignette.wikia.nocookie.net/logopedia/images/b/b3/Yape_logo.png" alt="Yape" style="height: 40px; border-radius: 5px;">
+
         </div>
     </div>
 </section>
-        footer { background: #111; color: white; text-align: center; padding: 50px 5%; font-size: 0.85rem; }
-        footer p { margin-bottom: 10px; opacity: 0.8; }
-    </style>
+        
 </head>
 <body>
 
@@ -84,9 +73,12 @@
     <div class="logo"><img src="IMG-20230810-WA0065.jpg" alt="Helmy Viajes"></div>
     <div class="nav-container">
         <nav>
-            <a href="#fulldays">Full Days</a>
-            <a href="#nacionales">Nacionales</a>
-            <a href="#internacional">Internacional</a>
+            <nav>
+    <a href="#fulldays"><i class="fas fa-sun"></i> Full Days</a>
+    <a href="#nacionales"><i class="fas fa-map-marked-alt"></i> Nacionales</a>
+    <a href="#internacional"><i class="fas fa-plane"></i> Internacional</a>
+    <a href="https://www.clickandbook.plus/es/" target="_blank" style="color: var(--rojo);"><i class="fas fa-search"></i> Reservar Online</a>
+</nav>
         </nav>
         <div class="social-links">
             <a href="https://www.facebook.com/helmyviajesperu/" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -105,14 +97,14 @@
     <div class="form-group"><label>Origen</label><input type="text" placeholder="Lima (LIM)"></div>
     <div class="form-group"><label>Destino</label><input type="text" placeholder="¿A dónde vas?"></div>
     <div class="form-group"><label>Fecha</label><input type="date"></div>
-    <div class="form-group"><button class="btn-search" onclick="window.open('https://wa.me/51925807384')">COTIZAR VUELO</button></div>
+    <div class="form-group"><button class="btn-search" style="background: var(--rojo);" onclick="window.open('https://www.clickandbook.plus/es/')">BUSCAR VUELO</button>
 </div>           
 
 <section id="fulldays">
     <div class="section-title"><h2>Full Days 2026</h2></div>
     <div class="grid">
         <div class="card">
-            <img src="https://photo-DROMEDARIO-HELMY.jpg?auto=format&fit=crop&w=600" alt="Dromedario">
+            <img src="https://photo-DROMEDARIO-HELMY.jpg?auto=format&fit=crop&w=600"alt="Dromedario">
             <div class="card-body">
                 <h3>Tour Dromedarius</h3>
                 <ul>
@@ -367,14 +359,25 @@
     </div>
 </section>
 <footer>
+        <section style="padding: 30px 5%; background: #fff; border-top: 1px solid #eee; text-align: center;">
+    <p style="font-weight: 700; color: var(--azul); margin-bottom: 20px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Medios de Pago y Bancos Autorizados</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; opacity: 0.8;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" style="height: 25px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" style="height: 35px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_del_Banco_de_Cr%C3%A9dito_del_Per%C3%BA.svg" alt="BCP" style="height: 30px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/BBVA_2019.svg" alt="BBVA" style="height: 25px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Interbank_logo.svg" alt="Interbank" style="height: 30px;">
+        <div style="display: flex; gap: 10px; align-items: center;">
+             <img src="https://vignette.wikia.nocookie.net/logopedia/images/b/b3/Yape_logo.png" alt="Yape" style="height: 40px; border-radius: 5px;">
+    </style>
 </div>
         </div>
     </div>
    </div> <img src="IMG-20230810-WA0065.jpg" alt="Logo" style="height:20px; filter: brightness(0) invert(1); margin-bottom:20px;"><br>
-   </div> <p><strong>HELMY VIAJES PERÚ</strong> | RUC: 20602927238</p>
-   </div> <p>Jr. Pablo Bermúdez 177, Of. 102, Jesús María</p>
-   </div> <p>WhatsApp: 925 807 384 / 997 799 056</p>
-  </div> </div></div> <p>© 2026 Helmy Viajes .</p>
+                      </div> <p><strong>HELMY VIAJES PERÚ</strong> | RUC: 20602927238</p>
+                            </div> <p>Jr. Pablo Bermúdez 177, Of. 102, Jesús María</p>
+                                   </div> <p>WhatsApp: 925 807 384 / 997 799 056</p>
+                             </div> </div></div> <p>© 2026 Helmy Viajes .</p>
 </footer>
 
 </body>
