@@ -18,19 +18,20 @@
         .social-links a { color: var(--azul); font-size: 1.2rem; margin-left: 10px; transition: 0.3s; }
 
         .hero { 
-            height: 60vh; 
-            background: linear-gradient(rgba(0,51,153,0.4), rgba(0,51,153,0.4)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=80') center/cover;
+            height: 70vh; 
+            background: linear-gradient(rgba(0,51,153,0.5), rgba(0,51,153,0.5)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=80') center/cover;
             display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center;
+            padding: 0 20px;
         }
-        .hero h1 { font-size: 3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 10px; }
+        .hero h1 { font-size: 3.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin-bottom: 30px; }
+        
+        .cta-button {
+            background: var(--rojo); color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; 
+            font-weight: 700; text-transform: uppercase; transition: 0.4s; box-shadow: 0 4px 15px rgba(230,0,0,0.4);
+        }
+        .cta-button:hover { background: var(--blanco); color: var(--azul); transform: translateY(-3px); }
 
-        .search-box { max-width: 1000px; margin: -60px auto 40px; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); display: flex; flex-wrap: wrap; gap: 15px; position: relative; z-index: 10; border-top: 6px solid var(--rojo); }
-        .form-group { flex: 1; min-width: 200px; }
-        .form-group label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--azul); margin-bottom: 8px; text-transform: uppercase; }
-        .form-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; background: #fdfdfd; }
-        .btn-search { background: var(--rojo); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; width: 100%; margin-top: 25px; transition: 0.4s; font-size: 1rem; box-shadow: 0 4px 10px rgba(230,0,0,0.3); }
-        .btn-search:hover { background: var(--azul); transform: scale(1.02); }
-          
         section { padding: 80px 5%; }
         .section-title { text-align: center; margin-bottom: 50px; }
         .section-title h2 { color: var(--azul); font-size: 2.2rem; text-transform: uppercase; border-bottom: 5px solid var(--rojo); display: inline-block; padding-bottom: 10px; }
@@ -51,12 +52,10 @@
 
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; z-index: 1000; box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
 
-        /* Estilos para Logotipos de Bancos */
         .bank-logos { padding: 40px 5%; background: white; text-align: center; border-top: 1px solid #eee; }
         .bank-logos p { font-weight: 700; color: #666; margin-bottom: 25px; font-size: 0.85rem; text-transform: uppercase; }
         .bank-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; opacity: 0.7; }
-        .bank-grid img { height: 35px; filter: grayscale(100%); transition: 0.3s; }
-        .bank-grid img:hover { filter: grayscale(0%); opacity: 1; }
+        .bank-grid img { height: 35px; transition: 0.3s; }
 
         footer { background: #111; color: white; text-align: center; padding: 60px 5%; font-size: 0.9rem; }
         footer img { height: 40px; filter: brightness(0) invert(1); margin-bottom: 25px; }
@@ -64,48 +63,28 @@
 </head>
 <body>
 
-<a href="https://wa.me/51997799056" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/51925807384" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <header>
-    <div class="logo">
-        <img src="IMG-20230810-WA0065.jpg" alt="Helmy Viajes">
-    </div>
+    <div class="logo"><img src="IMG-20230810-WA0065.jpg" alt="Helmy Viajes"></div>
     <div class="nav-container">
         <nav>
-            <a href="#fulldays"><i class="fas fa-sun"></i> Full Days</a>
-            <a href="#nacionales"><i class="fas fa-mountain"></i> Nacionales</a>
-            <a href="#internacional"><i class="fas fa-globe"></i> Internacional</a>
-            <a href="https://www.clickandbook.plus/es/" target="_blank" style="color: var(--rojo);"><i class="fas fa-search"></i> RESERVAR ONLINE</a>
+            <a href="#nacionales">Nacionales</a>
+            <a href="#internacional">Internacional</a>
+            <a href="#contacto">Contacto</a>
         </nav>
         <div class="social-links">
             <a href="https://www.facebook.com/helmyviajesperu/" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/helmyviajes" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@_helmyviajes" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
     </div>
 </header>
 
 <section class="hero">
     <h1>HELMY VIAJES PERÚ</h1>
-    <p>Tu aventura comienza Aquí. </p>
+    <p>Asesoría personalizada para tus vacaciones. Creamos experiencias inolvidables a tu medida.</p>
+    <a href="https://wa.me/51925807384?text=Hola,%20quiero%20cotizar%20mi%20próximo%20viaje" class="cta-button">¡Solicita tu Cotización aquí!</a>
 </section>
-
-<div class="search-box">
-    <div class="form-group">
-        <label><i class="fas fa-plane-departure"></i> Origen</label>
-        <input type="text" placeholder="Lima (LIM)">
-    </div>
-    <div class="form-group">
-        <label><i class="fas fa-plane-arrival"></i> Destino</label>
-        <input type="text" placeholder="¿A dónde quieres ir?">
-    </div>
-    <div class="form-group">
-        <label><i class="fas fa-calendar-alt"></i> Fecha de Viaje</label>
-        <input type="date">
-    </div>
-    <div class="form-group">
-    </div>
-</div>           
 
 <section id="nacionales">
     <div class="section-title"><h2>Paquetes Nacionales</h2></div>
@@ -113,25 +92,25 @@
         <div class="card">
             <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=600" alt="Cusco">
             <div class="card-body">
-                <h3>Cusco Mágico (5D/4N)</h3>
+                <h3>Cusco & Machu Picchu</h3>
                 <ul>
-                    <li><i class="fas fa-check"></i> Hotel, desayunos y traslados</li>
-                    <li><i class="fas fa-check"></i> Valle Sagrado y Machu Picchu</li>
-                    <li><i class="fas fa-check"></i> Montaña de 7 Colores</li>
+                    <li><i class="fas fa-check"></i> Traslados y Alojamiento</li>
+                    <li><i class="fas fa-check"></i> Tours con guías certificados</li>
+                    <li><i class="fas fa-check"></i> Asistencia personalizada</li>
                 </ul>
-                <a href="https://wa.me/51997799056?text=Info%20Cusco" class="btn-wa">COTIZAR POR WHATSAPP</a>
+                <a href="https://wa.me/51997799056?text=Info%20Cusco" class="btn-wa">CONSULTAR</a>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600" alt="Selva">
+            <img src="https://images.unsplash.com/photo-1584132915807-fd1f5fbc065c?auto=format&fit=crop&w=600" alt="Ica">
             <div class="card-body">
-                <h3>Selva Central</h3>
+                <h3>Ica & Paracas</h3>
                 <ul>
-                    <li><i class="fas fa-check"></i> Tours en Oxapampa y Pozuzo</li>
-                    <li><i class="fas fa-check"></i> Cataratas y comunidades nativas</li>
-                    <li><i class="fas fa-check"></i> Guía especializado</li>
+                    <li><i class="fas fa-check"></i> Islas Ballestas y Huacachina</li>
+                    <li><i class="fas fa-check"></i> Sandboarding y Buggies</li>
+                    <li><i class="fas fa-check"></i> Salidas diarias</li>
                 </ul>
-                <a href="https://wa.me/51925807384?text=Info%20Selva" class="btn-wa">VER DETALLES</a>
+                <a href="https://wa.me/51925807384?text=Info%20Ica" class="btn-wa">CONSULTAR</a>
             </div>
         </div>
     </div>
@@ -145,21 +124,21 @@
             <div class="card-body">
                 <h3>Punta Cana - Todo Incluido</h3>
                 <ul>
-                    <li><i class="fas fa-hotel"></i> Resort 5 estrellas</li>
-                    <li><i class="fas fa-utensils"></i> Comidas y bebidas ilimitadas</li>
-                    <li><i class="fas fa-plane"></i> Vuelos ida y vuelta</li>
+                    <li><i class="fas fa-hotel"></i> Resorts frente al mar</li>
+                    <li><i class="fas fa-glass-cheers"></i> Bebidas y comidas ilimitadas</li>
+                    <li><i class="fas fa-plane"></i> Vuelos confirmados</li>
                 </ul>
-                <a href="https://www.clickandbook.plus/es/" target="_blank" class="btn-wa" style="background:var(--rojo);">RESERVAR ONLINE</a>
+                <a href="https://wa.me/51925807384?text=Info%20Punta%20Cana" class="btn-wa">MÁS INFORMACIÓN</a>
             </div>
         </div>
         <div class="card">
             <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?auto=format&fit=crop&w=600" alt="Cancun">
             <div class="card-body">
-                <h3>México: Cancún & Riviera</h3>
+                <h3>Cancún y Playa del Carmen</h3>
                 <ul>
-                    <li><i class="fas fa-check"></i> Traslados Aeropuerto - Hotel</li>
-                    <li><i class="fas fa-check"></i> Sistema All Inclusive</li>
-                    <li><i class="fas fa-check"></i> Tour a Chichen Itzá</li>
+                    <li><i class="fas fa-check"></i> Hoteles de lujo</li>
+                    <li><i class="fas fa-check"></i> Tours a Chichen Itzá opcionales</li>
+                    <li><i class="fas fa-check"></i> Atención personalizada</li>
                 </ul>
                 <a href="https://wa.me/51997799056?text=Info%20Cancun" class="btn-wa">SOLICITAR PRECIOS</a>
             </div>
@@ -168,7 +147,7 @@
 </section>
 
 <div class="bank-logos">
-    <p>Aceptamos todos los medios de pago - Compra segura</p>
+    <p>Pagos Seguros y Facilidades Bancarias</p>
     <div class="bank-grid">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
@@ -179,11 +158,11 @@
     </div>
 </div>
 
-<footer>
+<footer id="contacto">
     <img src="IMG-20230810-WA0065.jpg" alt="Logo Helmy">
     <p><strong>HELMY VIAJES PERÚ</strong> | RUC: 20602927238</p>
     <p>Jr. Pablo Bermúdez 177, Of. 102, Jesús María - Lima</p>
-    <p>Atención 24/7: +51 925 807 384 / +51 997 799 056</p>
+    <p>Emergencias 24/7: +51 925 807 384 / +51 997 799 056</p>
     <p style="margin-top:20px; opacity:0.5;">© 2026 Helmy Viajes | Tu aventura comienza aquí.</p>
 </footer>
 
