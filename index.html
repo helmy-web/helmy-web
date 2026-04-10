@@ -18,67 +18,64 @@
         .social-links a { color: var(--azul); font-size: 1.2rem; margin-left: 10px; transition: 0.3s; }
 
         .hero { 
-            height: 50vh; 
-            background: linear-gradient(rgba(0,51,153,0.5), rgba(0,51,153,0.5)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=80')
+            height: 60vh; 
+            background: linear-gradient(rgba(0,51,153,0.4), rgba(0,51,153,0.4)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=80') center/cover;
             display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center;
         }
-        .hero h1 { font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero h1 { font-size: 3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 10px; }
 
-        .search-box { max-width: 1000px; margin: -50px auto 40px; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); display: flex; flex-wrap: wrap; gap: 15px; position: relative; z-index: 10; border-top: 5px solid var(--rojo); }
-        .form-group { flex: 1; min-width: 180px; }
-        .form-group label { display: block; font-size: 0.7rem; font-weight: 700; color: var(--azul); margin-bottom: 5px; }
-        .form-group input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
-        .btn-search { background: var(--azul); color: white; border: none; padding: 12px; border-radius: 5px; font-weight: 700; cursor: pointer; width: 100%; margin-top: 21px; transition: 0.3s; }
-        .btn-search:hover { background: #002570; }
+        .search-box { max-width: 1000px; margin: -60px auto 40px; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); display: flex; flex-wrap: wrap; gap: 15px; position: relative; z-index: 10; border-top: 6px solid var(--rojo); }
+        .form-group { flex: 1; min-width: 200px; }
+        .form-group label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--azul); margin-bottom: 8px; text-transform: uppercase; }
+        .form-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; background: #fdfdfd; }
+        .btn-search { background: var(--rojo); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; width: 100%; margin-top: 25px; transition: 0.4s; font-size: 1rem; box-shadow: 0 4px 10px rgba(230,0,0,0.3); }
+        .btn-search:hover { background: var(--azul); transform: scale(1.02); }
           
-        section { padding: 60px 5%; }
-        .section-title { text-align: center; margin-bottom: 40px; }
-        .section-title h2 { color: var(--azul); font-size: 2rem; text-transform: uppercase; border-bottom: 4px solid var(--rojo); display: inline-block; padding-bottom: 5px; }
+        section { padding: 80px 5%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { color: var(--azul); font-size: 2.2rem; text-transform: uppercase; border-bottom: 5px solid var(--rojo); display: inline-block; padding-bottom: 10px; }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column; transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
         
-        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
-        .card-body h3 { color: var(--azul); font-size: 1.2rem; margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 10px; height: 50px; display: flex; align-items: center; }
-        .card-body ul { list-style: none; font-size: 0.85rem; margin-bottom: 20px; flex-grow: 1; }
-        .card-body ul li { margin-bottom: 8px; display: flex; align-items: start; gap: 8px; }
-        .card-body ul li i { color: var(--rojo); margin-top: 3px; font-size: 0.9rem; }
+        .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-body h3 { color: var(--azul); font-size: 1.3rem; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .card-body ul { list-style: none; font-size: 0.9rem; margin-bottom: 20px; flex-grow: 1; color: #555; }
+        .card-body ul li { margin-bottom: 10px; display: flex; align-items: start; gap: 10px; }
+        .card-body ul li i { color: var(--rojo); margin-top: 4px; }
         
-        .destinos-lista { color: #666; font-size: 0.8rem; margin-bottom: 15px; font-style: italic; }
+        .btn-wa { display: block; background: var(--azul); color: white; text-align: center; padding: 14px; text-decoration: none; border-radius: 8px; font-weight: 700; transition: 0.3s; margin-top: auto; }
+        .btn-wa:hover { background: var(--rojo); }
 
-        .btn-wa { display: block; background: var(--rojo); color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 5px; font-weight: 700; transition: 0.3s; margin-top: auto; }
-        .btn-wa:hover { background: var(--azul); }
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; z-index: 1000; box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
 
-        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        
-        .testimonials { background: var(--gris); text-align: center; }
-        .testimonial-item { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .testimonial-item p { font-style: italic; margin-bottom: 15px; }
+        /* Estilos para Logotipos de Bancos */
+        .bank-logos { padding: 40px 5%; background: white; text-align: center; border-top: 1px solid #eee; }
+        .bank-logos p { font-weight: 700; color: #666; margin-bottom: 25px; font-size: 0.85rem; text-transform: uppercase; }
+        .bank-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; opacity: 0.7; }
+        .bank-grid img { height: 35px; filter: grayscale(100%); transition: 0.3s; }
+        .bank-grid img:hover { filter: grayscale(0%); opacity: 1; }
 
-        .seals { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; padding: 40px 5%; background: white; }
-        .seals img { height: 50px; opacity: 0.7; }
-
-        </div>
-    </div>
-</section>
-        
+        footer { background: #111; color: white; text-align: center; padding: 60px 5%; font-size: 0.9rem; }
+        footer img { height: 40px; filter: brightness(0) invert(1); margin-bottom: 25px; }
+    </style>
 </head>
 <body>
 
 <a href="https://wa.me/51997799056" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <header>
-    <div class="logo"><img src="IMG-20230810-WA0065.jpg" alt="Helmy Viajes"></div>
+    <div class="logo">
+        <img src="IMG-20230810-WA0065.jpg" alt="Helmy Viajes">
+    </div>
     <div class="nav-container">
         <nav>
-            <nav>
-    <a href="#fulldays"><i class="fas fa-sun"></i> Full Days</a>
-    <a href="#nacionales"><i class="fas fa-map-marked-alt"></i> Nacionales</a>
-    <a href="#internacional"><i class="fas fa-plane"></i> Internacional</a>
-    <a href="https://www.clickandbook.plus/es/" target="_blank" style="color: var(--rojo);"><i class="fas fa-search"></i> Reservar Online</a>
-</nav>
+            <a href="#fulldays"><i class="fas fa-sun"></i> Full Days</a>
+            <a href="#nacionales"><i class="fas fa-mountain"></i> Nacionales</a>
+            <a href="#internacional"><i class="fas fa-globe"></i> Internacional</a>
+            <a href="https://www.clickandbook.plus/es/" target="_blank" style="color: var(--rojo);"><i class="fas fa-search"></i> RESERVAR ONLINE</a>
         </nav>
         <div class="social-links">
             <a href="https://www.facebook.com/helmyviajesperu/" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -90,52 +87,28 @@
 
 <section class="hero">
     <h1>HELMY VIAJES PERÚ</h1>
-    <p>Tu aventura comienza Aquí</p>
+    <p>Tu aventura comienza Aquí. Motor de reservas global.</p>
 </section>
 
 <div class="search-box">
-    <div class="form-group"><label>Origen</label><input type="text" placeholder="Lima (LIM)"></div>
-    <div class="form-group"><label>Destino</label><input type="text" placeholder="¿A dónde vas?"></div>
-    <div class="form-group"><label>Fecha</label><input type="date"></div>
-    <div class="form-group"><button class="btn-search" style="background: var(--rojo);" onclick="window.open('https://www.clickandbook.plus/es/')">BUSCAR VUELO</button>
+    <div class="form-group">
+        <label><i class="fas fa-plane-departure"></i> Origen</label>
+        <input type="text" placeholder="Lima (LIM)">
+    </div>
+    <div class="form-group">
+        <label><i class="fas fa-plane-arrival"></i> Destino</label>
+        <input type="text" placeholder="¿A dónde quieres ir?">
+    </div>
+    <div class="form-group">
+        <label><i class="fas fa-calendar-alt"></i> Fecha de Viaje</label>
+        <input type="date">
+    </div>
+    <div class="form-group">
+        <button class="btn-search" onclick="window.open('https://www.clickandbook.plus/es/')">BUSCAR VUELOS</button>
+    </div>
 </div>           
 
-<section id="fulldays">
-    <div class="section-title"><h2>Full Days 2026</h2></div>
-    <div class="grid">
-        <div class="card">
-            <img src="https://photo-DROMEDARIO-HELMY.jpg?auto=format&fit=crop&w=600"alt="Dromedario">
-            <div class="card-body">
-                <h3>Tour Dromedarius</h3>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Transporte Turístico Privado</li>
-                    <li><i class="fas fa-check-circle"></i> Guía Oficial de Turismo</li>
-                    <li><i class="fas fa-check-circle"></i> Ingreso a Dromedarius</li>
-                    <li><i class="fas fa-check-circle"></i> Uso de instalaciones y piscina</li>
-                    <li><i class="fas fa-check-circle"></i> Degustación de vinos y piscos</li>
-                </ul>
-                <p class="destinos-lista"><strong>Visitas:</strong> Dromedarios, Bodegas de Ica.</p>
-                <a href="https://wa.me/51997799056?text=Info%20Dromedarios" class="btn-wa">RESERVAR AHORA</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src=https://www.facebook.com/photo/?fbid=205049874308889&set=piaarp.100044116332939?auto=format&fit=crop&w=600"alt="miviaje">
-            <div class="card-body">
-                <h3>Paracas & Ica Completo</h3>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Transporte Lima - Paracas - Ica</li>
-                    <li><i class="fas fa-check-circle"></i> Deslizador Islas Ballestas</li>
-                    <li><i class="fas fa-check-circle"></i> Laguna de Huacachina</li>
-                    <li><i class="fas fa-check-circle"></i> Sandboarding & Buggies</li>
-                </ul>
-                <a href="https://wa.me/51925807384?text=Info%20Paracas" class="btn-wa">RESERVAR AHORA</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="nacionales" style="background:var(--gris);">
+<section id="nacionales">
     <div class="section-title"><h2>Paquetes Nacionales</h2></div>
     <div class="grid">
         <div class="card">
@@ -143,243 +116,77 @@
             <div class="card-body">
                 <h3>Cusco Mágico (5D/4N)</h3>
                 <ul>
-                    <li><i class="fas fa-hotel"></i> 03 Noches con desayunos</li>
-                    <li><i class="fas fa-bus-alt"></i> Valle Sagrado y City Tour</li>
-                    <li><i class="fas fa-mountain"></i> Montaña 7 Colores</li>
-                    <li><i class="fas fa-ticket-alt"></i> Tren e Ingreso a Machu Picchu</li>
+                    <li><i class="fas fa-check"></i> Hotel, desayunos y traslados</li>
+                    <li><i class="fas fa-check"></i> Valle Sagrado y Machu Picchu</li>
+                    <li><i class="fas fa-check"></i> Montaña de 7 Colores</li>
                 </ul>
-                <a href="https://wa.me/51997799056?text=Info%20Cusco" class="btn-wa">COTIZAR PAQUETE</a>
+                <a href="https://wa.me/51997799056?text=Info%20Cusco" class="btn-wa">COTIZAR POR WHATSAPP</a>
             </div>
         </div>
-
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600" alt="Tarapoto">
+            <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600" alt="Selva">
             <div class="card-body">
-                <h3>Tarapoto (4D/3N)</h3>
+                <h3>Selva Central</h3>
                 <ul>
-                    <li><i class="fas fa-ship"></i> Navegación Río Amazonas</li>
-                    <li><i class="fas fa-water"></i> Laguna Azul</li>
-                    <li><i class="fas fa-fortress-tower"></i> Castillo de Lamas</li>
-                    <li><i class="fas fa-users"></i> Comunidades Nativas</li>
+                    <li><i class="fas fa-check"></i> Tours en Oxapampa y Pozuzo</li>
+                    <li><i class="fas fa-check"></i> Cataratas y comunidades nativas</li>
+                    <li><i class="fas fa-check"></i> Guía especializado</li>
                 </ul>
-                <a href="https://wa.me/51925807384?text=Info%20Tarapoto" class="btn-wa">COTIZAR PAQUETE</a>
+                <a href="https://wa.me/51925807384?text=Info%20Selva" class="btn-wa">VER DETALLES</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="internacional">
+<section id="internacional" style="background:var(--gris);">
     <div class="section-title"><h2>Destinos Internacionales</h2></div>
     <div class="grid">
         <div class="card">
             <img src="https://images.unsplash.com/photo-1589394815804-964ed9be2eb3?auto=format&fit=crop&w=600" alt="Punta Cana">
             <div class="card-body">
-                <h3>Punta Cana</h3>
+                <h3>Punta Cana - Todo Incluido</h3>
                 <ul>
-                    <li><i class="fas fa-plane"></i> Boleto Aéreo incluido</li>
-                    <li><i class="fas fa-glass-cheers"></i> Sistema Todo Incluido</li>
-                    <li><i class="fas fa-hotel"></i> Resort de lujo 5D/4N</li>
+                    <li><i class="fas fa-hotel"></i> Resort 5 estrellas</li>
+                    <li><i class="fas fa-utensils"></i> Comidas y bebidas ilimitadas</li>
+                    <li><i class="fas fa-plane"></i> Vuelos ida y vuelta</li>
                 </ul>
-                <a href="https://wa.me/51925807384?text=Info%20Punta%20Cana" class="btn-wa">VER DISPONIBILIDAD</a>
+                <a href="https://www.clickandbook.plus/es/" target="_blank" class="btn-wa" style="background:var(--rojo);">RESERVAR ONLINE</a>
             </div>
         </div>
-
         <div class="card">
             <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?auto=format&fit=crop&w=600" alt="Cancun">
             <div class="card-body">
-                <h3>Cancún</h3>
+                <h3>México: Cancún & Riviera</h3>
                 <ul>
-                    <li><i class="fas fa-plane-departure"></i> Vuelos ida y vuelta</li>
-                    <li><i class="fas fa-cocktail"></i> Sistema All Inclusive</li>
-                    <li><i class="fas fa-swimmer"></i> Resort con vista al mar</li>
+                    <li><i class="fas fa-check"></i> Traslados Aeropuerto - Hotel</li>
+                    <li><i class="fas fa-check"></i> Sistema All Inclusive</li>
+                    <li><i class="fas fa-check"></i> Tour a Chichen Itzá</li>
                 </ul>
-                <a href="https://wa.me/51997799056?text=Info%20Cancun" class="btn-wa">COTIZAR AHORA</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1583307466804-0322c3664720?auto=format&fit=crop&w=600" alt="Cartagena">
-            <div class="card-body">
-                <h3>Cartagena de Indias</h3>
-                <ul>
-                    <li><i class="fas fa-sun"></i> Playas de arena blanca</li>
-                    <li><i class="fas fa-archway"></i> Ciudad Amurallada</li>
-                    <li><i class="fas fa-shuttle-van"></i> Traslados incluidos</li>
-                </ul>
-                <a href="https://wa.me/51925807384?text=Info%20Cartagena" class="btn-wa">COTIZAR AHORA</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&w=600" alt="San Andres">
-            <div class="card-body">
-                <h3>San Andrés (Colombia)</h3>
-                <ul>
-                    <li><i class="fas fa-fish"></i> Mar de 7 colores</li>
-                    <li><i class="fas fa-hotel"></i> Alojamiento frente al mar</li>
-                    <li><i class="fas fa-plane"></i> Vuelos confirmados</li>
-                </ul>
-                <a href="https://wa.me/51925807384?text=Info%20San%20Andres" class="btn-wa">COTIZAR AHORA</a>
+                <a href="https://wa.me/51997799056?text=Info%20Cancun" class="btn-wa">SOLICITAR PRECIOS</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="especiales" style="background:var(--gris);">
-    <div class="section-title"><h2>Circuitos Especiales</h2></div>
-    <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1493246507139-91e8bef99c1e?auto=format&fit=crop&w=600" alt="Europa">
-            <div class="card-body">
-                <h3>Europa Clásica</h3>
-                <ul>
-                    <li><i class="fas fa-bus-alt"></i> Circuito con guía español</li>
-                    <li><i class="fas fa-bed"></i> Hoteles Seleccionados</li>
-                    <li><i class="fas fa-map-marked-alt"></i> Madrid, París, Venecia, Roma</li>
-                </ul>
-                <a href="https://wa.me/51925807384?text=Info%20Europa" class="btn-wa">INFO CIRCUITOS</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600" alt="Crucero">
-            <div class="card-body">
-                <h3>Cruceros Sin Visa</h3>
-                <ul>
-                    <li><i class="fas fa-ship"></i> Cartagena & Caribe</li>
-                    <li><i class="fas fa-utensils"></i> Pensión completa</li>
-                    <li><i class="fas fa-music"></i> Shows en vivo</li>
-                </ul>
-                <a href="https://wa.me/51925807384?text=Info%20Cruceros" class="btn-wa">VER CRUCEROS</a>
-            </div>
-        </div>
+<div class="bank-logos">
+    <p>Aceptamos todos los medios de pago - Compra segura</p>
+    <div class="bank-grid">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_del_Banco_de_Cr%C3%A9dito_del_Per%C3%BA.svg" alt="BCP">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/BBVA_2019.svg" alt="BBVA">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Interbank_logo.svg" alt="Interbank">
+        <img src="https://seeklogo.com/images/Y/yape-logo-3E473EE7E5-seeklogo.com.png" alt="Yape" style="height: 50px;">
     </div>
-</section>
-<section id="seguros" style="padding: 60px 5%; background-color: #fff;">
-    <div class="section-title" style="text-align: center; margin-bottom: 40px;">
-        <h2 style="color: var(--azul); font-size: 2rem; text-transform: uppercase; border-bottom: 4px solid var(--rojo); display: inline-block; padding-bottom: 5px;">
-            Seguros de <span>Viaje</span>
-        </h2>
-    </div>
-
-    <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: center;">
-        
-        <div class="seguros-img">
-            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80" 
-                 alt="Asistencia al Viajero" 
-                 style="width: 100%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
-        </div>
-
-        <div class="seguros-info" style="background: var(--gris); padding: 30px; border-radius: 15px; border-left: 8px solid var(--azul);">
-            <h3 style="color: var(--azul); margin-bottom: 15px; font-size: 1.4rem;">Asistencia Médica Internacional</h3>
-            <p style="margin-bottom: 20px; font-size: 0.95rem; color: #555;">
-                No permitas que un imprevisto arruine tu aventura. Brindamos cobertura global con las mejores centrales de asistencia del mundo:
-            </p>
-            
-            <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 25px;">
-                <li style="font-weight: 600; color: #333;"><i class="fas fa-shield-alt" style="color: var(--rojo); margin-right: 8px;"></i> Travi Assistance</li>
-                <li style="font-weight: 600; color: #333;"><i class="fas fa-shield-alt" style="color: var(--rojo); margin-right: 8px;"></i> Assist Card</li>
-                <li style="font-weight: 600; color: #333;"><i class="fas fa-shield-alt" style="color: var(--rojo); margin-right: 8px;"></i> Euroamerican</li>
-                <li style="font-weight: 600; color: #333;"><i class="fas fa-shield-alt" style="color: var(--rojo); margin-right: 8px;"></i> Global Assistance</li>
-                <li style="font-weight: 600; color: #333;"><i class="fas fa-shield-alt" style="color: var(--rojo); margin-right: 8px;"></i> UTA Assistance</li>
-            </ul>
-
-            <a href="https://wa.me/51925807384?text=Hola,%20solicito%20cotización%20de%20seguro%20de%20viaje" 
-               class="btn-wa" 
-               style="display: block; background: var(--rojo);color: #ffffff;text-align: center; padding: 15px; text-decoration: none; border-radius: 5px; font-weight: 700; transition: 0.3s; border:none;">
-               <i class="fab fa-whatsapp"></i> SOLICITAR COTIZACIÓN
-            </a>
-        </div>
-    </div>
-</section>
-<section class="testimonials">
-    <div class="section-title"><h2>Testimonios</h2></div>
-    <div class="grid">
-        <div class="testimonial-item"><p>"Excelente atención en mi viaje a Punta Cana. Todo coordinado al detalle."</p><strong>- Carlos M.</strong></div>
-        <div class="testimonial-item"><p>"Los full days son muy organizados. Una experiencia increíble."</p><strong>- Ana R.</strong></div>
-        <div class="testimonial-item"><p>"Agencia confiable y segura. Compré mis pasajes y todo fue rápido."</p><strong>- Jorge L.</strong></div>
-    </div>
-</section>
-<section id="nosotros" style="background: var(--gris); border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;">
-    <div class="grid" style="align-items: start;">
-        
-        <div class="nosotros-info" style="padding-right: 20px;">
-            <h2 style="color: var(--azul); font-size: 1.8rem; margin-bottom: 15px; border-bottom: 3px solid var(--rojo); display: inline-block;">¿Quiénes Somos?</h2>
-            <p style="font-size: 0.95rem; text-align: justify; color: #444;">
-                En <strong>Helmy Viajes Perú</strong> (RUC: 20602927238), somos una agencia de viajes y turismo comprometida con la excelencia. Nos apasiona conectar a nuestros viajeros con experiencias únicas, brindando seguridad, confianza y asesoría personalizada en cada destino nacional e internacional. Nuestra trayectoria nos respalda como una agencia formal y registrada ante las autoridades competentes del Perú.
-            </p>
-        </div>
-
-        <div class="mision-vision">
-            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 20px;">
-                <h3 style="color: var(--rojo); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                    <i class="fas fa-bullseye"></i> NUESTRA MISIÓN
-                </h3>
-                <p style="font-size: 0.9rem; margin: 0;">Ofrecer soluciones integrales de viaje con altos estándares de calidad, garantizando que cada aventura sea segura, placentera e inolvidable para nuestros pasajeros.</p>
-            </div>
-
-            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                <h3 style="color: var(--rojo); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                    <i class="fas fa-eye"></i> NUESTRA VISIÓN
-                </h3>
-                <p style="font-size: 0.9rem; margin: 0;">Consolidarnos como la agencia de viajes referente en el mercado peruano, reconocida por nuestra innovación, transparencia y por superar las expectativas de nuestros clientes.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-<div class="seals">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Logo_del_Mincetur.png" alt="MINCETUR">
-    <p style="font-size: 0.8rem; color: #999; width: 100%; text-align: center;">Agencia Autorizada por DIRCETUR y MINCETUR</p>
 </div>
-<section id="contacto" style="background: white;">
-    <div class="grid">
-        <div class="contacto-datos">
-            <h3 style="color: var(--azul);">Contáctanos</h3>
-            <p><i class="fas fa-clock"></i> <strong>Lunes a Viernes:</strong> 09:00 AM - 19:00 PM</p>
-            <p><i class="fas fa-clock"></i> <strong>Sábados:</strong> 09:00 AM - 14:00 PM</p>
-            <div style="background: #fff3f3; padding: 15px; border-radius: 8px; border-left: 5px solid var(--rojo); margin-top: 15px;">
-                <p style="color: var(--rojo); font-weight: 700; margin: 0;"><i class="fas fa-ambulance"></i> EMERGENCIAS 24/7</p>
-                <p style="font-size: 1.1rem; margin: 0;">WhatsApp: <strong>+51 925 807 384</strong></p>
-            </div>
-        </div>
-        
-        <div class="legal-logos" style="text-align: center;">
-            <p style="font-size: 0.75rem; margin-bottom: 20px;">
-                <a href="#" style="color: #666;">Políticas de Protección y Tratamiento de Datos Personales</a>
-            </p>
-            <div style="display: flex; justify-content: center; gap: 20px; align-items: center; flex-wrap: wrap;">
-                <div style="text-align: center;">
-                    <i class="fas fa-hotel" style="font-size: 30px; color: var(--azul);"></i>
-                    <p style="font-size: 0.7rem; font-weight: bold;">AGENCIA REGISTRADA</p>
-                </div>
-                <div style="text-align: center;">
-                    <i class="fas fa-shield-heart" style="font-size: 30px; color: #28a745;"></i>                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 <footer>
-        <section style="padding: 30px 5%; background: #fff; border-top: 1px solid #eee; text-align: center;">
-    <p style="font-weight: 700; color: var(--azul); margin-bottom: 20px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Medios de Pago y Bancos Autorizados</p>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; opacity: 0.8;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" style="height: 25px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" style="height: 35px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_del_Banco_de_Cr%C3%A9dito_del_Per%C3%BA.svg" alt="BCP" style="height: 30px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/BBVA_2019.svg" alt="BBVA" style="height: 25px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Interbank_logo.svg" alt="Interbank" style="height: 30px;">
-        <div style="display: flex; gap: 10px; align-items: center;">
-             <img src="https://vignette.wikia.nocookie.net/logopedia/images/b/b3/Yape_logo.png" alt="Yape" style="height: 40px; border-radius: 5px;">
-    </style>
-</div>
-        </div>
-    </div>
-   </div> <img src="IMG-20230810-WA0065.jpg" alt="Logo" style="height:20px; filter: brightness(0) invert(1); margin-bottom:20px;"><br>
-                      </div> <p><strong>HELMY VIAJES PERÚ</strong> | RUC: 20602927238</p>
-                            </div> <p>Jr. Pablo Bermúdez 177, Of. 102, Jesús María</p>
-                                   </div> <p>WhatsApp: 925 807 384 / 997 799 056</p>
-                             </div> </div></div> <p>© 2026 Helmy Viajes .</p>
+    <img src="IMG-20230810-WA0065.jpg" alt="Logo Helmy">
+    <p><strong>HELMY VIAJES PERÚ</strong> | RUC: 20602927238</p>
+    <p>Jr. Pablo Bermúdez 177, Of. 102, Jesús María - Lima</p>
+    <p>Atención 24/7: +51 925 807 384 / +51 997 799 056</p>
+    <p style="margin-top:20px; opacity:0.5;">© 2026 Helmy Viajes | Tu aventura comienza aquí.</p>
 </footer>
 
 </body>
 </html>
-
