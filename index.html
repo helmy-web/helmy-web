@@ -73,8 +73,48 @@
         <button class="bot-btn" onclick="botReply('asesor')">Hablar con un asesor (WhatsApp)</button>
     </div>
 </div>
+<style>
+        /* Estilos del Robot */
+        #helmy-bot { 
+            position: fixed; bottom: 100px; right: 30px; width: 320px; 
+            background: white; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); 
+            z-index: 1001; border-top: 6px solid var(--azul); display: none; font-family: 'Montserrat', sans-serif;
+        }
+        .bot-header { 
+            background: var(--azul); color: white; padding: 15px; border-radius: 10px 10px 0 0; 
+            font-weight: 700; display: flex; justify-content: space-between; align-items: center;
+        }
+        .bot-body { padding: 15px; max-height: 350px; overflow-y: auto; }
+        .bot-btn { 
+            display: block; width: 100%; padding: 12px; margin-top: 8px; background: #f0f4f8; 
+            border: none; border-radius: 8px; cursor: pointer; text-align: left; font-size: 0.85rem; 
+            font-weight: 600; color: var(--azul); transition: 0.3s;
+        }
+        .bot-btn:hover { background: var(--azul); color: white; }
+    </style>
 
-<header>
+    <script>
+        // Función para abrir/cerrar el chat
+        function toggleBot() {
+            const bot = document.getElementById('helmy-bot');
+            bot.style.display = (bot.style.display === 'block') ? 'none' : 'block';
+        }
+
+        // Respuestas del robot
+        function botReply(type) {
+            const content = document.getElementById('bot-content');
+            if(type === 'itinerario') {
+                content.innerHTML = "<p>🤖: Tenemos itinerarios listos de Ica, Paracas y Cruceros. ¿Cuál te envío?</p><button class='bot-btn' onclick=\"window.open('https://wa.me/51925807384')\">Solicitar por WhatsApp</button>";
+            } else if(type === 'pagos') {
+                content.innerHTML = "<p>🤖: Puedes pagar en BCP, BBVA, Interbank o Yape. ¿Deseas ver las cuentas?</p><button class='bot-btn' onclick=\"window.open('https://wa.me/51925807384')\">Sí, enviar cuentas</button>";
+            } else if(type === 'seguros') {
+                content.innerHTML = "<p>🤖: Trabajamos con Assist Card y Travi. ¿A qué destino viajas?</p><button class='bot-btn' onclick=\"window.open('https://wa.me/51925807384')\">Cotizar Seguro</button>";
+            } else {
+                window.open("https://wa.me/51925807384", "_blank");
+            }
+        }
+    </script>
+    <header>
     <div class="logo"><img src="IMG-20230810-WA0065.jpg" alt="Helmy Viajes"></div>
     <nav>
         <a href="#fulldays">Full Days</a>
