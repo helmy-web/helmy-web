@@ -7,81 +7,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --azul: #003399; --rojo: #e60000; --blanco: #ffffff; --gris: #f8f9fa; --texto: #333; }
+        :root { --azul: #003399; --rojo: #e60000; --blanco: #ffffff; --gris: #f4f7f6; --texto: #333; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; color: var(--texto); scroll-behavior: smooth; line-height: 1.6; background-color: #fff; }
+        body { font-family: 'Montserrat', sans-serif; color: var(--texto); scroll-behavior: smooth; line-height: 1.6; }
 
-        header { background: var(--blanco); padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
+        header { background: var(--blanco); padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .logo img { height: 60px; }
-        .nav-container { display: flex; align-items: center; gap: 20px; }
-        nav a { text-decoration: none; color: var(--azul); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; margin-right: 15px; }
-        .social-links a { color: var(--azul); font-size: 1.2rem; margin-left: 10px; transition: 0.3s; }
+        nav a { text-decoration: none; color: var(--azul); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; margin-left: 15px; }
 
         .hero { 
-            height: 50vh; 
-            background: linear-gradient(rgba(0,51,153,0.5), rgba(0,51,153,0.5)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=80') center/cover;
+            height: 55vh; 
+            background: linear-gradient(rgba(0,51,153,0.5), rgba(0,51,153,0.5)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1500&q=80') center/cover;
             display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center;
         }
-        .hero h1 { font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero h1 { font-size: 2.8rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
 
-        .search-box { max-width: 1000px; margin: -50px auto 40px; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); display: flex; flex-wrap: wrap; gap: 15px; position: relative; z-index: 10; border-top: 5px solid var(--rojo); }
-        .form-group { flex: 1; min-width: 180px; }
-        .form-group label { display: block; font-size: 0.7rem; font-weight: 700; color: var(--azul); margin-bottom: 5px; }
-        .form-group input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
-        .btn-search { background: var(--azul); color: white; border: none; padding: 12px; border-radius: 5px; font-weight: 700; cursor: pointer; width: 100%; margin-top: 21px; transition: 0.3s; }
-        .btn-search:hover { background: #002570; }
-          
         section { padding: 60px 5%; }
         .section-title { text-align: center; margin-bottom: 40px; }
         .section-title h2 { color: var(--azul); font-size: 2rem; text-transform: uppercase; border-bottom: 4px solid var(--rojo); display: inline-block; padding-bottom: 5px; }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column; transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
         .card img { width: 100%; height: 200px; object-fit: cover; }
-        
-        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
-        .card-body h3 { color: var(--azul); font-size: 1.2rem; margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 10px; height: 50px; display: flex; align-items: center; }
-        .card-body ul { list-style: none; font-size: 0.85rem; margin-bottom: 20px; flex-grow: 1; }
-        .card-body ul li { margin-bottom: 8px; display: flex; align-items: start; gap: 8px; }
-        .card-body ul li i { color: var(--rojo); margin-top: 3px; font-size: 0.9rem; }
-        
-        .destinos-lista { color: #666; font-size: 0.8rem; margin-bottom: 15px; font-style: italic; }
+        .card-body { padding: 20px; flex-grow: 1; }
+        .card-body h3 { color: var(--azul); font-size: 1.2rem; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .card-body ul { list-style: none; font-size: 0.85rem; margin-bottom: 15px; }
+        .card-body i { color: var(--rojo); margin-right: 8px; }
 
-        .btn-wa { display: block; background: var(--rojo); color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 5px; font-weight: 700; transition: 0.3s; margin-top: auto; }
+        .btn-wa { display: block; background: var(--rojo); color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 5px; font-weight: 700; transition: 0.3s; }
         .btn-wa:hover { background: var(--azul); }
 
-        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        
-        .testimonials { background: var(--gris); text-align: center; }
-        .testimonial-item { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .testimonial-item p { font-style: italic; margin-bottom: 15px; }
+        /* Estilo Seguros */
+        .seguros-box { background: var(--azul); color: white; padding: 30px; border-radius: 15px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+        .seguros-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; flex: 1; }
 
-        .seals { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; padding: 40px 5%; background: white; }
-        .seals img { height: 50px; opacity: 0.7; }
+        /* Estilo Bancos */
+        .bank-card { background: white; padding: 20px; border-radius: 10px; border-top: 5px solid var(--azul); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .bank-card img { height: 25px; margin-bottom: 10px; }
 
-        footer { background: #111; color: white; text-align: center; padding: 50px 5%; font-size: 0.85rem; }
-        footer p { margin-bottom: 10px; opacity: 0.8; }
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+
+        footer { background: #111; color: white; text-align: center; padding: 40px 5%; font-size: 0.85rem; }
     </style>
 </head>
 <body>
 
-<a href="https://wa.me/51997799056" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/51925807384" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <header>
     <div class="logo"><img src="IMG-20230810-WA0065.jpg" alt="Helmy Viajes"></div>
-    <div class="nav-container">
-        <nav>
-            <a href="#fulldays">Full Days</a>
-            <a href="#nacionales">Nacionales</a>
-            <a href="#internacional">Internacional</a>
-        </nav>
-        <div class="social-links">
-            <a href="https://www.facebook.com/helmyviajesperu/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/helmyviajes" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@_helmyviajes" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div>
-    </div>
+    <nav>
+        <a href="#tours">Tours</a>
+        <a href="#cruceros">Cruceros</a>
+        <a href="#seguros">Seguros</a>
+        <a href="#pagos">Pagos</a>
+        <a href="#nosotros">Nosotros</a>
+    </nav>
 </header>
 
 <section class="hero">
@@ -89,281 +70,137 @@
     <p>Tu aventura comienza Aquí</p>
 </section>
 
-<div class="search-box">
-    <div class="form-group"><label>Origen</label><input type="text" placeholder="Lima (LIM)"></div>
-    <div class="form-group"><label>Destino</label><input type="text" placeholder="¿A dónde vas?"></div>
-    <div class="form-group"><label>Fecha</label><input type="date"></div>
-    <div class="form-group"><button class="btn-search" onclick="window.open('https://wa.me/51925807384')">COTIZAR VUELO</button></div>
-</div>           
-
-<section id="fulldays">
-    <div class="section-title"><h2>Full Days 2026</h2></div>
+<section id="tours">
+    <div class="section-title"><h2>Paquetes Turísticos</h2></div>
     <div class="grid">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1542401886-65d6c61db217?auto=format&fit=crop&w=600&q=80" alt="Dromedarios Ica">
+            <img src="https://images.unsplash.com/photo-1542351567-cd7b0932314b?auto=format&fit=crop&w=600" alt="Dromedarios">
             <div class="card-body">
                 <h3>Tour Dromedarius</h3>
                 <ul>
-                    <li><i class="fas fa-check-circle"></i> Transporte Turístico Privado</li>
-                    <li><i class="fas fa-check-circle"></i> Guía Oficial de Turismo</li>
-                    <li><i class="fas fa-check-circle"></i> Ingreso a Dromedarius</li>
-                    <li><i class="fas fa-check-circle"></i> Uso de instalaciones y piscina</li>
-                    <li><i class="fas fa-check-circle"></i> Degustación de vinos y piscos</li>
+                    <li><i class="fas fa-check"></i> Ingreso a instalaciones y piscina</li>
+                    <li><i class="fas fa-wine-glass"></i> Degustación de vinos y piscos</li>
                 </ul>
-                <p class="destinos-lista"><strong>Visitas:</strong> Dromedarios, Bodegas de Ica.</p>
-                <a href="https://wa.me/51997799056?text=Info%20Dromedarios" class="btn-wa">RESERVAR AHORA</a>
+                <a href="https://wa.me/51925807384" class="btn-wa">CONSULTAR</a>
             </div>
         </div>
-
         <div class="card">
-   
-   <div class="card">
-    <img src="https://images.unsplash.com/photo-1580619305218-85e4e9962310?auto=format&fit=crop&w=600&q=80" alt="Paracas">
-    <div class="card-body">
-        <h3>Paracas & Ica Completo</h3>
-        <ul>
-            <li><i class="fas fa-check-circle"></i> Islas Ballestas y El Candelabro</li>
-            <li><i class="fas fa-check-circle"></i> Reserva Nacional de Paracas</li>
-            <li><i class="fas fa-check-circle"></i> Laguna de Huacachina</li>
-            <li><i class="fas fa-check-circle"></i> Sandboarding y Buggies</li>
-        </ul>
-        <a href="https://wa.me/51925807384?text=Info%20Paracas" class="btn-wa">RESERVAR AHORA</a>
-    </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="nacionales" style="background:var(--gris);">
-    <div class="section-title"><h2>Paquetes Nacionales</h2></div>
-    <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=600" alt="Cusco">
+            <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600" alt="Paracas">
             <div class="card-body">
-                <h3>Cusco Mágico (5D/4N)</h3>
+                <h3>Paracas & Ica Completo</h3>
                 <ul>
-                    <li><i class="fas fa-hotel"></i> 03 Noches con desayunos</li>
-                    <li><i class="fas fa-bus-alt"></i> Valle Sagrado y City Tour</li>
-                    <li><i class="fas fa-mountain"></i> Montaña 7 Colores</li>
-                    <li><i class="fas fa-ticket-alt"></i> Tren e Ingreso a Machu Picchu</li>
+                    <li><i class="fas fa-ship"></i> Islas Ballestas</li>
+                    <li><i class="fas fa-dizzy"></i> Sandboarding y Buggies</li>
                 </ul>
-                <a href="https://wa.me/51997799056?text=Info%20Cusco" class="btn-wa">COTIZAR PAQUETE</a>
+                <a href="https://wa.me/51925807384" class="btn-wa">CONSULTAR</a>
             </div>
         </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600" alt="Tarapoto">
-            <div class="card-body">
-                <h3>Tarapoto (4D/3N)</h3>
-                <ul>
-                    <li><i class="fas fa-ship"></i> Navegación Río Amazonas</li>
-                    <li><i class="fas fa-water"></i> Laguna Azul</li>
-                    <li><i class="fas fa-fortress-tower"></i> Castillo de Lamas</li>
-                    <li><i class="fas fa-users"></i> Comunidades Nativas</li>
-                </ul>
-                <a href="https://wa.me/51925807384?text=Info%20Tarapoto" class="btn-wa">COTIZAR PAQUETE</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="internacional">
-    <div class="section-title"><h2>Destinos Internacionales</h2></div>
-    <div class="grid">
         <div class="card">
             <img src="https://images.unsplash.com/photo-1589394815804-964ed9be2eb3?auto=format&fit=crop&w=600" alt="Punta Cana">
             <div class="card-body">
-                <h3>Punta Cana</h3>
+                <h3>Punta Cana All Inclusive</h3>
                 <ul>
-                    <li><i class="fas fa-plane"></i> Boleto Aéreo incluido</li>
-                    <li><i class="fas fa-glass-cheers"></i> Sistema Todo Incluido</li>
-                    <li><i class="fas fa-hotel"></i> Resort de lujo 5D/4N</li>
+                    <li><i class="fas fa-plane"></i> Vuelos e Impuestos</li>
+                    <li><i class="fas fa-hotel"></i> Resort 5 estrellas</li>
                 </ul>
-                <a href="https://wa.me/51925807384?text=Info%20Punta%20Cana" class="btn-wa">VER DISPONIBILIDAD</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?auto=format&fit=crop&w=600" alt="Cancun">
-            <div class="card-body">
-                <h3>Cancún</h3>
-                <ul>
-                    <li><i class="fas fa-plane-departure"></i> Vuelos ida y vuelta</li>
-                    <li><i class="fas fa-cocktail"></i> Sistema All Inclusive</li>
-                    <li><i class="fas fa-swimmer"></i> Resort con vista al mar</li>
-                </ul>
-                <a href="https://wa.me/51997799056?text=Info%20Cancun" class="btn-wa">COTIZAR AHORA</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1583307466804-0322c3664720?auto=format&fit=crop&w=600" alt="Cartagena">
-            <div class="card-body">
-                <h3>Cartagena de Indias</h3>
-                <ul>
-                    <li><i class="fas fa-sun"></i> Playas de arena blanca</li>
-                    <li><i class="fas fa-archway"></i> Ciudad Amurallada</li>
-                    <li><i class="fas fa-shuttle-van"></i> Traslados incluidos</li>
-                </ul>
-                <a href="https://wa.me/51925807384?text=Info%20Cartagena" class="btn-wa">COTIZAR AHORA</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&w=600" alt="San Andres">
-            <div class="card-body">
-                <h3>San Andrés (Colombia)</h3>
-                <ul>
-                    <li><i class="fas fa-fish"></i> Mar de 7 colores</li>
-                    <li><i class="fas fa-hotel"></i> Alojamiento frente al mar</li>
-                    <li><i class="fas fa-plane"></i> Vuelos confirmados</li>
-                </ul>
-                <a href="https://wa.me/51925807384?text=Info%20San%20Andres" class="btn-wa">COTIZAR AHORA</a>
+                <a href="https://wa.me/51925807384" class="btn-wa">CONSULTAR</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="especiales" style="background:var(--gris);">
-    <div class="section-title"><h2>Circuitos Especiales</h2></div>
+<section id="cruceros" style="background: #f0f4f8;">
+    <div class="section-title"><h2>Cruceros Exclusivos</h2></div>
     <div class="grid">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1493246507139-91e8bef99c1e?auto=format&fit=crop&w=600" alt="Europa">
+            <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600" alt="Cruceros">
             <div class="card-body">
-                <h3>Europa Clásica</h3>
+                <h3>Caribe Sin Visa</h3>
+                <p style="font-size: 0.8rem; color: #666; margin-bottom: 10px;">Salidas desde Cartagena y Panamá</p>
                 <ul>
-                    <li><i class="fas fa-bus-alt"></i> Circuito con guía español</li>
-                    <li><i class="fas fa-bed"></i> Hoteles Seleccionados</li>
-                    <li><i class="fas fa-map-marked-alt"></i> Madrid, París, Venecia, Roma</li>
+                    <li><i class="fas fa-utensils"></i> Pensión Completa</li>
+                    <li><i class="fas fa-music"></i> Shows y Entretenimiento</li>
                 </ul>
-                <a href="https://wa.me/51925807384?text=Info%20Europa" class="btn-wa">INFO CIRCUITOS</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600" alt="Crucero">
-            <div class="card-body">
-                <h3>Cruceros Sin Visa</h3>
-                <ul>
-                    <li><i class="fas fa-ship"></i> Cartagena & Caribe</li>
-                    <li><i class="fas fa-utensils"></i> Pensión completa</li>
-                    <li><i class="fas fa-music"></i> Shows en vivo</li>
-                </ul>
-                <a href="https://wa.me/51925807384?text=Info%20Cruceros" class="btn-wa">VER CRUCEROS</a>
+                <a href="https://wa.me/51925807384" class="btn-wa">VER CRUCEROS</a>
             </div>
         </div>
     </div>
 </section>
-<section id="seguros" style="padding: 60px 5%; background-color: #fff;">
-    <div class="section-title" style="text-align: center; margin-bottom: 40px;">
-        <h2 style="color: var(--azul); font-size: 2rem; text-transform: uppercase; border-bottom: 4px solid var(--rojo); display: inline-block; padding-bottom: 5px;">
-            Seguros de <span>Viaje</span>
-        </h2>
-    </div>
 
-    <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: center;">
-        
-        <div class="seguros-img">
-            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80" 
-                 alt="Asistencia al Viajero" 
-                 style="width: 100%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+<section id="seguros">
+    <div class="section-title"><h2>Seguros de Viaje</h2></div>
+    <div class="seguros-box">
+        <div style="flex: 1; min-width: 250px;">
+            <h3>Asistencia Médica Global</h3>
+            <p>Trabajamos con las mejores centrales de asistencia del mundo para tu tranquilidad.</p>
         </div>
-
-        <div class="seguros-info" style="background: var(--gris); padding: 30px; border-radius: 15px; border-left: 8px solid var(--azul);">
-            <h3 style="color: var(--azul); margin-bottom: 15px; font-size: 1.4rem;">Asistencia Médica Internacional</h3>
-            <p style="margin-bottom: 20px; font-size: 0.95rem; color: #555;">
-                No permitas que un imprevisto arruine tu aventura. Brindamos cobertura global con las mejores centrales de asistencia del mundo:
-            </p>
-            
-            <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 25px;">
-                <li style="font-weight: 600; color: #333;"><i class="fas fa-shield-alt" style="color: var(--rojo); margin-right: 8px;"></i> Travi Assistance</li>
-                <li style="font-weight: 600; color: #333;"><i class="fas fa-shield-alt" style="color: var(--rojo); margin-right: 8px;"></i> Assist Card</li>
-                <li style="font-weight: 600; color: #333;"><i class="fas fa-shield-alt" style="color: var(--rojo); margin-right: 8px;"></i> Euroamerican</li>
-                <li style="font-weight: 600; color: #333;"><i class="fas fa-shield-alt" style="color: var(--rojo); margin-right: 8px;"></i> Global Assistance</li>
-                <li style="font-weight: 600; color: #333;"><i class="fas fa-shield-alt" style="color: var(--rojo); margin-right: 8px;"></i> UTA Assistance</li>
-            </ul>
-
-            <a href="https://wa.me/51925807384?text=Hola,%20solicito%20cotización%20de%20seguro%20de%20viaje" 
-               class="btn-wa" 
-               style="display: block; background: var(--rojo);color: #ffffff;text-align: center; padding: 15px; text-decoration: none; border-radius: 5px; font-weight: 700; transition: 0.3s; border:none;">
-               <i class="fab fa-whatsapp"></i> SOLICITAR COTIZACIÓN
-            </a>
+        <div class="seguros-list">
+            <div><i class="fas fa-shield-alt"></i> Travi Assistance</div>
+            <div><i class="fas fa-shield-alt"></i> Assist Card</div>
+            <div><i class="fas fa-shield-alt"></i> Euroamerican</div>
+            <div><i class="fas fa-shield-alt"></i> Global Assistance</div>
+            <div><i class="fas fa-shield-alt"></i> UTA Assistance</div>
         </div>
     </div>
 </section>
-<section class="testimonials">
-    <div class="section-title"><h2>Testimonios</h2></div>
+
+<section id="nosotros" style="background: var(--gris);">
     <div class="grid">
-        <div class="testimonial-item"><p>"Excelente atención en mi viaje a Punta Cana. Todo coordinado al detalle."</p><strong>- Carlos M.</strong></div>
-        <div class="testimonial-item"><p>"Los full days son muy organizados. Una experiencia increíble."</p><strong>- Ana R.</strong></div>
-        <div class="testimonial-item"><p>"Agencia confiable y segura. Compré mis pasajes y todo fue rápido."</p><strong>- Jorge L.</strong></div>
+        <div>
+            <h2 style="color: var(--azul); border-left: 5px solid var(--rojo); padding-left: 15px;">Misión</h2>
+            <p>Brindar experiencias de viaje inolvidables con asesoría personalizada y seguridad garantizada.</p>
+        </div>
+        <div>
+            <h2 style="color: var(--azul); border-left: 5px solid var(--rojo); padding-left: 15px;">Visión</h2>
+            <p>Ser la agencia líder en innovación turística en el Perú, reconocida por nuestra calidad y confianza.</p>
+        </div>
     </div>
 </section>
-<section id="nosotros" style="background: var(--gris); border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;">
-    <div class="grid" style="align-items: start;">
-        
-        <div class="nosotros-info" style="padding-right: 20px;">
-            <h2 style="color: var(--azul); font-size: 1.8rem; margin-bottom: 15px; border-bottom: 3px solid var(--rojo); display: inline-block;">¿Quiénes Somos?</h2>
-            <p style="font-size: 0.95rem; text-align: justify; color: #444;">
-                En <strong>Helmy Viajes Perú</strong> (RUC: 20602927238), somos una agencia de viajes y turismo comprometida con la excelencia. Nos apasiona conectar a nuestros viajeros con experiencias únicas, brindando seguridad, confianza y asesoría personalizada en cada destino nacional e internacional. Nuestra trayectoria nos respalda como una agencia formal y registrada ante las autoridades competentes del Perú.
-            </p>
-        </div>
 
-        <div class="mision-vision">
-            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 20px;">
-                <h3 style="color: var(--rojo); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                    <i class="fas fa-bullseye"></i> NUESTRA MISIÓN
-                </h3>
-                <p style="font-size: 0.9rem; margin: 0;">Ofrecer soluciones integrales de viaje con altos estándares de calidad, garantizando que cada aventura sea segura, placentera e inolvidable para nuestros pasajeros.</p>
-            </div>
-
-            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                <h3 style="color: var(--rojo); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                    <i class="fas fa-eye"></i> NUESTRA VISIÓN
-                </h3>
-                <p style="font-size: 0.9rem; margin: 0;">Consolidarnos como la agencia de viajes referente en el mercado peruano, reconocida por nuestra innovación, transparencia y por superar las expectativas de nuestros clientes.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-<div class="seals">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Logo_del_Mincetur.png" alt="MINCETUR">
-    <p style="font-size: 0.8rem; color: #999; width: 100%; text-align: center;">Agencia Autorizada por DIRCETUR y MINCETUR</p>
-</div>
-<section id="contacto" style="background: white;">
+<section id="testimonios">
+    <div class="section-title"><h2>Lo que dicen nuestros clientes</h2></div>
     <div class="grid">
-        <div class="contacto-datos">
-            <h3 style="color: var(--azul);">Contáctanos</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Jr. Pablo Bermúdez 177, Of. 102, Jesús María</p>
-            <p><i class="fas fa-clock"></i> <strong>Lunes a Viernes:</strong> 09:00 AM - 19:00 PM</p>
-            <p><i class="fas fa-clock"></i> <strong>Sábados:</strong> 09:00 AM - 14:00 PM</p>
-            <div style="background: #fff3f3; padding: 15px; border-radius: 8px; border-left: 5px solid var(--rojo); margin-top: 15px;">
-                <p style="color: var(--rojo); font-weight: 700; margin: 0;"><i class="fas fa-ambulance"></i> EMERGENCIAS 24/7</p>
-                <p style="font-size: 1.1rem; margin: 0;">WhatsApp: <strong>+51 925 807 384</strong></p>
-            </div>
+        <div style="background: white; padding: 20px; border-radius: 10px; font-style: italic; border: 1px solid #eee;">
+            "Excelente atención en mi viaje a Punta Cana. Todo coordinado al detalle."<br><strong>- Carlos M.</strong>
         </div>
-        
-        <div class="legal-logos" style="text-align: center;">
-            <p style="font-size: 0.75rem; margin-bottom: 20px;">
-                <a href="#" style="color: #666;">Políticas de Protección y Tratamiento de Datos Personales</a>
-            </p>
-            <div style="display: flex; justify-content: center; gap: 20px; align-items: center; flex-wrap: wrap;">
-                <div style="text-align: center;">
-                    <i class="fas fa-hotel" style="font-size: 30px; color: var(--azul);"></i>
-                    <p style="font-size: 0.7rem; font-weight: bold;">AGENCIA REGISTRADA</p>
-                </div>
-                <div style="text-align: center;">
-                    <i class="fas fa-shield-heart" style="font-size: 30px; color: #28a745;"></i>                </div>
-            </div>
+        <div style="background: white; padding: 20px; border-radius: 10px; font-style: italic; border: 1px solid #eee;">
+            "Los full days son muy organizados. Una experiencia increíble."<br><strong>- Ana R.</strong>
         </div>
     </div>
 </section>
+
+<section id="pagos" style="background: #fff;">
+    <div class="section-title"><h2>Métodos de Pago</h2></div>
+    <div class="grid">
+        <div class="bank-card" style="border-top-color: #ff5f00;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_del_Banco_de_Cr%C3%A9dito_del_Per%C3%BA.svg" alt="BCP">
+            <p><strong>SOLES:</strong> 38036506599013</p>
+            <p><strong>CCI:</strong> 00238019520379210740</p>
+            <p style="font-size: 0.7rem; color: #888;">Helena Marilyn Rojo Costas</p>
+        </div>
+        <div class="bank-card" style="border-top-color: #004481;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/BBVA_2019.svg" alt="BBVA">
+            <p><strong>SOLES:</strong> 00110105450100053226</p>
+            <p style="font-size: 0.7rem; color: #888;">Helena Marilyn Rojo Costas</p>
+        </div>
+        <div class="bank-card" style="border-top-color: #00ad3d;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Interbank_logo.svg" alt="Interbank">
+            <p><strong>DÓLARES:</strong> 200-3004774970</p>
+            <p style="font-weight: bold; color: #00ad3d;">HELMY VIAJES</p>
+        </div>
+        <div class="bank-card" style="border-top-color: #6c2d91; text-align: center;">
+            <p><strong>YAPE / PLIN</strong></p>
+            <p style="font-size: 1.5rem; font-weight: bold; color: var(--azul);">925 807 384</p>
+            <p style="font-size: 0.7rem; color: #888;">Helena Marilyn Rojo Costas</p>
+        </div>
+    </div>
+</section>
+
 <footer>
-    <img src="IMG-20230810-WA0065.jpg" alt="Logo" style="height:20px; filter: brightness(0) invert(1); margin-bottom:20px;"><br>
     <p><strong>HELMY VIAJES PERÚ</strong> | RUC: 20602927238</p>
-    <p>Jr. Pablo Bermúdez 177, Of. 102, Jesús María</p>
+    <p>Jr. Pablo Bermúdez 177, Of. 102, Jesús María - Lima</p>
     <p>WhatsApp: 925 807 384 / 997 799 056</p>
-    <p>© 2026 Helmy Viajes | Tu aventura comienza aquí.</p>
+    <p>© 2026 Todos los derechos reservados.</p>
 </footer>
 
 </body>
