@@ -11,10 +11,10 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; color: var(--texto); scroll-behavior: smooth; line-height: 1.6; background-color: #fff; }
 
-        /* HEADER */
+        /* NAVEGACIÓN */
         header { background: var(--blanco); padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
         .logo img { height: 60px; }
-        nav { display: flex; align-items: center; gap: 20px; }
+        nav { display: flex; align-items: center; gap: 15px; }
         nav a { text-decoration: none; color: var(--azul); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; }
 
         /* HERO & BUSCADOR */
@@ -23,8 +23,8 @@
             background: linear-gradient(rgba(0,51,153,0.5), rgba(0,51,153,0.5)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=80') center/cover;
             display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px;
         }
-        .hero h1 { font-size: 3.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 10px; }
-        
+        .hero h1 { font-size: 3.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+
         .search-container { display: flex; justify-content: center; margin-top: -60px; padding: 0 5%; position: relative; z-index: 10; }
         .search-box { 
             background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
@@ -32,11 +32,11 @@
         }
         .form-group { display: flex; flex-direction: column; gap: 5px; }
         .form-group label { font-size: 0.8rem; font-weight: 700; color: var(--azul); text-transform: uppercase; }
-        .form-group input { padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; }
+        .form-group input { padding: 12px; border: 1px solid #ddd; border-radius: 8px; }
         .btn-search { background: var(--rojo); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; margin-top: 25px; transition: 0.3s; }
         .btn-search:hover { background: var(--azul); }
 
-        /* SECCIONES GENERALES */
+        /* SECCIONES */
         section { padding: 80px 5%; }
         .section-title { text-align: center; margin-bottom: 50px; }
         .section-title h2 { color: var(--azul); font-size: 2.2rem; text-transform: uppercase; border-bottom: 5px solid var(--rojo); display: inline-block; padding-bottom: 10px; }
@@ -45,25 +45,26 @@
         .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column; transition: 0.3s; }
         .card:hover { transform: translateY(-10px); }
         .card img { width: 100%; height: 220px; object-fit: cover; }
-        .card-body { padding: 25px; flex-grow: 1; }
-        .card-body h3 { color: var(--azul); margin-bottom: 15px; }
-        .card-body ul { list-style: none; font-size: 0.9rem; color: #555; margin-bottom: 20px; }
-        .card-body ul li { margin-bottom: 8px; }
-        .btn-reserva { display: block; background: var(--azul); color: white; text-align: center; padding: 14px; text-decoration: none; border-radius: 8px; font-weight: 700; transition: 0.3s; }
-        .btn-reserva:hover { background: var(--rojo); }
+        .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-body h3 { color: var(--azul); font-size: 1.3rem; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .card-body ul { list-style: none; font-size: 0.9rem; margin-bottom: 20px; flex-grow: 1; color: #555; }
+        .card-body ul li { margin-bottom: 10px; display: flex; align-items: start; gap: 10px; }
+        .card-body ul li i { color: var(--rojo); margin-top: 4px; }
+        .btn-reserva { display: block; background: var(--azul); color: white; text-align: center; padding: 14px; text-decoration: none; border-radius: 8px; font-weight: 700; transition: 0.3s; margin-top: auto; }
 
         /* SEGUROS */
         .seguros-container { background: #eef2f7; padding: 40px; border-radius: 15px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
         .seguros-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; flex: 1; }
         .seguros-list div { background: white; padding: 10px; border-radius: 5px; font-weight: 600; color: var(--azul); box-shadow: 2px 2px 5px rgba(0,0,0,0.05); }
 
-        /* FOOTER & BOT */
-        footer { background: #111; color: white; text-align: center; padding: 60px 5%; }
+        /* BOTONES & FLOATS */
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; z-index: 1000; cursor: pointer; box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
         #helmy-bot { position: fixed; bottom: 100px; right: 30px; width: 320px; background: white; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); z-index: 1001; display: none; border-top: 6px solid var(--azul); }
         .bot-header { background: var(--azul); color: white; padding: 15px; border-radius: 10px 10px 0 0; font-weight: 700; display: flex; justify-content: space-between; }
-        .bot-body { padding: 15px; max-height: 350px; overflow-y: auto; }
+        .bot-body { padding: 15px; }
         .bot-btn { display: block; width: 100%; padding: 12px; margin-top: 8px; background: #f0f4f8; border: none; border-radius: 8px; cursor: pointer; text-align: left; color: var(--azul); font-weight: 600; }
+
+        footer { background: #111; color: white; text-align: center; padding: 60px 5%; }
     </style>
 </head>
 <body>
@@ -81,50 +82,53 @@
 
 <section class="hero">
     <h1>HELMY VIAJES PERÚ</h1>
-    <p>Tu aventura comienza Aquí - 18 años de experiencia profesional</p>
+    <p>Asesoría profesional y segura desde el año 2007</p>
 </section>
 
 <div class="search-container">
     <div class="search-box">
-        <div class="form-group">
-            <label><i class="fas fa-plane-departure"></i> Origen</label>
-            <input type="text" id="origen" placeholder="Lima (LIM)">
-        </div>
-        <div class="form-group">
-            <label><i class="fas fa-plane-arrival"></i> Destino</label>
-            <input type="text" id="destino" placeholder="¿A dónde vas?">
-        </div>
-        <div class="form-group">
-            <label><i class="fas fa-calendar-alt"></i> Fecha</label>
-            <input type="date" id="fecha">
-        </div>
-        <div class="form-group">
-            <button class="btn-search" onclick="enviarCotizacion()">COTIZAR VUELO</button>
-        </div>
+        <div class="form-group"><label>Origen</label><input type="text" id="origen" placeholder="Lima (LIM)"></div>
+        <div class="form-group"><label>Destino</label><input type="text" id="destino" placeholder="¿A dónde vas?"></div>
+        <div class="form-group"><label>Fecha</label><input type="date" id="fecha"></div>
+        <div class="form-group"><button class="btn-search" onclick="enviarCotizacion()">COTIZAR VUELO</button></div>
     </div>
 </div>
 
 <section id="fulldays">
-    <div class="section-title"><h2>Full Days Populares</h2></div>
+    <div class="section-title"><h2>Full Days 2026</h2></div>
     <div class="grid">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800" alt="Ica">
+            <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800" alt="Paracas">
             <div class="card-body">
                 <h3>PARACAS & ICA</h3>
                 <ul>
-                    <li><i class="fas fa-check"></i> Islas Ballestas</li>
-                    <li><i class="fas fa-check"></i> Huacachina y Buggies</li>
-                    <li><i class="fas fa-check"></i> Catas de Pisco</li>
+                    <li><i class="fas fa-clock"></i> 04:30 AM Salida desde Lima</li>
+                    <li><i class="fas fa-ship"></i> Islas Ballestas (Deslizadores)</li>
+                    <li><i class="fas fa-sun"></i> Huacachina: Sandboarding y Buggies</li>
                 </ul>
-                <a href="https://wa.me/51925807384" class="btn-reserva">VER ITINERARIO</a>
+                <a href="https://wa.me/51925807384" class="btn-reserva">VER ITINERARIO COMPLETO</a>
             </div>
         </div>
         <div class="card">
             <img src="https://images.unsplash.com/photo-1542351567-cd7b0932314b?auto=format&fit=crop&w=800" alt="Dromedarios">
             <div class="card-body">
                 <h3>DROMEDARIUS ICA</h3>
-                <p>Paseo con dromedarios en el desierto y piscina.</p>
+                <ul>
+                    <li><i class="fas fa-camel"></i> Paseo con Dromedarios</li>
+                    <li><i class="fas fa-swimming-pool"></i> Uso de instalaciones y piscina</li>
+                </ul>
                 <a href="https://wa.me/51925807384" class="btn-reserva">VER DETALLES</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1621259530463-549116e09e17?auto=format&fit=crop&w=800" alt="Antioquia">
+            <div class="card-body">
+                <h3>ANTIOQUIA & CINEGUILLA</h3>
+                <ul>
+                    <li><i class="fas fa-paint-brush"></i> Pueblo de colores</li>
+                    <li><i class="fas fa-apple-alt"></i> Degustación de mermeladas</li>
+                </ul>
+                <a href="https://wa.me/51925807384" class="btn-reserva">MÁS INFO</a>
             </div>
         </div>
     </div>
@@ -137,30 +141,30 @@
             <img src="https://images.unsplash.com/photo-1589394815804-964ed9be2eb3?auto=format&fit=crop&w=800" alt="Punta Cana">
             <div class="card-body">
                 <h3>Punta Cana & Bayahibe</h3>
-                <p>All Inclusive, traslados y vuelos incluidos.</p>
+                <p>Vuelos + Traslados + Hotel All Inclusive.</p>
                 <a href="https://wa.me/51925807384" class="btn-reserva">VER PAQUETES</a>
             </div>
         </div>
         <div class="card">
             <img src="https://images.unsplash.com/photo-1512466699224-9d935772dd97?auto=format&fit=crop&w=800" alt="Colombia">
             <div class="card-body">
-                <h3>Colombia y Caribe</h3>
-                <p>San Andrés, Cartagena, Aruba y más.</p>
-                <a href="https://wa.me/51925807384" class="btn-reserva">COTIZAR AHORA</a>
+                <h3>Colombia: Cartagena & San Andrés</h3>
+                <p>Bogotá, Medellín, Santa Marta.</p>
+                <a href="https://wa.me/51925807384" class="btn-reserva">VER CIRCUITOS</a>
             </div>
         </div>
     </div>
 </section>
 
 <section id="cruceros">
-    <div class="section-title"><h2>Cruceros de Lujo</h2></div>
+    <div class="section-title"><h2>Cruceros</h2></div>
     <div class="grid">
         <div class="card">
             <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=800" alt="Cruceros">
             <div class="card-body">
-                <h3>Caribe Sin Visa</h3>
-                <p>Salidas desde Cartagena o Panamá. 8 días inolvidables.</p>
-                <a href="https://wa.me/51925807384" class="btn-reserva">VER RUTAS</a>
+                <h3>Cruceros por el Caribe (Sin Visa)</h3>
+                <p>Salidas desde Cartagena o Panamá. 8 días de lujo total.</p>
+                <a href="https://wa.me/51925807384" class="btn-reserva">VER CIRCUITOS</a>
             </div>
         </div>
     </div>
@@ -169,9 +173,9 @@
 <section id="seguros">
     <div class="section-title"><h2>Seguros de Viaje Profesional</h2></div>
     <div class="seguros-container">
-        <div style="flex: 1; padding-right: 20px;">
+        <div style="flex: 1;">
             <h3>Protección Total</h3>
-            <p>Asistencia médica, pérdida de equipaje y protección ante cancelaciones.</p>
+            <p>Planes de asistencia médica, pérdida de equipaje y protección ante imprevistos.</p>
         </div>
         <div class="seguros-list">
             <div><i class="fas fa-shield-alt"></i> Travi Assistance</div>
@@ -185,26 +189,12 @@
 <section id="nosotros" style="background: var(--gris);">
     <div class="grid">
         <div>
-            <h2><i class="fas fa-bullseye"></i> Nuestra Misión</h2>
-            <p>Ofrecer soluciones integrales de viaje con altos estándares de calidad, garantizando que cada aventura sea segura y placentera.</p>
+            <h2>Misión</h2>
+            <p>Ofrecer soluciones integrales de viaje con altos estándares de calidad, garantizando aventuras seguras e inolvidables.</p>
         </div>
         <div>
-            <h2><i class="fas fa-eye"></i> Nuestra Visión</h2>
+            <h2>Visión</h2>
             <p>Consolidarnos como la agencia referente en el mercado peruano por nuestra innovación y transparencia.</p>
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="section-title"><h2>Opiniones de nuestros viajeros</h2></div>
-    <div class="grid">
-        <div style="background: white; padding: 25px; border-radius: 15px; border: 1px solid #ddd;">
-            <p>"Excelente servicio en mi crucero sin visa. Todo coordinado al detalle por Helena."</p>
-            <strong>- Cliente Satisfecho</strong>
-        </div>
-        <div style="background: white; padding: 25px; border-radius: 15px; border: 1px solid #ddd;">
-            <p>"Los fulldays a Ica son los mejores. Súper puntuales y profesionales."</p>
-            <strong>- Familia Ramos</strong>
         </div>
     </div>
 </section>
@@ -215,7 +205,7 @@
         <div class="card" style="padding:20px; border-top: 5px solid #ff5f00;">
             <p><strong>BCP SOLES:</strong> 38036506599013</p>
             <p><strong>BCP DÓLARES:</strong> 38095203792107</p>
-            <p style="font-size: 0.7rem; color:#888;">Titular: Helena Marilyn Rojo Costas</p>
+            <p style="font-size: 0.75rem; color:#888;">Titular: Helena Marilyn Rojo Costas</p>
         </div>
         <div class="card" style="padding:20px; border-top: 5px solid #00ad3d;">
             <p><strong>INTERBANK DÓLARES:</strong> 200-3004774970</p>
@@ -225,7 +215,7 @@
 </section>
 
 <footer>
-    <img src="IMG-20230810-WA0065.jpg" alt="Logo" style="height:50px; filter: brightness(0) invert(1);"><br><br>
+    <img src="IMG-20230810-WA0065.jpg" alt="Logo" style="height:50px; filter: brightness(0) invert(1);"><br>
     <p><strong>HELMY VIAJES PERÚ S.A.C. | RUC: 20602927238</strong></p>
     <p>Jr. Pablo Bermúdez 177, Of. 102, Jesús María - Lima</p>
     <p>WhatsApp: 925 807 384 / 997 799 056</p>
@@ -235,37 +225,34 @@
 <div id="helmy-bot">
     <div class="bot-header"><span>Helmy-Bot 🤖</span> <span onclick="toggleBot()" style="cursor:pointer">&times;</span></div>
     <div class="bot-body" id="bot-content">
-        <p>¡Hola! Soy tu asistente de Helmy Viajes. ¿En qué puedo ayudarte?</p>
+        <p>¡Hola! Soy tu asistente de Helmy Viajes. ¿Cómo puedo ayudarte?</p>
         <button class="bot-btn" onclick="botReply('itinerario')">Deseo itinerarios</button>
         <button class="bot-btn" onclick="botReply('pagos')">Cuentas Bancarias</button>
-        <button class="bot-btn" onclick="botReply('asesor')">Hablar con Asesor</button>
+        <button class="bot-btn" onclick="botReply('asesor')">Hablar con Helena</button>
     </div>
 </div>
 
 <script>
     function toggleBot() {
         const bot = document.getElementById('helmy-bot');
-        bot.style.display = bot.style.display === 'block' ? 'none' : 'block';
+        bot.style.display = (bot.style.display === 'block') ? 'none' : 'block';
     }
-
     function botReply(type) {
         const content = document.getElementById('bot-content');
         if(type === 'itinerario') {
             content.innerHTML = "<p>🤖: Tenemos itinerarios de Ica, Paracas y Cruceros. ¿Cuál te envío?</p><button class='bot-btn' onclick=\"window.open('https://wa.me/51925807384')\">Ver por WhatsApp</button>";
         } else if(type === 'pagos') {
-            content.innerHTML = "<p>🤖: Aceptamos BCP e Interbank. ¿Deseas el flyer?</p><button class='bot-btn' onclick=\"window.open('https://wa.me/51925807384')\">Enviar Flyer</button>";
+            content.innerHTML = "<p>🤖: Aceptamos BCP e Interbank. ¿Deseas el flyer de cuentas?</p><button class='bot-btn' onclick=\"window.open('https://wa.me/51925807384')\">Sí, enviar flyer</button>";
         } else { window.open("https://wa.me/51925807384"); }
     }
-
     function enviarCotizacion() {
         const origen = document.getElementById('origen').value || "Lima";
         const destino = document.getElementById('destino').value;
         const fecha = document.getElementById('fecha').value;
-        if (!destino) { alert("Ingresa un destino"); return; }
-        const msg = `Hola Helmy Viajes, cotización:%0A✈️ Origen: ${origen}%0A📍 Destino: ${destino}%0A📅 Fecha: ${fecha}`;
+        if (!destino) { alert("Por favor, ingresa un destino."); return; }
+        const msg = `Hola Helmy Viajes, quiero cotizar:%0A✈️ Origen: ${origen}%0A📍 Destino: ${destino}%0A📅 Fecha: ${fecha}`;
         window.open(`https://wa.me/51925807384?text=${msg}`);
     }
 </script>
-
 </body>
 </html>
