@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helmy Viajes Perú | Agencia Autorizada por MINCETUR</title>
+    <title>Helmy Viajes Perú | Expertos en Turismo desde 2007</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -11,46 +11,64 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; color: var(--texto); scroll-behavior: smooth; }
 
+        /* HEADER */
         header { background: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .logo img { height: 70px; }
-        nav a { text-decoration: none; color: var(--azul); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-left: 20px; }
+        .logo img { height: 75px; }
+        nav { display: flex; flex-wrap: wrap; gap: 15px; }
+        nav a { text-decoration: none; color: var(--azul); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: var(--rojo); }
 
+        /* HERO */
         .hero { 
             height: 70vh; 
             background: linear-gradient(rgba(0,51,153,0.5), rgba(0,51,153,0.5)), url('https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1920&q=80') center/cover;
-            display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 10%;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 5%;
         }
-        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 10px; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.5rem; font-weight: 400; }
 
+        /* SECCIONES GENERALES */
         section { padding: 80px 5%; }
         .section-title { text-align: center; margin-bottom: 50px; }
         .section-title h2 { color: var(--azul); font-size: 2.5rem; text-transform: uppercase; border-bottom: 5px solid var(--rojo); display: inline-block; padding-bottom: 10px; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         
-        /* ESTILO DE CUENTAS BANCARIAS - EL FLYER */
-        .bank-card { background: white; border-radius: 15px; padding: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 6px solid var(--azul); transition: 0.3s; }
-        .bank-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-        .bank-card img { height: 30px; margin-bottom: 20px; display: block; }
-        .bank-card p { font-size: 0.9rem; margin-bottom: 8px; line-height: 1.4; }
-        .bank-card .titular { font-size: 0.75rem; color: #777; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px; font-style: italic; }
+        /* CARDS */
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: flex; flex-direction: column; border: 1px solid #eee; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 230px; object-fit: cover; }
+        .card-body { padding: 25px; flex-grow: 1; }
+        .card-body h3 { color: var(--azul); font-size: 1.4rem; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .card-body p.price { color: var(--rojo); font-weight: 800; font-size: 1.2rem; margin-bottom: 15px; }
+        .card-body ul { list-style: none; font-size: 0.85rem; color: #555; }
+        .card-body li { margin-bottom: 8px; display: flex; align-items: start; gap: 8px; }
+        .card-body li i { color: var(--rojo); margin-top: 3px; }
+
+        .btn-reserva { display: block; background: var(--rojo); color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700; margin-top: 20px; transition: 0.3s; }
+        .btn-reserva:hover { background: var(--azul); }
+
+        /* SECCIÓN SEGUROS */
+        .seguros-container { background: var(--azul); color: white; padding: 40px; border-radius: 20px; display: flex; flex-wrap: wrap; gap: 30px; }
+        .seguros-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; flex: 1; }
 
         /* FORMULARIO */
-        .lead-form { background: var(--azul); color: white; border-radius: 20px; padding: 40px; }
-        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .form-grid input, .form-grid select { padding: 12px; border-radius: 8px; border: none; }
-        .btn-submit { background: var(--rojo); color: white; border: none; padding: 12px 30px; border-radius: 8px; font-weight: 700; cursor: pointer; text-transform: uppercase; }
+        .form-section { background: var(--gris); border-radius: 20px; padding: 40px; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+        input, select { padding: 12px; border-radius: 8px; border: 1px solid #ddd; }
 
-        /* ROBOT ASISTENTE */
-        #helmy-bot { position: fixed; bottom: 100px; right: 30px; width: 300px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); z-index: 1001; border-top: 5px solid var(--azul); display: none; }
-        .bot-header { background: var(--azul); color: white; padding: 15px; border-radius: 15px 15px 0 0; font-weight: 700; display: flex; justify-content: space-between; }
-        .bot-body { padding: 15px; font-size: 0.9rem; }
-        .bot-btn { display: block; width: 100%; padding: 10px; margin-top: 8px; background: #f0f0f0; border: none; border-radius: 5px; cursor: pointer; text-align: left; transition: 0.3s; }
-        .bot-btn:hover { background: var(--azul); color: white; }
-
-        .wa-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; z-index: 1002; cursor: pointer; }
+        /* BOTÓN FLOTANTE ROBOT */
+        .wa-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; z-index: 1002; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        
+        #helmy-bot { position: fixed; bottom: 100px; right: 30px; width: 320px; background: white; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); z-index: 1001; border-top: 6px solid var(--azul); display: none; }
+        .bot-header { background: var(--azul); color: white; padding: 15px; border-radius: 10px 10px 0 0; font-weight: 700; display: flex; justify-content: space-between; }
+        .bot-body { padding: 15px; max-height: 300px; overflow-y: auto; }
+        .bot-btn { display: block; width: 100%; padding: 10px; margin-top: 8px; background: #f0f4f8; border: none; border-radius: 8px; cursor: pointer; text-align: left; font-size: 0.85rem; }
 
         footer { background: #111; color: white; padding: 60px 5%; text-align: center; }
+        .social { margin-top: 20px; font-size: 1.5rem; }
+        .social a { color: white; margin: 0 10px; }
     </style>
 </head>
 <body>
@@ -60,81 +78,252 @@
 <div id="helmy-bot">
     <div class="bot-header"><span>Helmy-Bot 🤖</span> <span onclick="toggleBot()" style="cursor:pointer">×</span></div>
     <div class="bot-body" id="bot-content">
-        <p>¡Hola! Soy tu asistente de Helmy Viajes. ¿En qué puedo ayudarte?</p>
-        <button class="bot-btn" onclick="botReply('pagos')">Ver números de cuenta</button>
-        <button class="bot-btn" onclick="botReply('seguros')">Seguros de Viaje</button>
-        <button class="bot-btn" onclick="botReply('promo')">Promociones del mes</button>
+        <p>¡Hola! Soy tu asistente de Helmy Viajes. ¿En qué puedo ayudarte hoy?</p>
+        <button class="bot-btn" onclick="botReply('itinerario')">Deseo itinerarios detallados</button>
+        <button class="bot-btn" onclick="botReply('pagos')">Números de Cuenta Bancaria</button>
+        <button class="bot-btn" onclick="botReply('seguros')">Información de Seguros</button>
+        <button class="bot-btn" onclick="botReply('asesor')">Hablar con un asesor (WhatsApp)</button>
     </div>
 </div>
 
 <header>
     <div class="logo"><img src="IMG-20230810-WA0065.jpg" alt="Helmy Viajes"></div>
     <nav>
-        <a href="#destinos">Destinos</a>
-        <a href="#pagos">Métodos de Pago</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#fulldays">Full Days</a>
+        <a href="#nacional">Nacional</a>
+        <a href="#internacional">Internacional</a>
+        <a href="#cruceros">Cruceros</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#pagos">Pagos</a>
     </nav>
 </header>
 
 <section class="hero">
-    <h1>VIAJA CON LA GARANTÍA DE HELMY VIAJES</h1>
-    <p>Agencia Certificada por MINCETUR y Marca Perú</p>
-    <a href="#contacto" class="btn-submit" style="text-decoration:none; margin-top:20px;">QUIERO MÁS INFORMACIÓN</a>
+    <h1>HELMY VIAJES PERÚ</h1>
+    <p>Asesoría profesional y segura desde el año 2007</p>
 </section>
 
-<section id="pagos" style="background: var(--gris);">
-    <div class="section-title"><h2>Garantía de Pago Seguro</h2></div>
+<section id="fulldays">
+    <div class="section-title"><h2>Full Days Lima & Alrededores</h2></div>
     <div class="grid">
-        <div class="bank-card" style="border-top-color: #ff5f00;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_del_Banco_de_Cr%C3%A9dito_del_Per%C3%BA.svg" alt="BCP">
-            <p><strong>Soles:</strong> 38036506599013</p>
-            <p><strong>Dólares:</strong> 38095203792107</p>
-            <p><strong>CCI:</strong> 00238019520379210740</p>
-            <p class="titular">Titular: Helena Marilyn Rojo Costas</p>
-        </div>
-
-        <div class="bank-card" style="border-top-color: #004481;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/BBVA_2019.svg" alt="BBVA">
-            <p><strong>Soles:</strong> 0011-0105-45-0100053226</p>
-            <p><strong>CCI:</strong> 011-105-000100053226-45</p>
-            <p class="titular">Titular: Helena Marilyn Rojo Costas</p>
-        </div>
-
-        <div class="bank-card" style="border-top-color: #00ad3d;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Interbank_logo.svg" alt="Interbank">
-            <p><strong>Dólares:</strong> 200-3004774970</p>
-            <p><strong>Soles:</strong> 200-3004774963</p>
-            <p style="color: #00ad3d; font-weight: bold; margin-top: 5px;">Empresa: HELMY VIAJES S.A.C.</p>
-        </div>
-
-        <div class="bank-card" style="border-top-color: #6c2d91; text-align: center;">
-            <div style="display:flex; justify-content: center; gap: 10px; margin-bottom: 10px;">
-                <img src="https://vignette.wikia.nocookie.net/logopedia/images/b/b3/Yape_logo.png" height="40" alt="Yape">
-                <img src="https://seeklogo.com/images/P/plin-logo-967A4AF583-seeklogo.com.png" height="40" alt="Plin">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800" alt="Paracas">
+            <div class="card-body">
+                <h3>Paracas & Ica Completo</h3>
+                <ul>
+                    <li><i class="fas fa-clock"></i> 04:30 AM Salida desde Lima</li>
+                    <li><i class="fas fa-ship"></i> Islas Ballestas (Deslizadores)</li>
+                    <li><i class="fas fa-sun"></i> Huacachina: Sandboarding y Buggies</li>
+                    <li><i class="fas fa-wine-glass"></i> Vitivinícola: Catas de Pisco y Vino</li>
+                </ul>
+                <a href="https://wa.me/51925807384" class="btn-reserva">VER ITINERARIO COMPLETO</a>
             </div>
-            <p style="font-size: 1.5rem; font-weight: bold; color: var(--azul);">925 807 384</p>
-            <p class="titular">Helena Marilyn Rojo Costas</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1542351567-cd7b0932314b?auto=format&fit=crop&w=800" alt="Dromedarios">
+            <div class="card-body">
+                <h3>Dromedarius Ica</h3>
+                <ul>
+                    <li><i class="fas fa-camel"></i> Paseo con Dromedarios en el desierto</li>
+                    <li><i class="fas fa-swimming-pool"></i> Uso de instalaciones y piscina</li>
+                    <li><i class="fas fa-utensils"></i> Tiempo para almuerzo típico</li>
+                </ul>
+                <a href="https://wa.me/51925807384" class="btn-reserva">VER DETALLES</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1621259530463-549116e09e17?auto=format&fit=crop&w=800" alt="Antioquia">
+            <div class="card-body">
+                <h3>Antioquia & Cieneguilla</h3>
+                <ul>
+                    <li><i class="fas fa-paint-brush"></i> Visita al pueblo de colores</li>
+                    <li><i class="fas fa-apple-alt"></i> Degustación de mermeladas y néctares</li>
+                </ul>
+                <a href="https://wa.me/51925807384" class="btn-reserva">MÁS INFO</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1634123513476-8051e285090b?auto=format&fit=crop&w=800" alt="Churin">
+            <div class="card-body">
+                <h3>Churin: Aguas Termales</h3>
+                <ul>
+                    <li><i class="fas fa-hot-tub"></i> Complejo Mamahuarmi y Tingo</li>
+                    <li><i class="fas fa-mountain"></i> Paisajes de la sierra de Lima</li>
+                </ul>
+                <a href="https://wa.me/51925807384" class="btn-reserva">MÁS INFO</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="internacional" style="background: var(--gris);">
+    <div class="section-title"><h2>Destinos Internacionales</h2></div>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1589394815804-964ed9be2eb3?auto=format&fit=crop&w=800" alt="Punta Cana">
+            <div class="card-body">
+                <h3>Punta Cana & Bayahibe</h3>
+                <ul>
+                    <li><i class="fas fa-plane"></i> Vuelos + Traslados + Hotel All Inclusive</li>
+                    <li><i class="fas fa-cocktail"></i> Bebidas y comidas ilimitadas</li>
+                </ul>
+                <a href="https://wa.me/51925807384" class="btn-reserva">VER PAQUETES</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1585464231875-d9ef1f5ad396?auto=format&fit=crop&w=800" alt="Cancun">
+            <div class="card-body">
+                <h3>Cancún & Playa del Carmen</h3>
+                <ul>
+                    <li><i class="fas fa-umbrella-beach"></i> Tours a Chichén Itzá y Xcaret</li>
+                </ul>
+                <a href="https://wa.me/51925807384" class="btn-reserva">VER PAQUETES</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1512466699224-9d935772dd97?auto=format&fit=crop&w=800" alt="Colombia">
+            <div class="card-body">
+                <h3>Colombia: Cartagena & San Andrés</h3>
+                <p>Bogotá, Medellín, Santa Marta</p>
+                <a href="https://wa.me/51925807384" class="btn-reserva">VER CIRCUITOS</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h3>Cono Sur & Caribe</h3>
+                <p>Buenos Aires, Iguazú, Santiago, Aruba, Jamaica, Panamá.</p>
+                <a href="https://wa.me/51925807384" class="btn-reserva">COTIZAR AHORA</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="cruceros">
+    <div class="section-title"><h2>Cruceros (Estilo Costamar)</h2></div>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=800" alt="Cruceros">
+            <div class="card-body">
+                <h3>Cruceros por el Caribe (Sin Visa)</h3>
+                <p>Salidas desde Cartagena o Panamá. 8 días de lujo total.</p>
+                <a href="https://wa.me/51925807384" class="btn-reserva">VER CIRCUITOS</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?auto=format&fit=crop&w=800" alt="Europa">
+            <div class="card-body">
+                <h3>Cruceros por Europa</h3>
+                <p>Mediterráneo, Islas Griegas y Capitales Bálticas.</p>
+                <a href="https://wa.me/51925807384" class="btn-reserva">VER CIRCUITOS</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="seguros">
+    <div class="section-title"><h2>Seguros de Viaje Profesional</h2></div>
+    <div class="seguros-container">
+        <div style="flex: 1;">
+            <h3>Protección Total</h3>
+            <p>Planes de asistencia médica, pérdida de equipaje y cancelación de viaje.</p>
+        </div>
+        <div class="seguros-list">
+            <div><i class="fas fa-shield-alt"></i> Travi Assistance</div>
+            <div><i class="fas fa-shield-alt"></i> Assist Card</div>
+            <div><i class="fas fa-shield-alt"></i> Euroamerican</div>
+            <div><i class="fas fa-shield-alt"></i> UTA Assistance</div>
+        </div>
+    </div>
+</section>
+
+<section id="nacional">
+    <div class="section-title"><h2>Paquetes Nacionales</h2></div>
+    <div class="grid">
+        <div class="card"><img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=800" alt="Cusco"><div class="card-body"><h3>Cusco & Machu Picchu</h3><a href="#" class="btn-reserva">INFO</a></div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1594921677334-a3f2893818e9?auto=format&fit=crop&w=800" alt="Arequipa"><div class="card-body"><h3>Arequipa & Colca</h3><a href="#" class="btn-reserva">INFO</a></div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&w=800" alt="Cajamarca"><div class="card-body"><h3>Cajamarca & Chiclayo</h3><a href="#" class="btn-reserva">INFO</a></div></div>
+        <div class="card"><div class="card-body"><h3>Punta Sal, Trujillo, Cajamarca, Lima</h3><a href="#" class="btn-reserva">VER MÁS</a></div></div>
+    </div>
+</section>
+
+<section id="nosotros" style="background: var(--gris);">
+    <div class="grid">
+        <div>
+            <h2>Misión</h2>
+            <p>Desde el 2007, HELMY VIAJES tiene la misión de ofrecer experiencias de viaje seguras y personalizadas, transformando cada destino en un recuerdo imborrable para nuestros clientes.</p>
+        </div>
+        <div>
+            <h2>Visión</h2>
+            <p>Consolidarnos como la agencia de viajes líder en el mercado peruano, reconocida por nuestra ética profesional y por ser aliados estratégicos de las mejores operadoras del mundo.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="section-title"><h2>Lo que opinan nuestros viajeros</h2></div>
+    <div class="grid">
+        <div style="background: white; padding: 20px; border-radius: 15px; border: 1px solid #ddd;">
+            <p>"Excelente servicio en mi crucero sin visa. Todo coordinado al detalle por la Sra. Helena."</p>
+            <strong>- Cliente Satisfecho</strong>
+        </div>
+        <div style="background: white; padding: 20px; border-radius: 15px; border: 1px solid #ddd;">
+            <p>"Los fulldays a Ica son los mejores. Súper puntuales y profesionales."</p>
+            <strong>- Familia Ramos</strong>
         </div>
     </div>
 </section>
 
 <section id="contacto">
-    <div class="lead-form">
-        <h2 style="text-align: center; margin-bottom: 20px;">Regístrate para Recibir Ofertas</h2>
+    <div class="form-section">
+        <h2 style="text-align:center; margin-bottom: 20px;">¿Deseas recibir nuestras ofertas?</h2>
         <form class="form-grid">
-            <input type="text" placeholder="Tu Nombre Completo" required>
+            <input type="text" placeholder="Nombre y Apellido" required>
             <input type="tel" placeholder="WhatsApp (9XXXXXXXX)" required>
             <input type="email" placeholder="Correo Electrónico">
-            <button type="submit" class="btn-submit">ENVIAR Y SUSCRIBIRME</button>
+            <select>
+                <option>Interés: Internacional</option>
+                <option>Interés: Nacional</option>
+                <option>Interés: Cruceros</option>
+            </select>
+            <button type="submit" class="btn-reserva" style="margin-top:0">ENVIAR DATOS</button>
         </form>
+    </div>
+</section>
+
+<section id="pagos">
+    <div class="section-title"><h2>Garantía de Pago y Cuentas</h2></div>
+    <div class="grid">
+        <div class="card" style="padding:20px; border-top: 5px solid #ff5f00;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_del_Banco_de_Cr%C3%A9dito_del_Per%C3%BA.svg" height="25">
+            <p><strong>SOLES:</strong> 38036506599013</p>
+            <p><strong>DÓLARES:</strong> 38095203792107</p>
+            <p><strong>CCI:</strong> 00238019520379210740</p>
+            <p style="font-size: 0.75rem; color:#888;">Titular: Helena Marilyn Rojo Costas</p>
+        </div>
+        <div class="card" style="padding:20px; border-top: 5px solid #004481;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/BBVA_2019.svg" height="25">
+            <p><strong>SOLES:</strong> 00110105450100053226</p>
+            <p><strong>CCI:</strong> 01110500010005322645</p>
+            <p style="font-size: 0.75rem; color:#888;">Titular: Helena Marilyn Rojo Costas</p>
+        </div>
+        <div class="card" style="padding:20px; border-top: 5px solid #00ad3d;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Interbank_logo.svg" height="25">
+            <p><strong>DÓLARES:</strong> 200-3004774970</p>
+            <p><strong>Empresa:</strong> HELMY VIAJES S.A.C.</p>
+        </div>
     </div>
 </section>
 
 <footer>
     <img src="IMG-20230810-WA0065.jpg" alt="Logo" style="height:50px; filter: brightness(0) invert(1);"><br><br>
     <p><strong>HELMY VIAJES PERÚ S.A.C. | RUC: 20602927238</strong></p>
-    <p>Jr. Pablo Bermúdez 177, Of. 102, Jesús María - Lima</p>
+    <p>Dirección: Jr. Pablo Bermúdez 177, Of. 102, Jesús María - Lima</p>
     <p>WhatsApp: 925 807 384 / 997 799 056</p>
+    <div class="social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
 </footer>
 
 <script>
@@ -142,15 +331,16 @@
         const bot = document.getElementById('helmy-bot');
         bot.style.display = bot.style.display === 'block' ? 'none' : 'block';
     }
-
     function botReply(type) {
         const content = document.getElementById('bot-content');
-        if(type === 'pagos') {
-            content.innerHTML = "<p>Nuestras cuentas oficiales están en BCP, BBVA e Interbank. ¿Deseas que un asesor te envíe el PDF con las cuentas?</p><a href='https://wa.me/51925807384' style='color:blue; font-weight:700'>SÍ, ENVIAR POR WHATSAPP</a>";
+        if(type === 'itinerario') {
+            content.innerHTML = "<p>¡Hola! Tenemos itinerarios detallados para Ica, Paracas y Cruceros. ¿Cuál prefieres que te envíe por WhatsApp?</p><button class='bot-btn' onclick=\"window.location.href='https://wa.me/51925807384'\">Enviar Itinerarios</button>";
+        } else if(type === 'pagos') {
+            content.innerHTML = "<p>Nuestras cuentas están a nombre de Helena Rojo y Helmy Viajes (Interbank). ¿Deseas el flyer con las cuentas?</p><button class='bot-btn' onclick=\"window.location.href='https://wa.me/51925807384'\">SÍ, ENVIAR FLYER</button>";
         } else if(type === 'seguros') {
-            content.innerHTML = "<p>Contamos con coberturas de Travi Assistance y Assist Card. ¿Para qué destino necesitas?</p><a href='https://wa.me/51925807384' style='color:blue; font-weight:700'>COTIZAR SEGURO</a>";
+            content.innerHTML = "<p>Trabajamos con Travi y Assist Card. Ofrecemos planes médicos desde $30. ¿A dónde viajas?</p><button class='bot-btn' onclick=\"window.location.href='https://wa.me/51925807384'\">COTIZAR SEGURO</button>";
         } else {
-            content.innerHTML = "<p>¡Claro! Tenemos paquetes a Ica, Paracas y Cruceros. Un asesor te atenderá ahora mismo.</p><a href='https://wa.me/51925807384' style='color:blue; font-weight:700'>HABLAR CON ASESOR</a>";
+            window.location.href = 'https://wa.me/51925807384';
         }
     }
 </script>
