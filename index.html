@@ -16,6 +16,49 @@
         .nav-container { display: flex; align-items: center; gap: 20px; }
         nav a { text-decoration: none; color: var(--azul); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; margin-right: 15px; }
         .social-links a { color: var(--azul); font-size: 1.2rem; margin-left: 10px; transition: 0.3s; }
+        .hero { 
+            height: 70vh; 
+            background: linear-gradient(rgba(0,51,153,0.5), rgba(0,51,153,0.5)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=80') center/cover;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 { font-size: 3.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin-bottom: 30px; }
+        
+        .cta-button {
+            background: var(--rojo); color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; 
+            font-weight: 700; text-transform: uppercase; transition: 0.4s; box-shadow: 0 4px 15px rgba(230,0,0,0.4);
+        }
+        .cta-button:hover { background: var(--blanco); color: var(--azul); transform: translateY(-3px); }
+
+        section { padding: 80px 5%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { color: var(--azul); font-size: 2.2rem; text-transform: uppercase; border-bottom: 5px solid var(--rojo); display: inline-block; padding-bottom: 10px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
+        
+        .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-body h3 { color: var(--azul); font-size: 1.3rem; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .card-body ul { list-style: none; font-size: 0.9rem; margin-bottom: 20px; flex-grow: 1; color: #555; }
+        .card-body ul li { margin-bottom: 10px; display: flex; align-items: start; gap: 10px; }
+        .card-body ul li i { color: var(--rojo); margin-top: 4px; }
+        
+        .btn-wa { display: block; background: var(--azul); color: white; text-align: center; padding: 14px; text-decoration: none; border-radius: 8px; font-weight: 700; transition: 0.3s; margin-top: auto; }
+        .btn-wa:hover { background: var(--rojo); }
+
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; z-index: 1000; box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
+
+        .bank-logos { padding: 40px 5%; background: white; text-align: center; border-top: 1px solid #eee; }
+        .bank-logos p { font-weight: 700; color: #666; margin-bottom: 25px; font-size: 0.85rem; text-transform: uppercase; }
+        .bank-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; opacity: 0.7; }
+        .bank-grid img { height: 35px; transition: 0.3s; }
+
+        footer { background: #111; color: white; text-align: center; padding: 60px 5%; font-size: 0.9rem; }
+        footer img { height: 40px; filter: brightness(0) invert(1); margin-bottom: 25px; }
+    </style>
 
 
         /* HERO */
