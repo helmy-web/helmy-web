@@ -11,33 +11,28 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; background-color: var(--blanco); }
 
-        /* BARRA DE CONFIANZA SUPERIOR */
         .top-bar { background: var(--azul); color: white; padding: 8px 5%; display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: 600; }
         .top-bar span { display: flex; align-items: center; gap: 8px; }
 
-        /* HEADER PROFESIONAL */
         header { background: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .logo img { height: 75px; }
         .social-nav a { color: var(--azul); font-size: 1.4rem; margin-left: 20px; transition: 0.3s; }
         .social-nav a:hover { color: var(--rojo); }
 
-        /* HERO DINÁMICO */
         .hero { 
             height: 65vh; 
-            background: linear-gradient(rgba(0,51,153,0.5), rgba(0,51,153,0.5)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1500&q=80') center/cover;
+            background: linear-gradient(rgba(0,51,153,0.5), rgba(0,51,153,0.5)), url('https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1500&q=80') center/cover;
             display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px;
         }
         .hero h1 { font-size: 3.5rem; font-weight: 800; text-shadow: 3px 3px 10px rgba(0,0,0,0.5); text-transform: uppercase; }
         .badge-18 { background: var(--rojo); color: white; padding: 10px 25px; border-radius: 50px; font-weight: 700; margin-top: 15px; font-size: 1.2rem; border: 2px solid white; }
 
-        /* BUSCADOR AVANZADO */
         .search-container { max-width: 1100px; margin: -60px auto 40px; background: white; padding: 35px; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.2); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; border-top: 8px solid var(--azul); }
         .input-group label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--azul); text-transform: uppercase; margin-bottom: 8px; }
         .input-group input, .input-group select { width: 100%; padding: 12px; border: 2px solid #eee; border-radius: 10px; outline: none; }
         .btn-quote { background: var(--rojo); color: white; border: none; padding: 15px; border-radius: 10px; font-weight: 800; cursor: pointer; text-transform: uppercase; align-self: end; transition: 0.3s; }
         .btn-quote:hover { transform: scale(1.03); background: #b30000; }
 
-        /* SECCIONES DETALLADAS */
         section { padding: 80px 8%; }
         .section-header { text-align: center; margin-bottom: 60px; }
         .section-header h2 { font-size: 2.5rem; color: var(--azul); text-transform: uppercase; letter-spacing: 1px; }
@@ -57,25 +52,21 @@
         .btn-card { display: block; background: var(--azul); color: white; text-align: center; padding: 15px; text-decoration: none; border-radius: 12px; font-weight: 700; transition: 0.3s; }
         .btn-card:hover { background: var(--rojo); }
 
-        /* BLOQUE DE GARANTÍA LEGAL (CRUCIAL) */
         .garantia-legal { background: var(--gris-claro); border-radius: 25px; padding: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; border: 2px dashed #ccc; }
         .garantia-item i { font-size: 3rem; color: var(--azul); margin-bottom: 15px; }
         .garantia-item h4 { margin-bottom: 10px; color: var(--azul); }
 
-        /* BOTONES FLOTANTES */
         .float-buttons { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; }
         .btn-flotante { width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; box-shadow: 0 10px 25px rgba(0,0,0,0.3); cursor: pointer; transition: 0.3s; }
         .btn-wa { background: #25d366; }
         .btn-bot { background: var(--azul); }
 
-        /* FOOTER CORPORATIVO */
         footer { background: #0b132b; color: white; padding: 80px 8% 40px; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px; }
         .footer-col h4 { color: var(--blanco); margin-bottom: 25px; border-left: 4px solid var(--rojo); padding-left: 15px; }
         .footer-col p, .footer-col li { font-size: 0.9rem; color: #bdc3c7; margin-bottom: 12px; list-style: none; }
         .copy { text-align: center; border-top: 1px solid #2d3436; padding-top: 30px; font-size: 0.8rem; color: #636e72; }
 
-        /* BOT VENTANA */
         #helmy-bot-window { position: fixed; bottom: 110px; right: 30px; width: 320px; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); display: none; z-index: 1999; overflow: hidden; border-top: 8px solid var(--azul); }
     </style>
 </head>
@@ -129,8 +120,9 @@
         <p>Salidas confirmadas con los mejores operadores de Lima</p>
     </div>
     <div class="grid">
+        <!-- FOTO REAL DE ICA (HUACACHINA) -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&w=800" alt="Ica">
+            <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800" alt="Ica">
             <div class="card-body">
                 <span class="price-tag">Salidas Diarias</span>
                 <h3>Paracas & Ica Premium</h3>
@@ -142,8 +134,9 @@
                 <a href="https://wa.me/51925807384" class="btn-card">SOLICITAR ITINERARIO</a>
             </div>
         </div>
+        <!-- FOTO REAL DE DESIERTO/DROMEDARIOS -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1542351567-cd7b0932314b?auto=format&fit=crop&w=800" alt="Dromedarios">
+            <img src="https://images.unsplash.com/photo-1547127796-06bb04e4b315?auto=format&fit=crop&w=800" alt="Dromedarios">
             <div class="card-body">
                 <span class="price-tag">Exclusivo Helmy</span>
                 <h3>Dromedarius & Desierto</h3>
@@ -155,8 +148,9 @@
                 <a href="https://wa.me/51925807384" class="btn-card">VER DETALLES</a>
             </div>
         </div>
+        <!-- FOTO REAL DE ANTIOQUIA (CASA PINTADA) -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1621259530463-549116e09e17?auto=format&fit=crop&w=800" alt="Antioquia">
+            <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=800" alt="Antioquia">
             <div class="card-body">
                 <span class="price-tag">Cerca a Lima</span>
                 <h3>Antioquia: Pueblo de Colores</h3>
@@ -178,16 +172,18 @@
         <p>Circuitos garantizados con hoteles seleccionados</p>
     </div>
     <div class="grid">
+        <!-- FOTO REAL DE EUROPA (MADRID/PARIS) -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800" alt="Europa">
+            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800" alt="Europa">
             <div class="card-body">
                 <h3>Europa Clásica 2026</h3>
                 <p>Recorre Madrid, París, Venecia, Florencia y Roma. Incluye vuelos y traslados.</p>
                 <a href="https://wa.me/51925807384" class="btn-card">VER PROGRAMA 15 DÍAS</a>
             </div>
         </div>
+        <!-- FOTO REAL DE TIERRA SANTA (JERUSALEN) -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=800" alt="Tierra Santa">
+            <img src="https://images.unsplash.com/photo-1548231571-0082987a0da3?auto=format&fit=crop&w=800" alt="Tierra Santa">
             <div class="card-body">
                 <h3>Tierra Santa & Egipto</h3>
                 <p>Una experiencia espiritual única recorriendo Tel Aviv, Jerusalén y El Cairo.</p>
@@ -212,7 +208,7 @@
         <div class="garantia-item">
             <i class="fas fa-shield-alt"></i>
             <h4>ALIANZAS Y RESPALDO</h4>
-            <p>MINCETUR , DIRCETUR, CAMARA DE COMERCIO ,<br>.</p>
+            <p>MINCETUR, DIRCETUR, CAMARA DE COMERCIO</p>
         </div>
     </div>
 </section>
@@ -243,20 +239,18 @@
     <div class="footer-grid">
         <div class="footer-col">
             <img src="IMG-20230810-WA0065.jpg" style="height:60px; filter: brightness(0) invert(1); margin-bottom:20px;">
-            <p>"Tu tranquilidad es nuestra prioridad. En HELMY, transformamos cada destino en una experiencia fluida y memorable. Te brindamos el respaldo profesional y la seguridad integral que mereces, acompañándote con asesoría experta desde el primer contacto hasta tu retorno a casa. Viaja con la confianza y el respaldo que solo nosotros te podemos ofrecer.</p>
+            <p>"Tu tranquilidad es nuestra prioridad. En HELMY, transformamos cada destino en una experiencia fluida y memorable."</p>
         </div>
         <div class="footer-col">
             <h4>Contacto Directo</h4>
             <li><i class="fas fa-phone"></i> 925 807 384</li>
             <li><i class="fas fa-phone"></i> 997 799 056</li>
             <li><i class="fas fa-envelope"></i> helmyviajes@gmail.com</li>
-            <li><i class="fas fa-map-marker-alt"></i> Jesús María, Lima</li>
         </div>
         <div class="footer-col">
             <h4>Nuestras Redes</h4>
             <li><i class="fab fa-facebook"></i> /helmyviajes</li>
             <li><i class="fab fa-instagram"></i> @helmyviajes</li>
-            <li><i class="fab fa-whatsapp"></i> WhatsApp Reservas</li>
         </div>
     </div>
     <div class="copy">
@@ -274,10 +268,10 @@
         <span>Helmy-Bot Online 🤖</span><span onclick="toggleBot()" style="cursor:pointer">×</span>
     </div>
     <div style="padding: 25px;">
-        <p style="font-size: 0.9rem; margin-bottom: 20px;">¡Hola! Soy el asistente de Helmy Viajes. <b>¿Cómo puedo ayudarte a planear tu viaje hoy?</b></p>
+        <p style="font-size: 0.9rem; margin-bottom: 20px;">¡Hola! Soy el asistente de Helmy Viajes.</p>
         <button style="width:100%; padding:12px; margin-bottom:10px; cursor:pointer;" onclick="botResp('itinerarios')">📍 Ver Itinerarios</button>
         <button style="width:100%; padding:12px; margin-bottom:10px; cursor:pointer;" onclick="botResp('pagos')">💰 Datos de Pago</button>
-        <button style="width:100%; padding:12px; cursor:pointer;" onclick="window.open('https://wa.me/51925807384')">👤 Hablar con Helen</button>
+        <button style="width:100%; padding:12px; cursor:pointer;" onclick="window.open('https://wa.me/51925807384')">👤 Hablar con Helena</button>
     </div>
 </div>
 
