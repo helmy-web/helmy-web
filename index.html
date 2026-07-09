@@ -3,397 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helmy Viajes Perú | TU AVENTURA COMIENZA AQUI</title>
+    <title>Helmy Viajes Perú | Experiencias inolvidables</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --azul: #003399; 
-            --rojo: #e60000; 
-            --dorado: #c5a059; 
-            --blanco: #ffffff;
-            --gris-claro: #f4f7f6; 
-        }
+        :root { --azul: #003399; --rojo: #e60000; --dorado: #c5a059; --blanco: #ffffff; --gris: #f4f7f6; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; background-color: var(--blanco); }
- 
-        .top-bar { background: var(--azul); color: white; padding: 8px 5%; display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: 600; }
-        .top-bar span { display: flex; align-items: center; gap: 8px; }
- 
-        header { background: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .logo img { height: 75px; }
-        .social-nav a { color: var(--azul); font-size: 1.4rem; margin-left: 20px; transition: 0.3s; }
-        .social-nav a:hover { color: var(--rojo); }
- 
-        .hero { 
-            height: 65vh; 
-            background: linear-gradient(rgba(0,51,153,0.5), rgba(0,51,153,0.5)), url('https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1500&q=80') center/cover;
-            display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px;
-        }
-        .hero h1 { font-size: 3.5rem; font-weight: 800; text-shadow: 3px 3px 10px rgba(0,0,0,0.5); text-transform: uppercase; }
-        .badge-19 { background: var(--rojo); color: white; padding: 10px 25px; border-radius: 50px; font-weight: 700; margin-top: 15px; font-size: 1.2rem; border: 2px solid white; }
- 
-        .search-container { max-width: 1100px; margin: -60px auto 40px; background: white; padding: 35px; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.2); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; border-top: 8px solid var(--azul); }
-        .input-group label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--azul); text-transform: uppercase; margin-bottom: 8px; }
-        .input-group input, .input-group select { width: 100%; padding: 12px; border: 2px solid #eee; border-radius: 10px; outline: none; }
-        .btn-quote { background: var(--rojo); color: white; border: none; padding: 15px; border-radius: 10px; font-weight: 800; cursor: pointer; text-transform: uppercase; align-self: end; transition: 0.3s; }
-        .btn-quote:hover { transform: scale(1.03); background: #b30000; }
- 
-        section { padding: 80px 8%; }
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-size: 2.5rem; color: var(--azul); text-transform: uppercase; letter-spacing: 1px; }
-        .section-header div { width: 80px; height: 5px; background: var(--rojo); margin: 15px auto; }
- 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; }
-        .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0; display: flex; flex-direction: column; transition: 0.4s; }
-        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
-        .card img { width: 100%; height: 260px; object-fit: cover; }
-        .card-body { padding: 30px; flex-grow: 1; }
-        .card-body h3 { color: var(--azul); font-size: 1.5rem; margin-bottom: 15px; }
-        .card-body ul { list-style: none; margin-bottom: 20px; }
-        .card-body li { font-size: 0.9rem; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #666; }
-        .card-body li i { color: var(--rojo); }
- 
-        .price-tag { font-size: 0.8rem; font-weight: 700; color: var(--rojo); text-transform: uppercase; margin-bottom: 5px; display: block; }
-        .btn-card { display: block; background: var(--azul); color: white; text-align: center; padding: 15px; text-decoration: none; border-radius: 12px; font-weight: 700; transition: 0.3s; }
-        .btn-card:hover { background: var(--rojo); }
- 
-        /* Estilos Nuevos para Identidad y Testimonios */
-        .nosotros-box { background: var(--gris-claro); padding: 40px; border-radius: 20px; text-align: center; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
-        .nosotros-box p { font-size: 1.1rem; max-width: 900px; margin: 0 auto; color: #444; }
+        body { font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; }
         
-        .mv-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
-        .mv-card { background: white; padding: 35px; border-radius: 20px; border-top: 5px solid var(--azul); box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: left; }
-        .mv-card h3 { color: var(--azul); margin-bottom: 15px; text-transform: uppercase; font-size: 1.3rem; }
-
-        .testimonio-card { background: var(--gris-claro); border-left: 5px solid var(--rojo); padding: 25px; border-radius: 0 20px 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
-        .testimonio-card p { font-style: italic; color: #555; margin-bottom: 15px; }
-        .testimonio-card h4 { color: var(--azul); font-weight: 700; }
-        .testimonio-card span { font-size: 0.8rem; color: #888; }
-
-        .garantia-legal { background: var(--gris-claro); border-radius: 25px; padding: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; border: 2px dashed #ccc; }
-        .garantia-item i { font-size: 3rem; color: var(--azul); margin-bottom: 15px; }
-        .garantia-item h4 { margin-bottom: 10px; color: var(--azul); }
- 
-        .float-buttons { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; }
-        .btn-flotante { width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; box-shadow: 0 10px 25px rgba(0,0,0,0.3); cursor: pointer; transition: 0.3s; }
-        .btn-wa { background: #25d366; }
-        .btn-bot { background: var(--azul); }
- 
-        footer { background: #0b132b; color: white; padding: 80px 8% 40px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px; }
-        .footer-col h4 { color: var(--blanco); margin-bottom: 25px; border-left: 4px solid var(--rojo); padding-left: 15px; }
-        .footer-col p, .footer-col li { font-size: 0.9rem; color: #bdc3c7; margin-bottom: 12px; list-style: none; }
-        .copy { text-align: center; border-top: 1px solid #2d3436; padding-top: 30px; font-size: 0.8rem; color: #636e72; }
- 
-        #helmy-bot-window { position: fixed; bottom: 110px; right: 30px; width: 320px; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); display: none; z-index: 1999; overflow: hidden; border-top: 8px solid var(--azul); }
+        /* Grid Dinámico */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 20px; }
+        
+        /* Tarjeta optimizada */
+        .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-10px); }
+        .card-img-container { width: 100%; height: 220px; overflow: hidden; }
+        .card-img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .card-body { padding: 20px; flex-grow: 1; }
+        
+        .btn-card { display: block; background: var(--azul); color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 10px; font-weight: 700; margin-top: 15px; }
+        .btn-card:hover { background: var(--rojo); }
     </style>
 </head>
 <body>
- 
-<div class="top-bar">
-    <span><i class="fas fa-certificate"></i> Agencia Registrada ante MINCETUR</span>
-    <span><i class="fas fa-clock"></i> 19 Años de Trayectoria Profesional</span>
-</div>
- 
-<header>
-    <div class="logo"><img src="IMG-20230810-WA0065.jpg" alt="Helmy Viajes Perú"></div>
-    <div class="social-nav">
-        <a href="https://facebook.com/helmyviajes"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com/helmyviajes"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/51925807384"><i class="fab fa-whatsapp"></i></a>
-    </div>
-</header>
- 
-<section class="hero">
-    <h1>HELMY VIAJES PERÚ</h1>
-    <p>Seguridad y Respaldo en cada uno de tus destinos</p>
-    <div class="badge-19">19 AÑOS DE EXPERIENCIA PROFESIONAL</div>
-</section>
- 
-<div class="search-container">
-    <div class="input-group">
-        <label>¿Qué buscas?</label>
-        <select id="tipo">
-            <option>Full Days</option>
-            <option>Vuelos Internacionales</option>
-            <option>Cruceros</option>
-            <option>Europa & Asia</option>
-        </select>
-    </div>
-    <div class="input-group">
-        <label>Destino</label>
-        <input type="text" id="destino-txt" placeholder="Ej: Punta Cana, Cusco...">
-    </div>
-    <div class="input-group">
-        <label>Fecha Viaje</label>
-        <input type="date">
-    </div>
-    <button class="btn-quote" onclick="enviarCotizacion()">Ver Ofertas Disponibles</button>
-</div>
 
-<section id="identidad">
-    <div class="section-header">
-        <h2>Conócenos</h2>
-        <div></div>
+<section id="full-days" style="padding: 50px 8%;">
+    <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+        <h2>Nuestros Destinos Destacados</h2>
     </div>
-    <div class="nosotros-box">
-        <p>En <strong>Helmy Viajes S.A.C.</strong> nos apasiona conectar a nuestros clientes con las mejores experiencias de viaje alrededor del mundo. Brindamos una asesoría experta y personalizada para asegurar que cada viaje sea único, seguro e inolvidable.</p>
-    </div>
-    <div class="mv-container">
-        <div class="mv-card">
-            <h3><i class="fas fa-bullseye" style="color: var(--rojo); margin-right: 10px;"></i> Nuestra Misión</h3>
-            <p>"Brindar un asesoramiento humano, cálido e inigualable que respalde cada aventura de nuestros viajeros. Con años de experiencia en el mercado, combinamos la innovación y la constante tecnología para diseñar experiencias de viaje personalizadas y seguras, garantizando tranquilidad y confianza en cada destino.".</p>
-        </div>
-        <div class="mv-card">
-            <h3><i class="fas fa-eye" style="color: var(--azul); margin-right: 10px;"></i> Nuestra Visión</h3>
-            <p>"Consolidarnos como la agencia de viajes de referencia a nivel nacional e internacional, proyectándonos al mundo a través de la constante exploración de diferentes destinos. Aspiramos a expandir nuestro legado de confianza y respaldo incondicional, liderando el sector mediante la adaptación tecnológica y la creación de las experiencias del futuro."</p>
-        </div>
-    </div>
-</section>
- 
-<section id="full-days" style="background: var(--gris-claro);">
-    <div class="section-header">
-        <h2>Full Days & Aventuras</h2>
-        <div></div>
-        <p>Salidas confirmadas con los mejores operadores de Lima</p>
-    </div><div class="grid">
-    <div class="card" style="border: 1px solid #ccc; padding: 10px; width: 300px;">
-        <img src="https://images.unsplash.com/photo-1544605910-a29285703f83?q=80&w=800&auto=format&fit=crop" 
-             alt="Huacachina" 
-             style="width: 100%; height: 200px; object-fit: cover; display: block;">
-        
-        <div class="card-body">
-            <span class="price-tag">Salidas Diarias</span>
-            <h3>Paracas & Ica Premium</h3>
-            <ul style="list-style: none; padding: 0;">
-                <li><i class="fas fa-check"></i> Islas Ballestas + Huacachina</li>
-                <li><i class="fas fa-check"></i> Buggies y Sandboarding</li>
-                <li><i class="fas fa-check"></i> Degustación de Vinos y Piscos</li>
-            </ul>
-        </div>
-    </div>
-</div>
-       <a href="https://wa.me/51925807384" class="btn-card">SOLICITAR ITINERARIO</a>
-            </div>
-        </div>
+    
+    <div class="grid">
         <div class="card">
-            <div style="width: 100%; height: 200px; overflow: hidden;">
-                <img src="https://i.postimg.cc/d0YQnGm9/DROMEDARIOHELMY.jpg" style="width: 100%; height: 100%; object-fit: contain; background: #f0f0f0;" alt="Dromedarios Helmy Viajes">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1544605910-a29285703f83?q=80&w=800&auto=format&fit=crop" alt="Huacachina">
             </div>
-            <div class="card-body" style="padding: 15px;">
-                <span class="price-tag">Exclusivo Helmy</span>
-                <h3 style="font-size: 1.2rem;">Dromedarius & Desierto</h3>
-                <ul style="font-size: 0.85rem;">
-                    <li><i class="fas fa-check"></i> Paseo en Dromedarios (Camellos)</li>
-                    <li><i class="fas fa-check"></i> Uso de Piscina en el Desierto</li>
-                    <li><i class="fas fa-check"></i> Almuerzo incluido</li>
-                </ul>
-                <a href="https://wa.me/51925807384" class="btn-card">VER DETALLES</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=800" alt="Antioquia">
             <div class="card-body">
-                <span class="price-tag">Cerca a Lima</span>
-                <h3>Antioquia: Pueblo de Colores</h3>
+                <h3>Paracas & Ica Premium</h3>
                 <ul>
-                    <li><i class="fas fa-check"></i> Visita Cieneguilla</li>
-                    <li><i class="fas fa-check"></i> Pueblo de Kochahuayco</li>
-                    <li><i class="fas fa-check"></i> Guía Certificado</li>
+                    <li><i class="fas fa-check" style="color:var(--rojo)"></i> Islas Ballestas + Huacachina</li>
+                    <li><i class="fas fa-check" style="color:var(--rojo)"></i> Buggies y Sandboarding</li>
                 </ul>
-                <a href="https://wa.me/51925807384" class="btn-card">VER DISPONIBILIDAD</a>
+                <a href="#" class="btn-card">VER ITINERARIO</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1509281373149-e957c6296406?auto=format&fit=crop&w=800" alt="Dromedarios">
+            </div>
+            <div class="card-body">
+                <h3>Dromedarius & Desierto</h3>
+                <ul>
+                    <li><i class="fas fa-check" style="color:var(--rojo)"></i> Paseo en Dromedarios</li>
+                    <li><i class="fas fa-check" style="color:var(--rojo)"></i> Piscina en el Desierto</li>
+                </ul>
+                <a href="#" class="btn-card">VER DETALLES</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=800" alt="Antioquia">
+            </div>
+            <div class="card-body">
+                <h3>Antioquia: Colores</h3>
+                <ul>
+                    <li><i class="fas fa-check" style="color:var(--rojo)"></i> Cieneguilla</li>
+                    <li><i class="fas fa-check" style="color:var(--rojo)"></i> Guía Certificado</li>
+                </ul>
+                <a href="#" class="btn-card">VER DISPONIBILIDAD</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="internacionales">
-    <div class="section-header">
-        <h2>Destinos Internacionales Destacados</h2>
-        <div></div>
-        <p>Los paraísos más solicitados con asesoría premium todo incluido</p>
-    </div>
-    <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800" alt="Cancún">
-            <div class="card-body">
-                <span class="price-tag">Caribe Mexicano</span>
-                <h3>Cancún Mágico 🇲🇽</h3>
-                <p style="color:#666; font-size:0.9rem; margin-bottom:15px;">Disfruta de espectaculares playas del Caribe mexicano, zonas arqueológicas mayas e increíble entretenimiento con todo incluido.</p>
-                <a href="https://wa.me/51925807384" class="btn-card">COTIZAR CANCÚN</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1589561284191-246e6a6449bd?auto=format&fit=crop&w=800" alt="Quito">
-            <div class="card-body">
-                <span class="price-tag">Ecuador Histórico</span>
-                <h3>Quito Tradicional 🇪🇨</h3>
-                <p style="color:#666; font-size:0.9rem; margin-bottom:15px;">Visita el centro histórico mejor preservado de América, sube al teleférico y párate justo en la emblemática Mitad del Mundo.</p>
-                <a href="https://wa.me/51925807384" class="btn-card">COTIZAR QUITO</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1610452331776-96a2caeb507a?auto=format&fit=crop&w=800" alt="Guayaquil">
-            <div class="card-body">
-                <span class="price-tag">Ecuador Costero</span>
-                <h3>Guayaquil: Perla del Pacífico 🇪🇨</h3>
-                <p style="color:#666; font-size:0.9rem; margin-bottom:15px;">Camina por el renovado Malecón 2000, sube los escalones del Cerro Las Peñas y disfruta de su calidez y gran biodiversidad.</p>
-                <a href="https://wa.me/51925807384" class="btn-card">COTIZAR GUAYAQUIL</a>
-            </div>
-        </div>
-    </div>
-</section>
- 
-<section id="europa" style="background: var(--gris-claro);">
-    <div class="section-header">
-        <h2>Grandes Viajes: Europa & Asia</h2>
-        <div></div>
-        <p>Circuitos garantizados con hoteles seleccionados</p>
-    </div>
-    <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800" alt="Europa">
-            <div class="card-body">
-                <h3>Europa Clásica 2026</h3>
-                <p>Recorre Madrid, París, Venecia, Florencia y Roma. Incluye vuelos y traslados.</p>
-                <a href="https://wa.me/51925807384" class="btn-card">VER PROGRAMA 15 DÍAS</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1548231571-0082987a0da3?auto=format&fit=crop&w=800" alt="Tierra Santa">
-            <div class="card-body">
-                <h3>Tierra Santa & Egipto</h3>
-                <p>Una experiencia espiritual única recorriendo Tel Aviv, Jerusalén y El Cairo.</p>
-                <a href="https://wa.me/51925807384" class="btn-card">VER PROGRAMA</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="testimonios">
-    <div class="section-header">
-        <h2>Pasajeros Satisfechos</h2>
-        <div></div>
-        <p>Experiencias reales de viajeros que confían en nosotros</p>
-    </div>
-    <div class="grid">
-        <div class="testimonio-card">
-            <p>"La asesoría de Helmy Viajes para nuestras vacaciones en Punta Cana fue excelente. Todo salió a la perfección, los hoteles recomendados fueron increíbles. ¡Súper recomendados!"</p>
-            <h4>Carlos Mendoza</h4>
-            <span>Viajó al Caribe</span>
-        </div>
-        <div class="testimonio-card">
-            <p>"Hicimos el tour de Cusco y Machu Picchu en familia. La organización, puntualidad y amabilidad de los guías hicieron que fuera la mejor experiencia de nuestras vidas."</p>
-            <h4>Mariana Rojas</h4>
-            <span>Viajó a Cusco</span>
-        </div>
-        <div class="testimonio-card">
-            <p>"Atención de primera. Me ayudaron a gestionar de inmediato mis vuelos a Cancún y respondieron todas mis dudas de viaje a los pocos minutos. Excelente servicio."</p>
-            <h4>Juan Diego Silva</h4>
-            <span>Viajó a México</span>
-        </div>
-    </div>
-</section>
- 
-<section style="background: var(--gris-claro);">
-    <div class="garantia-legal">
-        <div class="garantia-item">
-            <i class="fas fa-id-card"></i>
-            <h4>RUC Verificado</h4>
-            <p>20602927238<br>Helmy Viajes Perú S.A.C.</p>
-        </div>
-        <div class="garantia-item">
-            <i class="fas fa-map-marked-alt"></i>
-            <h4>Oficina Física</h4>
-            <p>Jr. Pablo Bermúdez 177, Of. 102<br>Jesús María, Lima</p>
-        </div>
-        <div class="garantia-item">
-            <i class="fas fa-shield-alt"></i>
-            <h4>ALIANZAS Y RESPALDO</h4>
-            <p>MINCETUR, DIRCETUR, CAMARA DE COMERCIO</p>
-        </div>
-    </div>
-</section>
- 
-<section id="pagos">
-    <div class="section-header"><h2>Cuentas para Reservas</h2><div></div></div>
-    <div class="grid">
-        <div class="card" style="border-top: 8px solid #ff5f00;">
-            <div class="card-body">
-                <h3>BCP - Helmy viajes</h3>
-                <p><strong>Soles:</strong> 38036506599013</p>
-                <p><strong>Dólares:</strong> 38095203792107</p>
-                <p style="font-size: 0.8rem; color: #888;">* Cuentas de la representante legal</p>
-            </div>
-        </div>
-        <div class="card" style="border-top: 8px solid #00ad3d;">
-            <div class="card-body">
-                <h3>INTERBANK - Empresa</h3>
-                <p><strong>Titular:</strong> Helmy Viajes S.A.C.</p>
-                <p><strong>Dólares:</strong> 200-3004774970</p>
-                <p style="font-size: 0.8rem; color: #888;">* Cuenta jurídica empresarial</p>
-            </div>
-        </div>
-    </div>
-</section>
- 
-<footer>
-    <div class="footer-grid">
-        <div class="footer-col">
-            <img src="IMG-20230810-WA0065.jpg" style="height:60px; filter: brightness(0) invert(1); margin-bottom:20px;">
-            <p>"Tu tranquilidad es nuestra prioridad. En HELMY, transformamos cada destino en una experiencia fluida y memorable. Te brindamos el respaldo profesional y la seguridad integral que mereces, acompañándote con asesoría experta desde el primer contacto hasta tu retorno a casa. Viaja con la confianza y el respaldo que solo nosotros te podemos ofrecer.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Contacto Directo</h4>
-            <li><i class="fas fa-phone"></i> 925 807 384</li>
-            <li><i class="fas fa-phone"></i> 997 799 056</li>
-            <li><i class="fas fa-envelope"></i> helmyviajes@gmail.com</li>
-        </div>
-        <div class="footer-col">
-            <h4>Nuestras Redes</h4>
-            <li><i class="fab fa-facebook"></i> /helmyviajes</li>
-            <li><i class="fab fa-instagram"></i> @helmyviajes</li>
-        </div>
-    </div>
-    <div class="copy">
-        &copy; 2026 Helmy Viajes Perú S.A.C. | Todos los derechos reservados. | RUC: 20602927238
-    </div>
-</footer>
- 
-<div class="float-buttons">
-    <div class="btn-flotante btn-bot" onclick="toggleBot()"><i class="fas fa-robot"></i></div>
-    <div class="btn-flotante btn-wa" onclick="window.open('https://wa.me/51925807384')"><i class="fab fa-whatsapp"></i></div>
-</div>
- 
-<div id="helmy-bot-window">
-    <div style="background: var(--azul); color: white; padding: 20px; font-weight: 700; display: flex; justify-content: space-between;">
-        <span>Helmy-Bot Online 🤖</span><span onclick="toggleBot()" style="cursor:pointer">×</span>
-    </div>
-    <div style="padding: 25px;">
-        <p style="font-size: 0.9rem; margin-bottom: 20px;">¡Hola! Soy el asistente de Helmy Viajes.</p>
-        <button style="width:100%; padding:12px; margin-bottom:10px; cursor:pointer;" onclick="botResp('itinerarios')">📍 Ver Itinerarios</button>
-        <button style="width:100%; padding:12px; margin-bottom:10px; cursor:pointer;" onclick="botResp('pagos')">💰 Datos de Pago</button>
-        <button style="width:100%; padding:12px; cursor:pointer;" onclick="window.open('https://wa.me/51925807384')">👤 Hablar con Helen</button>
-    </div>
-</div>
- 
-<script>
-    function toggleBot() {
-        const win = document.getElementById('helmy-bot-window');
-        win.style.display = (win.style.display === 'block') ? 'none' : 'block';
-    }
-    function botResp(tipo) {
-        if(tipo === 'itinerarios') alert("Enviando itinerarios PDF a tu WhatsApp...");
-        if(tipo === 'pagos') alert("Cuentas: BCP 38036506599013 e Interbank Dólares 200-3004774970");
-        window.open('https://wa.me/51925807384');
-    }
-    function enviarCotizacion() {
-        const dest = document.getElementById('destino-txt').value;
-        const tipo = document.getElementById('tipo').value;
-        window.open(`https://wa.me/51925807384?text=Hola Helmy Viajes! Deseo cotizar ${tipo} para ${dest}`);
-    }
-</script>
- 
 </body>
 </html>
