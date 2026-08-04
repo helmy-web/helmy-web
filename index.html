@@ -373,25 +373,16 @@
     </div>
 </div>
  
-<script>
  <script>
     function toggleBot() {
         const win = document.getElementById('helmy-bot-window');
         win.style.display = (win.style.display === 'block') ? 'none' : 'block';
     }
-    function botResp(tipo) {
-        if(tipo === 'agencias') {
-            window.open('https://wa.me/51925807384?text=Hola Helmy, soy una agencia de viajes y busco información sobre sus servicios de logística y convenios.');
-        } else if(tipo === 'cotizar') {
-            window.open('https://wa.me/51925807384?text=Hola, me gustaría cotizar un viaje. Mi destino es: ___ y planeo viajar en la fecha: ___ con ___ personas.');
-        }
-    }
     function enviarCotizacion() {
         const dest = document.getElementById('destino-txt').value;
         const tipo = document.getElementById('tipo').value;
-        window.open(`https://wa.me/51925807384?text=Hola Helmy Viajes! Deseo cotizar la opción de ${tipo} para el destino de ${dest}. Quedo atento/a.`);
+        window.open(`https://api.whatsapp.com/send?phone=51925807384&text=Hola%20Helmy%20Viajes!%20Deseo%20cotizar%20la%20opcion%20de%20${tipo}%20para%20el%20destino%20de%20${dest}.`);
     }
 </script>
- 
 </body>
 </html>
