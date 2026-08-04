@@ -360,30 +360,32 @@
  
 <div id="helmy-bot-window">
     <div style="background: var(--azul); color: white; padding: 20px; font-weight: 700; display: flex; justify-content: space-between;">
-        <span>Helmy-Bot Online 🤖</span><span onclick="toggleBot()" style="cursor:pointer">×</span>
+        <span>Helmy-Bot 🤖</span><span onclick="toggleBot()" style="cursor:pointer; font-size: 1.5rem; line-height: 1;">×</span>
     </div>
     <div style="padding: 25px;">
-        <p style="font-size: 0.9rem; margin-bottom: 20px;">¡Hola! Soy el asistente de Helmy Viajes.</p>
-        <button style="width:100%; padding:12px; margin-bottom:10px; cursor:pointer;" onclick="botResp('itinerarios')">📍 Ver Itinerarios</button>
-        <button style="width:100%; padding:12px; margin-bottom:10px; cursor:pointer;" onclick="botResp('pagos')">💰 Datos de Pago</button>
-        <button style="width:100%; padding:12px; cursor:pointer;" onclick="window.open('https://wa.me/51925807384')">👤 Hablar con Helen</button>
+        <p style="font-size: 0.95rem; margin-bottom: 20px; line-height: 1.5; color: #444;">¡Hola! Qué gusto tenerte por aquí. ¿En qué te puedo ayudar al toque?</p>
+        <button style="width:100%; padding:12px; margin-bottom:10px; cursor:pointer; background: var(--gris-claro); border: 1px solid #ccc; border-radius: 8px; font-weight: bold; color: var(--azul);" onclick="botResp('agencias')">🤝 Soy Agencia de Viajes</button>
+        <button style="width:100%; padding:12px; margin-bottom:10px; cursor:pointer; background: var(--gris-claro); border: 1px solid #ccc; border-radius: 8px; color: #333;" onclick="botResp('cotizar')">✈️ Cotizar un Viaje</button>
+        <button style="width:100%; padding:12px; cursor:pointer; background: var(--rojo); color: white; border: none; border-radius: 8px; font-weight: bold;" onclick="window.open('https://wa.me/51925807384')">👤 Hablar con Helmy</button>
     </div>
-</div>
  
 <script>
+ <script>
     function toggleBot() {
         const win = document.getElementById('helmy-bot-window');
         win.style.display = (win.style.display === 'block') ? 'none' : 'block';
     }
     function botResp(tipo) {
-        if(tipo === 'itinerarios') alert("Enviando itinerarios PDF a tu WhatsApp...");
-        if(tipo === 'pagos') alert("Cuentas: BCP 38036506599013 e Interbank Dólares 200-3004774970");
-        window.open('https://wa.me/51925807384');
+        if(tipo === 'agencias') {
+            window.open('https://wa.me/51925807384?text=Hola Helmy, soy una agencia de viajes y busco información sobre sus servicios de logística y convenios.');
+        } else if(tipo === 'cotizar') {
+            window.open('https://wa.me/51925807384?text=Hola, me gustaría cotizar un viaje. Mi destino es: ___ y planeo viajar en la fecha: ___ con ___ personas.');
+        }
     }
     function enviarCotizacion() {
         const dest = document.getElementById('destino-txt').value;
         const tipo = document.getElementById('tipo').value;
-        window.open(`https://wa.me/51925807384?text=Hola Helmy Viajes! Deseo cotizar ${tipo} para ${dest}`);
+        window.open(`https://wa.me/51925807384?text=Hola Helmy Viajes! Deseo cotizar la opción de ${tipo} para el destino de ${dest}. Quedo atento/a.`);
     }
 </script>
  
