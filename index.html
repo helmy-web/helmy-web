@@ -87,6 +87,56 @@
         .copy { text-align: center; border-top: 1px solid #2d3436; padding-top: 30px; font-size: 0.8rem; color: #636e72; }
  
         #helmy-bot-window { position: fixed; bottom: 110px; right: 30px; width: 320px; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); display: none; z-index: 1999; overflow: hidden; border-top: 8px solid var(--azul); }
+
+        /* ESTILOS DE LA VITRINA - AÑADIDOS AQUÍ */
+        .contenedor-tours {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .tarjeta-tour {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 320px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            background-color: #fff;
+        }
+        .tarjeta-tour img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .info-tour {
+            padding: 15px;
+        }
+        .info-tour h3 {
+            margin: 0 0 10px;
+            color: #003366;
+        }
+        .info-tour p {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .btn-whatsapp-cotizar {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center; /* Centramos el texto del botón */
+        }
+        .btn-whatsapp-cotizar:hover {
+            background-color: #128C7E;
+        }
     </style>
 </head>
 <body>
@@ -152,6 +202,44 @@
         </div>
     </div>
 </section>
+
+<!-- SECCIÓN VITRINA INTEGRADA AQUÍ -->
+<section id="vitrina-destinos">
+    <div class="section-header">
+        <h2>Descubre el Mundo con Helmy Viajes</h2>
+        <div></div>
+        <p>Elige tu próximo destino y nosotros nos encargamos del resto</p>
+    </div>
+    
+    <div class="contenedor-tours">
+        
+        <!-- TARJETA INTERNACIONAL -->
+        <div class="tarjeta-tour">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop" alt="Destinos Internacionales">
+            <div class="info-tour">
+                <h3>Destinos Internacionales</h3>
+                <p><strong>Explora:</strong> Europa, Colombia, República Dominicana (Santo Domingo), Argentina, Chile, Panamá, México, Costa Rica, Caribe (Aruba, Jamaica, Cuba) y más.</p>
+                <a href="https://wa.me/51925807384?text=Hola%20Helmy%20Viajes,%20quiero%20cotizar%20un%20viaje%20INTERNACIONAL%20%F0%9F%8C%8E%E2%9C%88%EF%B8%8F" target="_blank" class="btn-whatsapp-cotizar">
+                    📲 Cotizar Destino Internacional
+                </a>
+            </div>
+        </div>
+
+        <!-- TARJETA NACIONAL -->
+        <div class="tarjeta-tour">
+            <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=600&auto=format&fit=crop" alt="Destinos Nacionales">
+            <div class="info-tour">
+                <h3>Destinos Nacionales</h3>
+                <p><strong>Descubre el Perú:</strong> Cusco, Arequipa, Tarapoto, Iquitos, Piura, Punta Sal, Tumbes, Pucallpa, Chiclayo, Trujillo, Ica, Paracas, Nazca, Puno y mucho más.</p>
+                <a href="https://wa.me/51997799056?text=Hola%20Helmy%20Viajes,%20quiero%20cotizar%20un%20viaje%20NACIONAL%20%F0%9F%87%B5%F0%9F%87%AA%F0%9F%8F%94%EF%B8%8F" target="_blank" class="btn-whatsapp-cotizar">
+                    📲 Cotizar Destino Nacional
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- FIN DE LA VITRINA -->
  
 <section id="full-days" style="background: var(--gris-claro);">
     <div class="section-header">
