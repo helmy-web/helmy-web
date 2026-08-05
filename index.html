@@ -49,50 +49,58 @@
         .section-header { text-align: center; margin-bottom: 50px; }
         .section-header h2 { font-size: 2.2rem; color: var(--azul); text-transform: uppercase; font-weight: 800; }
         .section-header div { width: 80px; height: 5px; background: var(--rojo); margin: 15px auto; }
+        .section-header p { font-size: 1.1rem; color: #555; }
  
-        /* GRILLA DE TARJETAS */
+        /* GRILLA DE TARJETAS TIPO AGENCIAS TOP */
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
         
         .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.06); border: 1px solid #eaeaea; display: flex; flex-direction: column; transition: 0.3s; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); border-color: var(--azul); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
         
         .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
-        .card-body h3 { color: var(--azul); font-size: 1.3rem; margin-bottom: 10px; font-weight: 800; text-transform: uppercase; }
-        .card-body .destinos-lista { font-size: 0.9rem; color: #555; margin-bottom: 15px; font-weight: 600; flex-grow: 1; }
+        .card-body h3 { color: var(--azul); font-size: 1.3rem; margin-bottom: 5px; font-weight: 800; text-transform: uppercase; }
+        .duracion { font-size: 0.85rem; color: #777; margin-bottom: 15px; display: flex; align-items: center; gap: 5px; font-weight: 600; }
         
-        /* ACORDEÓN PARA INCLUYE / NO INCLUYE */
-        details { background: #f9f9f9; padding: 12px; border-radius: 8px; border-left: 4px solid var(--azul); margin-bottom: 15px; }
-        summary { font-weight: 700; color: var(--azul); font-size: 0.9rem; cursor: pointer; outline: none; text-transform: uppercase; }
+        /* PRECIOS */
+        .precio-box { background: #fdf2f2; border-left: 4px solid var(--rojo); padding: 10px 15px; margin-bottom: 15px; border-radius: 0 8px 8px 0; }
+        .precio-box span { display: block; font-size: 0.8rem; color: #555; text-transform: uppercase; font-weight: 700; }
+        .precio-box .monto { font-size: 1.6rem; color: var(--rojo); font-weight: 800; }
+        
+        /* ACORDEÓN PARA INCLUYE / NO INCLUYE / RECOMENDACIONES */
+        details { background: #f9f9f9; padding: 12px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 15px; }
+        summary { font-weight: 700; color: var(--azul); font-size: 0.9rem; cursor: pointer; outline: none; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center; }
         .detalles-contenido { margin-top: 15px; font-size: 0.85rem; }
-        .detalles-contenido h4 { color: var(--azul); margin-top: 10px; font-size: 0.9rem; }
+        .detalles-contenido h4 { color: var(--azul); margin-top: 15px; font-size: 0.9rem; display: flex; align-items: center; gap: 5px; }
+        .detalles-contenido h4:first-child { margin-top: 0; }
         .detalles-contenido ul { list-style: none; padding: 0; margin-bottom: 10px; }
-        .detalles-contenido ul li { margin-bottom: 5px; }
-        .nota-importante { color: var(--rojo); font-weight: bold; font-size: 0.8rem; display: block; margin-top: 10px; border-top: 1px dashed #ccc; padding-top: 10px; }
+        .detalles-contenido ul li { margin-bottom: 5px; padding-left: 15px; position: relative; }
+        .detalles-contenido ul li::before { content: "•"; position: absolute; left: 0; color: #999; }
+        .terminos-caja { background: #fff3cd; border: 1px solid #ffeeba; padding: 10px; border-radius: 5px; margin-top: 10px; font-size: 0.75rem; color: #856404; }
 
         /* BOTONES DE TARJETAS */
-        .btn-card { display: block; background: var(--azul); color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 6px; font-weight: 700; transition: 0.3s; text-transform: uppercase; font-size: 0.85rem; margin-top: auto; border: 2px solid var(--azul); }
+        .btn-card { display: block; background: var(--azul); color: white; text-align: center; padding: 14px; text-decoration: none; border-radius: 6px; font-weight: 700; transition: 0.3s; text-transform: uppercase; font-size: 0.9rem; margin-top: auto; border: 2px solid var(--azul); }
         .btn-card:hover { background: white; color: var(--azul); }
         .btn-rojo { background: var(--rojo); border-color: var(--rojo); }
         .btn-rojo:hover { background: white; color: var(--rojo); }
 
         /* MARCAS DE SEGUROS */
-        .seguros-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; }
-        .seguro-tag { background: white; border: 2px solid var(--azul); color: var(--azul); padding: 10px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .seguros-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px; }
+        .seguro-tag { background: white; border: 2px solid var(--azul); color: var(--azul); padding: 10px 20px; border-radius: 50px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
 
-        /* SECCIONES INSTITUCIONALES (NOSOTROS, TESTIMONIOS, LEGAL, PAGOS) */
+        /* INSTITUCIONAL Y GARANTÍA */
         .nosotros-box { background: var(--gris-claro); padding: 40px; border-radius: 20px; text-align: center; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
         .nosotros-box p { font-size: 1.1rem; max-width: 900px; margin: 0 auto; color: #444; }
         .mv-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
         .mv-card { background: white; padding: 35px; border-radius: 20px; border-top: 5px solid var(--azul); box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: left; }
         .mv-card h3 { color: var(--azul); margin-bottom: 15px; text-transform: uppercase; font-size: 1.3rem; }
-
-        .testimonio-card { background: var(--gris-claro); border-left: 5px solid var(--rojo); padding: 25px; border-radius: 0 20px 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+        
+        .testimonio-card { background: white; border-left: 5px solid var(--rojo); padding: 25px; border-radius: 0 20px 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .testimonio-card p { font-style: italic; color: #555; margin-bottom: 15px; }
         .testimonio-card h4 { color: var(--azul); font-weight: 700; }
         .testimonio-card span { font-size: 0.8rem; color: #888; }
-
-        .garantia-legal { background: var(--gris-claro); border-radius: 25px; padding: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; border: 2px dashed #ccc; }
+        
+        .garantia-legal { background: white; border-radius: 25px; padding: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; border: 2px dashed #ccc; }
         .garantia-item i { font-size: 3rem; color: var(--azul); margin-bottom: 15px; }
         .garantia-item h4 { margin-bottom: 10px; color: var(--azul); }
 
@@ -107,8 +115,7 @@
         .btn-flotante { width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; box-shadow: 0 10px 25px rgba(0,0,0,0.3); cursor: pointer; transition: 0.3s; }
         .btn-wa { background: var(--rojo); } 
         .btn-bot { background: var(--azul); }
-
-        /* CHATBOT */
+        
         #helmy-bot-window { position: fixed; bottom: 110px; right: 30px; width: 320px; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); display: none; z-index: 1999; overflow: hidden; border-top: 8px solid var(--azul); }
         .bot-btn { display:block; width:100%; padding:12px; margin-bottom:10px; cursor:pointer; background: var(--gris-claro); border: 1px solid #ccc; border-radius: 8px; font-weight: bold; color: var(--azul); text-decoration: none; text-align: center; box-sizing: border-box; }
         .bot-btn-rojo { background: var(--rojo); color: white; border: none; }
@@ -134,7 +141,6 @@
     <div class="social-nav">
         <a href="https://facebook.com/helmyviajes"><i class="fab fa-facebook"></i></a>
         <a href="https://instagram.com/helmyviajes"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@_helmyviajes" target="_blank"><i class="fab fa-tiktok"></i></a>
         <a href="https://wa.me/51925807384"><i class="fab fa-whatsapp"></i></a>
     </div>
 </header>
@@ -149,14 +155,16 @@
         <label>¿Qué buscas?</label>
         <select id="tipo">
             <option>Full Days</option>
-            <option>Vuelos Internacionales</option>
+            <option>Nacionales</option>
+            <option>Internacionales</option>
             <option>Cruceros</option>
             <option>Europa & Asia</option>
+            <option>Seguros de Viaje</option>
         </select>
     </div>
     <div class="input-group">
         <label>Destino</label>
-        <input type="text" id="destino-txt" placeholder="Ej: Punta Cana, Cusco...">
+        <input type="text" id="destino-txt" placeholder="Ej: Punta Cana, Cusco, Madrid...">
     </div>
     <div class="input-group">
         <label>Fecha Viaje</label>
@@ -164,7 +172,7 @@
     </div>
     <button class="btn-quote" onclick="enviarCotizacion()">Ver Ofertas Disponibles</button>
 </div>
- 
+
 <!-- ==========================================
      1. FULL DAYS (LÍNEA 997 799 056)
      ========================================== -->
@@ -172,85 +180,127 @@
     <div class="section-header">
         <h2>Full Days & Escapadas</h2>
         <div></div>
-        <p>Salidas confirmadas. Atención y reservas: <strong>997 799 056</strong></p>
+        <p>Salidas confirmadas desde Lima. Atención: <strong>997 799 056</strong></p>
     </div>
     <div class="grid">
         
+        <!-- PARACAS ICA -->
         <div class="card">
             <img src="https://images.unsplash.com/photo-1544605910-a29285703f83?q=80&w=800&auto=format&fit=crop" alt="Paracas Ica">
             <div class="card-body">
-                <h3>Paracas & Ica</h3>
-                <p class="destinos-lista">Islas Ballestas, Huacachina, Tubulares y más.</p>
+                <h3>Paracas & Ica Premium</h3>
+                <span class="duracion"><i class="fas fa-clock"></i> Full Day (1 Día)</span>
+                
+                <div class="precio-box">
+                    <span>Precio por persona desde:</span>
+                    <div class="monto">S/ 119.00</div>
+                </div>
+
                 <details>
-                    <summary>Ver Itinerario / Qué Incluye</summary>
+                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
                     <div class="detalles-contenido">
-                        <h4>Incluye:</h4>
+                        <h4><i class="fas fa-check-circle" style="color: green;"></i> Incluye:</h4>
                         <ul>
-                            <li>✅ Transporte turístico ida y vuelta</li>
-                            <li>✅ Guía de Turismo en español</li>
-                            <li>✅ Embarcación rápida para Islas Ballestas</li>
-                            <li>✅ Asistencia permanente</li>
+                            <li>Transporte turístico ida y vuelta.</li>
+                            <li>Guía de Turismo en español.</li>
+                            <li>Embarcación rápida para Islas Ballestas.</li>
+                            <li>Degustación de vinos y piscos.</li>
+                            <li>Asistencia permanente.</li>
                         </ul>
-                        <h4>No Incluye:</h4>
+                        <h4><i class="fas fa-times-circle" style="color: red;"></i> No Incluye:</h4>
                         <ul>
-                            <li>❎ Pago de ingreso a ballestas + reserva</li>
-                            <li>❎ Almuerzo</li>
-                            <li>❎ Cualquier otro no mencionado en Incluye.</li>
+                            <li>Pago de ingreso a ballestas + reserva.</li>
+                            <li>Almuerzo.</li>
+                            <li>Paseo en tubulares (opcional).</li>
                         </ul>
-                        <span class="nota-importante">IMPORTANTE:<br>Precios por persona en soles. Precios no aplican para feriados: Semana Santa, Año Nuevo, Navidad, Fiestas Patrias. Incrementa el 20% a los servicios para estas fechas.</span>
+                        <h4><i class="fas fa-lightbulb" style="color: orange;"></i> Recomendaciones:</h4>
+                        <ul>
+                            <li>Llevar bloqueador solar, lentes de sol, ropa ligera y casaca cortaviento.</li>
+                        </ul>
+                        <div class="terminos-caja">
+                            <strong>Importante:</strong> Precios por persona en soles. No aplican para feriados: Semana Santa, Año Nuevo, Navidad, Fiestas Patrias (Incrementa el 20%).
+                        </div>
                     </div>
                 </details>
-                <a href="https://wa.me/51997799056?text=Hola,%20deseo%20cotizar%20el%20Full%20Day%20Paracas%20e%20Ica" class="btn-card" target="_blank">Cotizar Full Day</a>
+                <a href="https://wa.me/51997799056?text=Hola,%20deseo%20reservar%20el%20Full%20Day%20Paracas%20e%20Ica" class="btn-card" target="_blank">Reservar Ahora</a>
             </div>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1607590899451-92fbbd79d342?q=80&w=800&auto=format&fit=crop" alt="Líneas de Nazca">
-            <div class="card-body">
-                <h3>Sobrevuelo Nazca</h3>
-                <p class="destinos-lista">Sobrevuelo a las enigmáticas líneas de Nazca.</p>
-                <details><summary>Ver Itinerario / Qué Incluye</summary><div class="detalles-contenido"><h4>Incluye:</h4><ul><li>✅ [Escribir aquí lo que incluye]</li></ul><h4>No Incluye:</h4><ul><li>❎ [Escribir aquí lo que NO incluye]</li></ul></div></details>
-                <a href="https://wa.me/51997799056?text=Hola,%20deseo%20cotizar%20el%20Full%20Day%20Nazca" class="btn-card" target="_blank">Cotizar Full Day</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://i.postimg.cc/d0YQnGm9/DROMEDARIOHELMY.jpg" alt="Dromedarius">
-            <div class="card-body">
-                <h3>Dromedarius</h3>
-                <p class="destinos-lista">Paseo en camellos y aventura en el desierto.</p>
-                <details><summary>Ver Itinerario / Qué Incluye</summary><div class="detalles-contenido"><h4>Incluye:</h4><ul><li>✅ [Completar información]</li></ul></div></details>
-                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar Full Day</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?q=80&w=800&auto=format&fit=crop" alt="Churín">
-            <div class="card-body">
-                <h3>Baños de Churín</h3>
-                <p class="destinos-lista">Relajación total en aguas termales curativas.</p>
-                <details><summary>Ver Itinerario / Qué Incluye</summary><div class="detalles-contenido"><h4>Incluye:</h4><ul><li>✅ [Completar información]</li></ul></div></details>
-                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar Full Day</a>
-            </div>
-        </div>
-
+        <!-- ANTIOQUÍA -->
         <div class="card">
             <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=800&auto=format&fit=crop" alt="Antioquia">
             <div class="card-body">
-                <h3>Antioquía</h3>
-                <p class="destinos-lista">El pueblo de colores y manzanas.</p>
-                <details><summary>Ver Itinerario / Qué Incluye</summary><div class="detalles-contenido"><h4>Incluye:</h4><ul><li>✅ [Completar información]</li></ul></div></details>
-                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar Full Day</a>
+                <h3>Antioquía: Pueblo de Colores</h3>
+                <span class="duracion"><i class="fas fa-clock"></i> Full Day (1 Día)</span>
+                
+                <div class="precio-box">
+                    <span>Precio por persona desde:</span>
+                    <div class="monto">S/ 99.00</div>
+                </div>
+
+                <details>
+                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <div class="detalles-contenido">
+                        <h4><i class="fas fa-check-circle" style="color: azul;"></i> Incluye:</h4>
+                        <ul>
+                            <li>Transporte turístico ida y vuelta.</li>
+                            <li>Visita a Cieneguilla y Sisicaya .</li>
+                            <li>Recorrido por Antioquía y Cochahuayco.</li>
+                            <li>Guía de turismo certificado.</li>
+                            <li>Fotografías grupales.</li>
+                        </ul>
+                        <h4><i class="fas fa-times-circle" style="color: red;"></i> No Incluye:</h4>
+                        <ul>
+                            <li>Almuerzo campestre.</li>
+                            <li>Gastos personales.</li>
+                        </ul>
+                        <h4><i class="fas fa-lightbulb" style="color: azul;"></i> Recomendaciones:</h4>
+                        <ul>
+                            <li>Ropa cómoda, zapatillas para caminata y repelente.</li>
+                        </ul>
+                        <div class="terminos-caja">
+                            <strong>Importante:</strong> Sujeto a condiciones climáticas. Salidas todos los fines de semana.
+                        </div>
+                    </div>
+                </details>
+                <a href="https://wa.me/51997799056?text=Hola,%20deseo%20reservar%20el%20Full%20Day%20Antioquia" class="btn-card" target="_blank">Reservar Ahora</a>
             </div>
         </div>
 
+        <!-- DROMEDARIUS -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" alt="Cerro Azul">
+            <img src="https://i.postimg.cc/d0YQnGm9/DROMEDARIOHELMY.jpg" alt="Dromedarius">
             <div class="card-body">
-                <h3>Cañete & Cerro Azul</h3>
-                <p class="destinos-lista">Deportes de aventura y playas del sur.</p>
-                <details><summary>Ver Itinerario / Qué Incluye</summary><div class="detalles-contenido"><h4>Incluye:</h4><ul><li>✅ [Completar información]</li></ul></div></details>
-                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar Full Day</a>
+                <h3>Dromedarius & Desierto</h3>
+                <span class="duracion"><i class="fas fa-clock"></i> Full Day (1 Día)</span>
+                
+                <div class="precio-box">
+                    <span>Precio por persona desde:</span>
+                    <div class="monto">S/ 195.00</div>
+                </div>
+
+                <details>
+                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <div class="detalles-contenido">
+                        <h4><i class="fas fa-check-circle" style="color: azul;"></i> Incluye:</h4>
+                        <ul>
+                            <li>Transporte ida y vuelta desde Lima.</li>
+                            <li>Ticket de ingreso al centro de esparcimiento Dromedarius.</li>
+                            <li>Paseo guiado en dromedarios (camellos).</li>
+                            <li>Uso de instalaciones y piscina.</li>
+                        </ul>
+                        <h4><i class="fas fa-times-circle" style="color: red;"></i> No Incluye:</h4>
+                        <ul>
+                            <li>Almuerzo dentro del establecimiento.</li>
+                            <li>Otros juegos no mencionados.</li>
+                        </ul>
+                        <h4><i class="fas fa-lightbulb" style="color: azul;"></i> Recomendaciones:</h4>
+                        <ul>
+                            <li>Llevar ropa de baño, toalla, bloqueador, lentes de sol, casaca corta viento , sombrero.</li>
+                        </ul>
+                    </div>
+                </details>
+                <a href="https://wa.me/51997799056?text=Hola,%20deseo%20reservar%20el%20Full%20Day%20Dromedarius" class="btn-card" target="_blank">Reservar Ahora</a>
             </div>
         </div>
     </div>
@@ -263,47 +313,148 @@
     <div class="section-header">
         <h2>Destinos Nacionales</h2>
         <div></div>
-        <p>Todo el Perú a tu alcance. Atención: <strong>997 799 056</strong></p>
+        <p>Los mejores paquetes en todo el Perú. Atención: <strong>997 799 056</strong></p>
     </div>
     <div class="grid">
         
+        <!-- CUSCO -->
         <div class="card">
             <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=800&auto=format&fit=crop" alt="Cusco">
             <div class="card-body">
-                <h3>Sur Andino</h3>
-                <p class="destinos-lista">📍 Cusco, Arequipa.</p>
-                <details><summary>Ver detalles</summary><div class="detalles-contenido"><ul><li>✅ [Completar qué incluye tu paquete al sur]</li></ul></div></details>
-                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar</a>
+                <h3>Cusco, Valle y Machu Picchu</h3>
+                <span class="duracion"><i class="fas fa-calendar-alt"></i> 4 Días / 3 Noches</span>
+                
+                <div class="precio-box">
+                    <span>Paquete desde:</span>
+                    <div class="monto">$ 249.00</div>
+                </div>
+
+                <details>
+                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <div class="detalles-contenido">
+                        <h4><i class="fas fa-check-circle" style="color: azul;"></i> Incluye:</h4>
+                        <ul>
+                            <li>Traslados Aeropuerto - Hotel - Aeropuerto.</li>
+                            <li>3 Noches de alojamiento (Hotel 3* c/ desayuno).</li>
+                            <li>City Tour y Ruinas Aledañas (Sacsayhuamán, Qenqo, Puca Pucara, Tambomachay).</li>
+                            <li>Tour Valle Sagrado con almuerzo buffet.</li>
+                            <li>Full Day Machu Picchu en Tren Expedition/Voyager.</li>
+                            <li>Todos los tickets de ingreso (BTC).</li>
+                        </ul>
+                        <h4><i class="fas fa-times-circle" style="color: red;"></i> No Incluye:</h4>
+                        <ul>
+                            <li>Tickets aéreos Lima-Cusco-Lima.</li>
+                            <li>Cenas o alimentación no descrita.</li>
+                        </ul>
+                        <h4><i class="fas fa-lightbulb" style="color: azul;"></i> Recomendaciones:</h4>
+                        <ul>
+                            <li>Aclimatarse el primer día con mate de coca. Ropa abrigadora para las noches.</li>
+                        </ul>
+                    </div>
+                </details>
+                <a href="https://wa.me/51997799056?text=Hola,%20deseo%20cotizar%20Cusco%20Imperial" class="btn-card" target="_blank">Cotizar Destino</a>
             </div>
         </div>
 
+        <!-- TARAPOTO -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?q=80&w=800&auto=format&fit=crop" alt="Playas del Norte">
+            <img src="https://images.unsplash.com/photo-1518182170546-076616fd4aa5?q=80&w=800&auto=format&fit=crop" alt="Tarapoto">
             <div class="card-body">
-                <h3>Playas del Norte</h3>
-                <p class="destinos-lista">📍 Tumbes, Punta Sal, Máncora.</p>
-                <details><summary>Ver detalles</summary><div class="detalles-contenido"><ul><li>✅ [Completar qué incluye]</li></ul></div></details>
-                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar</a>
+                <h3>Aventura en Tarapoto</h3>
+                <span class="duracion"><i class="fas fa-calendar-alt"></i> 4 Días / 3 Noches</span>
+                
+                <div class="precio-box">
+                    <span>Paquete desde:</span>
+                    <div class="monto">S/ 550.00</div>
+                </div>
+
+                <details>
+                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <div class="detalles-contenido">
+                        <h4><i class="fas fa-check-circle" style="color: azul;"></i> Incluye:</h4>
+                        <ul>
+                            <li>Traslados in/out.</li>
+                            <li>3 Noches de alojamiento con piscina y desayunos.</li>
+                            <li>Tour Laguna Azul con paseo en bote y almuerzo.</li>
+                            <li>Cataratas de Ahuashiyacu.</li>
+                            <li>Lamas Nativo y su Castillo.</li>
+                            <li>Entradas y guiado especializado.</li>
+                        </ul>
+                        <h4><i class="fas fa-times-circle" style="color: red;"></i> No Incluye:</h4>
+                        <ul>
+                            <li>Vuelos aéreos.</li>
+                            <li>Gastos extra en los destinos.</li>
+                        </ul>
+                    </div>
+                </details>
+                <a href="https://wa.me/51997799056?text=Hola,%20deseo%20cotizar%20Tarapoto" class="btn-card" target="_blank">Cotizar Destino</a>
             </div>
         </div>
 
+        <!-- PUNTA SAL -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1607590899451-92fbbd79d342?q=80&w=800&auto=format&fit=crop" alt="Norte Histórico">
+            <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?q=80&w=800&auto=format&fit=crop" alt="Punta Sal">
             <div class="card-body">
-                <h3>Ruta Moche</h3>
-                <p class="destinos-lista">📍 Chiclayo, Trujillo.</p>
-                <details><summary>Ver detalles</summary><div class="detalles-contenido"><ul><li>✅ [Completar qué incluye]</li></ul></div></details>
-                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar</a>
+                <h3>Punta Sal & Máncora</h3>
+                <span class="duracion"><i class="fas fa-calendar-alt"></i> 3 Días / 2 Noches</span>
+                
+                <div class="precio-box">
+                    <span>Paquete desde:</span>
+                    <div class="monto">S/ 480.00</div>
+                </div>
+
+                <details>
+                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <div class="detalles-contenido">
+                        <h4><i class="fas fa-check-circle" style="color: azul;"></i> Incluye:</h4>
+                        <ul>
+                            <li>Traslado Aeropuerto Tumbes/Talara - Hotel.</li>
+                            <li>2 Noches en hotel frente al mar con desayuno.</li>
+                            <li>Tour de nado con tortugas en El Ñuro.</li>
+                            <li>Tarde libre en playas de Máncora.</li>
+                        </ul>
+                        <h4><i class="fas fa-times-circle" style="color: red;"></i> No Incluye:</h4>
+                        <ul>
+                            <li>Pasajes aéreos o terrestres.</li>
+                            <li>Almuerzos y cenas.</li>
+                        </ul>
+                    </div>
+                </details>
+                <a href="https://wa.me/51997799056?text=Hola,%20deseo%20cotizar%20Playas%20del%20Norte" class="btn-card" target="_blank">Cotizar Destino</a>
             </div>
         </div>
-
+        
+        <!-- AREQUIPA -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1518182170546-076616fd4aa5?q=80&w=800&auto=format&fit=crop" alt="Selva">
+            <img src="https://images.unsplash.com/photo-1607590899451-92fbbd79d342?q=80&w=800&auto=format&fit=crop" alt="Arequipa">
             <div class="card-body">
-                <h3>Amazonía Peruana</h3>
-                <p class="destinos-lista">📍 Tarapoto, Pucallpa, Iquitos.</p>
-                <details><summary>Ver detalles</summary><div class="detalles-contenido"><ul><li>✅ [Completar qué incluye]</li></ul></div></details>
-                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar</a>
+                <h3>Arequipa y Cañón del Colca</h3>
+                <span class="duracion"><i class="fas fa-calendar-alt"></i> 3 Días / 2 Noches</span>
+                
+                <div class="precio-box">
+                    <span>Paquete desde:</span>
+                    <div class="monto">S/ 390.00</div>
+                </div>
+
+                <details>
+                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <div class="detalles-contenido">
+                        <h4><i class="fas fa-check-circle" style="color: azul;"></i> Incluye:</h4>
+                        <ul>
+                            <li>Traslados Aeropuerto - Hotel - Aeropuerto.</li>
+                            <li>2 Noches de alojamiento en Arequipa c/ desayuno.</li>
+                            <li>City Tour (Monasterio Santa Catalina opcional).</li>
+                            <li>Full Day al Cañón del Colca (Mirador Cruz del Cóndor) con almuerzo.</li>
+                        </ul>
+                        <h4><i class="fas fa-times-circle" style="color: red;"></i> No Incluye:</h4>
+                        <ul>
+                            <li>Boleto Turístico del Colca (BTC).</li>
+                            <li>Ingreso a baños termales de La Calera.</li>
+                            <li>Vuelos aéreos.</li>
+                        </ul>
+                    </div>
+                </details>
+                <a href="https://wa.me/51997799056?text=Hola,%20deseo%20cotizar%20Arequipa" class="btn-card" target="_blank">Cotizar Destino</a>
             </div>
         </div>
 
@@ -317,47 +468,154 @@
     <div class="section-header">
         <h2>Destinos Internacionales</h2>
         <div></div>
-        <p>Descubre el mundo. Atención exclusiva: <strong>925 807 384</strong></p>
+        <p>Descubre el mundo con expertos. Atención: <strong>925 807 384</strong></p>
     </div>
     <div class="grid">
         
+        <!-- PUNTA CANA -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=800&auto=format&fit=crop" alt="Punta Cana">
+            <div class="card-body">
+                <h3>Punta Cana Todo Incluido</h3>
+                <span class="duracion"><i class="fas fa-calendar-alt"></i> 5 Días / 4 Noches</span>
+                
+                <div class="precio-box">
+                    <span>Paquete Completo (Vuelos+Hotel) desde:</span>
+                    <div class="monto">$ 899.00</div>
+                </div>
+
+                <details>
+                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <div class="detalles-contenido">
+                        <h4><i class="fas fa-check-circle" style="color: green;"></i> Incluye:</h4>
+                        <ul>
+                            <li>Boleto aéreo Lima - Punta Cana - Lima.</li>
+                            <li>Traslados Aeropuerto - Hotel - Aeropuerto.</li>
+                            <li>4 Noches en Resort 5 Estrellas (Riu, Barceló o similar).</li>
+                            <li>Sistema TODO INCLUIDO (Comidas, snacks y bebidas ilimitadas).</li>
+                            <li>Impuestos hoteleros y aéreos.</li>
+                        </ul>
+                        <h4><i class="fas fa-times-circle" style="color: red;"></i> No Incluye:</h4>
+                        <ul>
+                            <li>Tours opcionales (Isla Saona, Coco Bongo).</li>
+                            <li>Seguro de Asistencia al Viajero (Sugerido).</li>
+                        </ul>
+                        <div class="terminos-caja">
+                            <strong>Requisitos:</strong> Pasaporte peruano vigente (mín. 6 meses). No requiere visa.
+                        </div>
+                    </div>
+                </details>
+                <a href="https://wa.me/51925807384?text=Hola,%20deseo%20cotizar%20Punta%20Cana" class="btn-card btn-rojo" target="_blank">Cotizar Punta Cana</a>
+            </div>
+        </div>
+
+        <!-- CANCUN -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800" alt="Cancún">
+            <div class="card-body">
+                <h3>Cancún Mágico</h3>
+                <span class="duracion"><i class="fas fa-calendar-alt"></i> 5 Días / 4 Noches</span>
+                
+                <div class="precio-box">
+                    <span>Paquete Completo (Vuelos+Hotel) desde:</span>
+                    <div class="monto">$ 920.00</div>
+                </div>
+
+                <details>
+                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <div class="detalles-contenido">
+                        <h4><i class="fas fa-check-circle" style="color: azul;"></i> Incluye:</h4>
+                        <ul>
+                            <li>Boleto aéreo Lima - Cancún - Lima.</li>
+                            <li>Traslados in/out.</li>
+                            <li>4 Noches de alojamiento en zona hotelera.</li>
+                            <li>Sistema de alimentación Todo Incluido.</li>
+                            <li>Impuestos obligatorios.</li>
+                        </ul>
+                        <h4><i class="fas fa-times-circle" style="color: red;"></i> No Incluye:</h4>
+                        <ul>
+                            <li>Impuesto de saneamiento ambiental (Se paga en el hotel).</li>
+                            <li>Tours (Chichén Itzá, Xcaret).</li>
+                        </ul>
+                        <div class="terminos-caja">
+                            <strong>Requisitos:</strong> Pasaporte vigente y Visa Mexicana o Americana para ciudadanos peruanos.
+                        </div>
+                    </div>
+                </details>
+                <a href="https://wa.me/51925807384?text=Hola,%20deseo%20cotizar%20Cancun" class="btn-card btn-rojo" target="_blank">Cotizar Cancún</a>
+            </div>
+        </div>
+
+        <!-- CARTAGENA & SAN ANDRÉS -->
         <div class="card">
             <img src="https://images.unsplash.com/photo-1583345229337-12b724581177?q=80&w=800&auto=format&fit=crop" alt="Colombia">
             <div class="card-body">
-                <h3>Colombia Mágica 🇨🇴</h3>
-                <p class="destinos-lista">📍 Cartagena, San Andrés, Medellín, Cali, Bogotá.</p>
-                <details><summary>Ver Paquetes / Incluye</summary><div class="detalles-contenido"><ul><li>✅ Vuelos + Hotel + Traslados (Completar info)</li></ul></div></details>
-                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Cotizar Colombia</a>
+                <h3>Combinado Colombia 🇨🇴</h3>
+                <span class="duracion"><i class="fas fa-calendar-alt"></i> 6 Días / 5 Noches</span>
+                
+                <div class="precio-box">
+                    <span>Paquete Completo desde:</span>
+                    <div class="monto">$ 799.00</div>
+                </div>
+
+                <details>
+                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <div class="detalles-contenido">
+                        <h4><i class="fas fa-check-circle" style="color: azul;"></i> Incluye:</h4>
+                        <ul>
+                            <li>Vuelos internacionales Lima - Colombia - Lima y vuelos internos.</li>
+                            <li>Traslados in/out en ambas ciudades.</li>
+                            <li>2 Noches en Cartagena (Hotel c/ desayunos).</li>
+                            <li>3 Noches en San Andrés (Sistema Todo Incluido).</li>
+                        </ul>
+                        <h4><i class="fas fa-times-circle" style="color: red;"></i> No Incluye:</h4>
+                        <ul>
+                            <li>Tarjeta de turismo de San Andrés.</li>
+                            <li>Tours opcionales (Islas del Rosario, Jhonny Cay).</li>
+                        </ul>
+                        <div class="terminos-caja">
+                            <strong>Requisitos:</strong> DNI o Pasaporte vigente. Vacuna Fiebre Amarilla recomendada.
+                        </div>
+                    </div>
+                </details>
+                <a href="https://wa.me/51925807384?text=Hola,%20deseo%20cotizar%20Colombia" class="btn-card btn-rojo" target="_blank">Cotizar Colombia</a>
             </div>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=800&auto=format&fit=crop" alt="Caribe">
-            <div class="card-body">
-                <h3>Paraíso Caribeño 🌴</h3>
-                <p class="destinos-lista">📍 Punta Cana, Santo Domingo, Aruba, Jamaica, Varadero, Havana.</p>
-                <details><summary>Ver Paquetes / Incluye</summary><div class="detalles-contenido"><ul><li>✅ Sistema All Inclusive (Completar info)</li></ul></div></details>
-                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Cotizar Caribe</a>
-            </div>
-        </div>
-
+        <!-- BUENOS AIRES -->
         <div class="card">
             <img src="https://images.unsplash.com/photo-1619681123381-8b0907eef37b?q=80&w=800&auto=format&fit=crop" alt="Argentina">
             <div class="card-body">
-                <h3>Ruta Sudamericana Sur</h3>
-                <p class="destinos-lista">📍 Argentina (Buenos Aires, Mendoza, Iguazú), Chile (Santiago, Isla de Pascua).</p>
-                <details><summary>Ver Paquetes / Incluye</summary><div class="detalles-contenido"><ul><li>✅ Completar información</li></ul></div></details>
-                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Cotizar Sudamérica</a>
-            </div>
-        </div>
+                <h3>Buenos Aires al Tango</h3>
+                <span class="duracion"><i class="fas fa-calendar-alt"></i> 4 Días / 3 Noches</span>
+                
+                <div class="precio-box">
+                    <span>Paquete Completo desde:</span>
+                    <div class="monto">$ 599.00</div>
+                </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=800&auto=format&fit=crop" alt="Brasil">
-            <div class="card-body">
-                <h3>Brasil & Centroamérica</h3>
-                <p class="destinos-lista">📍 Río de Janeiro, Sao Paulo, Panamá, San José (Costa Rica).</p>
-                <details><summary>Ver Paquetes / Incluye</summary><div class="detalles-contenido"><ul><li>✅ Completar información</li></ul></div></details>
-                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Cotizar Destino</a>
+                <details>
+                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <div class="detalles-contenido">
+                        <h4><i class="fas fa-check-circle" style="color: azul;"></i> Incluye:</h4>
+                        <ul>
+                            <li>Vuelo Lima - Buenos Aires - Lima.</li>
+                            <li>Traslados Aeropuerto - Hotel - Aeropuerto.</li>
+                            <li>3 Noches de hotel céntrico con desayuno.</li>
+                            <li>City Tour guiado (Obelisco, Caminito, Recoleta).</li>
+                            <li>Cena Show de Tango de cortesía.</li>
+                        </ul>
+                        <h4><i class="fas fa-times-circle" style="color: red;"></i> No Incluye:</h4>
+                        <ul>
+                            <li>Eco-tasa municipal.</li>
+                            <li>Comidas no especificadas.</li>
+                        </ul>
+                        <div class="terminos-caja">
+                            <strong>Requisitos:</strong> DNI vigente en buen estado o Pasaporte.
+                        </div>
+                    </div>
+                </details>
+                <a href="https://wa.me/51925807384?text=Hola,%20deseo%20cotizar%20Buenos%20Aires" class="btn-card btn-rojo" target="_blank">Cotizar Buenos Aires</a>
             </div>
         </div>
 
@@ -371,27 +629,80 @@
     <div class="section-header">
         <h2>Grandes Viajes: Europa & Asia</h2>
         <div></div>
-        <p>Circuitos garantizados de larga distancia</p>
+        <p>Circuitos garantizados y asesoría de visados</p>
     </div>
     <div class="grid">
         
         <div class="card">
             <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800&auto=format&fit=crop" alt="Europa Clasica">
             <div class="card-body">
-                <h3>Europa Clásica & Mediterráneo</h3>
-                <p class="destinos-lista">📍 Madrid, París, Ámsterdam, Roma, Venecia, Florencia, Milán, Bruselas, Londres.</p>
-                <details><summary>Ver Detalles del Circuito</summary><div class="detalles-contenido"><ul><li>✅ Hoteles categoría turista/primera</li><li>✅ Autocar de lujo con guía</li></ul></div></details>
-                <a href="https://wa.me/51925807384" class="btn-card" target="_blank">Cotizar Europa</a>
+                <h3>Europa Clásica Inolvidable</h3>
+                <span class="duracion"><i class="fas fa-calendar-alt"></i> 17 Días / 15 Noches</span>
+                
+                <div class="precio-box">
+                    <span>Circuito (Solo Terrestre) desde:</span>
+                    <div class="monto">$ 1,850.00</div>
+                </div>
+
+                <details>
+                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <div class="detalles-contenido">
+                        <h4>Ruta:</h4>
+                        <p>Madrid, Burdeos, París, Frankfurt, Múnich, Venecia, Florencia, Roma, Niza, Barcelona, Madrid.</p>
+                        <h4><i class="fas fa-check-circle" style="color: azul;"></i> Incluye:</h4>
+                        <ul>
+                            <li>Traslados de llegada y salida.</li>
+                            <li>Alojamiento en hoteles cat. turista/primera con desayuno buffet.</li>
+                            <li>Recorrido en autocar de lujo con guía de habla hispana.</li>
+                            <li>Visitas panorámicas según itinerario.</li>
+                        </ul>
+                        <h4><i class="fas fa-times-circle" style="color: red;"></i> No Incluye:</h4>
+                        <ul>
+                            <li>Boleto Aéreo Internacional.</li>
+                            <li>Tasas turísticas de ciudad (City Tax - pago en destino).</li>
+                            <li>Seguro de viaje Schengen (Obligatorio).</li>
+                        </ul>
+                        <h4><i class="fas fa-lightbulb" style="color: azul;"></i> Recomendaciones:</h4>
+                        <ul>
+                            <li>Llevar zapatos cómodos para largas caminatas. Presupuestar 40-50 euros diarios para comidas extras.</li>
+                        </ul>
+                    </div>
+                </details>
+                <a href="https://wa.me/51925807384?text=Hola,%20cotizar%20Circuito%20Europa" class="btn-card" target="_blank">Cotizar Circuito</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1548231571-0082987a0da3?q=80&w=800&auto=format&fit=crop" alt="Asia y Medio Oriente">
+            <img src="https://images.unsplash.com/photo-1548231571-0082987a0da3?q=80&w=800&auto=format&fit=crop" alt="Asia">
             <div class="card-body">
-                <h3>Asia & Medio Oriente</h3>
-                <p class="destinos-lista">📍 Japón, China, Egipto.</p>
-                <details><summary>Ver Detalles del Circuito</summary><div class="detalles-contenido"><ul><li>✅ Vuelos transcontinentales</li><li>✅ Guías de habla hispana</li></ul></div></details>
-                <a href="https://wa.me/51925807384" class="btn-card" target="_blank">Cotizar Exóticos</a>
+                <h3>Japón & China Milenaria</h3>
+                <span class="duracion"><i class="fas fa-calendar-alt"></i> 14 Días / 12 Noches</span>
+                
+                <div class="precio-box">
+                    <span>Circuito (Solo Terrestre) desde:</span>
+                    <div class="monto">$ 2,450.00</div>
+                </div>
+
+                <details>
+                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <div class="detalles-contenido">
+                        <h4>Ruta:</h4>
+                        <p>Tokio, Kioto, Osaka, Pekín, Shanghái.</p>
+                        <h4><i class="fas fa-check-circle" style="color: azul;"></i> Incluye:</h4>
+                        <ul>
+                            <li>Hoteles céntricos con desayuno.</li>
+                            <li>Tren bala en Japón.</li>
+                            <li>Guías oficiales de habla hispana.</li>
+                            <li>Visita a la Gran Muralla China con almuerzo.</li>
+                        </ul>
+                        <h4><i class="fas fa-times-circle" style="color: red;"></i> No Incluye:</h4>
+                        <ul>
+                            <li>Vuelos transcontinentales.</li>
+                            <li>Gestión de Visados.</li>
+                        </ul>
+                    </div>
+                </details>
+                <a href="https://wa.me/51925807384?text=Hola,%20cotizar%20Circuito%20Asia" class="btn-card" target="_blank">Cotizar Circuito</a>
             </div>
         </div>
 
@@ -405,34 +716,37 @@
     <div class="section-header">
         <h2>Cruceros por el Mundo</h2>
         <div></div>
-        <p>Lujo, diversión y descanso navegando por los mejores mares</p>
+        <p>Despierta cada día en un destino diferente</p>
     </div>
     <div class="grid">
         
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?q=80&w=800&auto=format&fit=crop" alt="Cruceros sin visa">
+            <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?q=80&w=800&auto=format&fit=crop" alt="Crucero sin visa">
             <div class="card-body">
-                <h3>Cruceros Sin Visa</h3>
-                <p class="destinos-lista">Salidas desde puertos accesibles en el Caribe y Sudamérica sin necesidad de visa americana.</p>
-                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Ver Rutas Sin Visa</a>
+                <h3>Caribe Sin Visa (Desde Panamá)</h3>
+                <span class="duracion"><i class="fas fa-ship"></i> 8 Días / 7 Noches</span>
+                <p style="font-size: 0.9rem; margin-bottom: 15px; flex-grow: 1;">Zarpa desde Colón (Panamá) recorriendo Cartagena, Aruba y Curazao sin necesidad de Visa Americana.</p>
+                <a href="https://wa.me/51925807384?text=Hola,%20cotizar%20Crucero%20Sin%20Visa" class="btn-card btn-rojo" target="_blank">Ver Disponibilidad y Precios</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1502758837130-9788e3650f00?q=80&w=800&auto=format&fit=crop" alt="Cruceros Europa">
+            <img src="https://images.unsplash.com/photo-1542314831-c6a4d14272ce?q=80&w=800&auto=format&fit=crop" alt="Crucero Miami">
             <div class="card-body">
-                <h3>Salidas desde Europa</h3>
-                <p class="destinos-lista">Recorre las Islas Griegas, el Mediterráneo o los Fiordos Noruegos zarpando desde Europa.</p>
-                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Ver Rutas Europa</a>
+                <h3>Caribe & Bahamas (Desde Miami)</h3>
+                <span class="duracion"><i class="fas fa-ship"></i> 5 a 8 Días</span>
+                <p style="font-size: 0.9rem; margin-bottom: 15px; flex-grow: 1;">Embarca en Royal Caribbean, MSC o NCL desde Florida. <strong>*Requiere Visa Americana.</strong></p>
+                <a href="https://wa.me/51925807384?text=Hola,%20cotizar%20Crucero%20desde%20Miami" class="btn-card btn-rojo" target="_blank">Ver Disponibilidad y Precios</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1542314831-c6a4d14272ce?q=80&w=800&auto=format&fit=crop" alt="Cruceros USA">
+            <img src="https://images.unsplash.com/photo-1502758837130-9788e3650f00?q=80&w=800&auto=format&fit=crop" alt="Crucero Europa">
             <div class="card-body">
-                <h3>Salidas desde EE.UU.</h3>
-                <p class="destinos-lista">Zarpa desde Miami, Orlando o Nueva York hacia el Caribe y Las Bahamas (Requiere Visa).</p>
-                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Ver Rutas EE.UU.</a>
+                <h3>Islas Griegas & Mediterráneo</h3>
+                <span class="duracion"><i class="fas fa-ship"></i> 8 Días / 7 Noches</span>
+                <p style="font-size: 0.9rem; margin-bottom: 15px; flex-grow: 1;">Salidas desde Barcelona, Roma o Atenas. Descubre el encanto del viejo continente por mar.</p>
+                <a href="https://wa.me/51925807384?text=Hola,%20cotizar%20Crucero%20Europa" class="btn-card btn-rojo" target="_blank">Ver Disponibilidad y Precios</a>
             </div>
         </div>
 
@@ -440,36 +754,35 @@
 </section>
 
 <!-- ==========================================
-     6. SEGUROS DE VIAJE
+     6. SEGUROS DE ASISTENCIA AL VIAJERO
      ========================================== -->
 <section id="seguros">
     <div class="section-header">
         <h2>Seguros de Asistencia al Viajero</h2>
         <div></div>
-        <p>Tu tranquilidad no es opcional. Viaja protegido con las mejores compañías globales.</p>
+        <p>Tu tranquilidad no es opcional. Viaja protegido a cualquier parte del mundo.</p>
     </div>
     
-    <div style="text-align: center; margin-bottom: 20px;">
-        <p style="max-width: 800px; margin: 0 auto; color: #555;">Contamos con coberturas integrales para emergencias médicas, pérdida de equipaje y cancelación de vuelos. <strong>Emitimos tu póliza en minutos.</strong></p>
-    </div>
-
-    <div class="seguros-grid">
-        <span class="seguro-tag">Travi Assistance</span>
-        <span class="seguro-tag">Assicard Assistance</span>
-        <span class="seguro-tag">Travel Care Assistance</span>
-        <span class="seguro-tag">Euroamerican Assistance</span>
-        <span class="seguro-tag">Global Assist Travel Protection</span>
-        <span class="seguro-tag">Passenger Assistance</span>
-        <span class="seguro-tag">United Assist</span>
-    </div>
-
-    <div style="text-align: center; margin-top: 40px;">
-        <a href="https://wa.me/51925807384?text=Hola,%20necesito%20cotizar%20un%20Seguro%20de%20Viaje." class="btn-card btn-rojo" style="display: inline-block; padding: 15px 40px; font-size: 1rem;" target="_blank"><i class="fas fa-shield-alt"></i> Cotizar Mi Seguro Ahora</a>
+    <div style="background: var(--gris-claro); padding: 40px; border-radius: 20px; text-align: center; border-left: 8px solid var(--azul);">
+        <h3 style="color: var(--azul); margin-bottom: 15px;">¿Qué cubre nuestra asistencia?</h3>
+        <p style="margin-bottom: 25px; color: #555;">Asistencia médica por enfermedad o accidente, pérdida o demora de equipaje, cancelación de vuelo, repatriación sanitaria, asistencia legal y cobertura COVID-19. <strong>Emitimos tu póliza en 5 minutos.</strong></p>
+        
+        <div class="seguros-grid">
+            <span class="seguro-tag">Travi Assistance</span>
+            <span class="seguro-tag">Assicard Assistance</span>
+            <span class="seguro-tag">Travel Care Assistance</span>
+            <span class="seguro-tag">Euroamerican Assistance</span>
+            <span class="seguro-tag">Global Assist</span>
+            <span class="seguro-tag">Passenger Assistance</span>
+            <span class="seguro-tag">United Assist</span>
+        </div>
+        
+        <a href="https://wa.me/51925807384?text=Hola,%20necesito%20cotizar%20un%20Seguro%20de%20Viaje." class="btn-card btn-rojo" style="display: inline-block; padding: 15px 40px; margin-top: 30px; font-size: 1rem; width: auto;" target="_blank"><i class="fas fa-shield-alt"></i> Cotizar Mi Seguro Ahora</a>
     </div>
 </section>
 
 <!-- ==========================================
-     7. IDENTIDAD Y CORPORATIVO (Misión y Visión Restaurada)
+     7. CONÓCENOS (MISIÓN Y VISIÓN)
      ========================================== -->
 <section id="identidad" class="bg-gris">
     <div class="section-header">
@@ -492,7 +805,7 @@
 </section>
 
 <!-- ==========================================
-     8. TESTIMONIOS (Restaurados)
+     8. TESTIMONIOS
      ========================================== -->
 <section id="testimonios">
     <div class="section-header">
@@ -518,9 +831,9 @@
         </div>
     </div>
 </section>
- 
+
 <!-- ==========================================
-     9. GARANTÍA LEGAL Y RESPALDOS (Actualizado con Y Tú Qué Planes)
+     9. GARANTÍA LEGAL Y RESPALDOS
      ========================================== -->
 <section class="bg-gris">
     <div class="garantia-legal">
@@ -543,7 +856,7 @@
 </section>
  
 <!-- ==========================================
-     10. CUENTAS BANCARIAS (Restauradas)
+     10. CUENTAS BANCARIAS
      ========================================== -->
 <section id="pagos">
     <div class="section-header"><h2>Cuentas para Reservas</h2><div></div></div>
@@ -568,7 +881,7 @@
 </section>
 
 <!-- ==========================================
-     FOOTER ORIGINAL COMPLETO
+     FOOTER
      ========================================== -->
 <footer>
     <div class="footer-grid">
@@ -578,14 +891,15 @@
         </div>
         <div class="footer-col">
             <h4>Contacto Directo</h4>
-            <li><i class="fas fa-phone" style="margin-right: 10px;"></i> 925 807 384</li>
-            <li><i class="fas fa-phone" style="margin-right: 10px;"></i> 997 799 056</li>
-            <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> helmyviajes@gmail.com</li>
+            <li><i class="fas fa-phone" style="margin-right: 10px;"></i> 925 807 384 (Internacional / B2B)</li>
+            <li><i class="fas fa-phone" style="margin-right: 10px;"></i> 997 799 056 (Nacional)</li>
+            <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> helmyviajesreservas@gmail.com</li>
         </div>
         <div class="footer-col">
             <h4>Nuestras Redes</h4>
             <li><i class="fab fa-facebook" style="margin-right: 10px;"></i> /helmyviajes</li>
             <li><i class="fab fa-instagram" style="margin-right: 10px;"></i> @helmyviajes</li>
+            <li><i class="fab fa-tiktok" style="margin-right: 10px;"></i> @_helmyviajes</li>
         </div>
     </div>
     <div class="copy">
@@ -594,7 +908,7 @@
 </footer>
 
 <!-- ==========================================
-     BOTONES FLOTANTES Y HELMY-BOT (Restaurados)
+     BOTONES FLOTANTES Y HELMY-BOT
      ========================================== -->
 <div class="float-buttons">
     <div class="btn-flotante btn-bot" onclick="toggleBot()"><i class="fas fa-robot"></i></div>
