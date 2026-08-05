@@ -10,149 +10,153 @@
         :root {
             --azul: #003399; 
             --rojo: #e60000; 
-            --dorado: #c5a059; 
             --blanco: #ffffff;
             --gris-claro: #f4f7f6; 
+            --gris-oscuro: #333333;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; background-color: var(--blanco); }
+        body { font-family: 'Montserrat', sans-serif; color: var(--gris-oscuro); line-height: 1.6; background-color: var(--blanco); }
  
-        /* BARRAS SUPERIORES */
+        /* CABECERA Y MENÚ */
         .top-bar { background: var(--azul); color: white; padding: 8px 5%; display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
-        .top-bar span { display: flex; align-items: center; gap: 8px; }
         header { background: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .logo img { height: 75px; }
-        .social-nav a { color: var(--azul); font-size: 1.4rem; margin-left: 20px; transition: 0.3s; }
+        
+        .main-nav { display: flex; gap: 15px; }
+        .main-nav a { text-decoration: none; color: var(--azul); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s; }
+        .main-nav a:hover { color: var(--rojo); }
+
+        .social-nav a { color: var(--azul); font-size: 1.4rem; margin-left: 15px; transition: 0.3s; }
         .social-nav a:hover { color: var(--rojo); }
  
         /* HERO Y BUSCADOR */
         .hero { 
-            height: 65vh; 
-            background: linear-gradient(rgba(0,51,153,0.6), rgba(0,51,153,0.6)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=80') center/cover;
+            height: 60vh; 
+            background: linear-gradient(rgba(0,51,153,0.7), rgba(0,51,153,0.7)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=80') center/cover;
             display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px;
         }
-        .hero h1 { font-size: 3.5rem; font-weight: 800; text-shadow: 3px 3px 10px rgba(0,0,0,0.5); text-transform: uppercase; }
-        .hero p { font-size: 1.2rem; font-weight: 600; margin-top: 10px; }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); text-transform: uppercase; margin-bottom: 10px; }
         
-        .search-container { max-width: 1100px; margin: -60px auto 40px; background: white; padding: 35px; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.2); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; border-top: 8px solid var(--rojo); }
+        .search-container { max-width: 1100px; margin: -60px auto 40px; background: white; padding: 35px; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.2); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; border-top: 8px solid var(--rojo); position: relative; z-index: 10; }
         .input-group label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--azul); text-transform: uppercase; margin-bottom: 8px; }
         .input-group input, .input-group select { width: 100%; padding: 12px; border: 2px solid #eee; border-radius: 10px; outline: none; font-family: 'Montserrat', sans-serif;}
         .btn-quote { background: var(--rojo); color: white; border: none; padding: 15px; border-radius: 10px; font-weight: 800; cursor: pointer; text-transform: uppercase; align-self: end; transition: 0.3s; }
         .btn-quote:hover { transform: scale(1.03); background: #b30000; }
- 
-        /* ESTRUCTURA DE SECCIONES */
-        section { padding: 80px 8%; }
+
+        /* SECCIONES GENERALES */
+        section { padding: 70px 5%; }
+        .bg-gris { background-color: var(--gris-claro); }
         .section-header { text-align: center; margin-bottom: 50px; }
-        .section-header h2 { font-size: 2.5rem; color: var(--azul); text-transform: uppercase; letter-spacing: 1px; font-weight: 800; }
+        .section-header h2 { font-size: 2.2rem; color: var(--azul); text-transform: uppercase; font-weight: 800; }
         .section-header div { width: 80px; height: 5px; background: var(--rojo); margin: 15px auto; }
-        .section-header p { color: #666; font-size: 1.1rem; }
  
-        /* TARJETAS DE DESTINOS (GRILLA) */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
-        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #eee; display: flex; flex-direction: column; transition: 0.4s; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); border-color: var(--azul); }
-        .card img { width: 100%; height: 220px; object-fit: cover; }
-        .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
-        .price-tag { font-size: 0.8rem; font-weight: 800; color: white; background-color: var(--rojo); padding: 5px 12px; border-radius: 20px; display: inline-block; margin-bottom: 15px; align-self: flex-start; text-transform: uppercase;}
-        .card-body h3 { color: var(--azul); font-size: 1.4rem; margin-bottom: 15px; font-weight: 700; }
-        .card-body p { font-size: 0.9rem; color: #555; margin-bottom: 20px; flex-grow: 1; }
-        .card-body ul { list-style: none; margin-bottom: 20px; flex-grow: 1; }
-        .card-body li { font-size: 0.9rem; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #666; font-weight: 600; }
-        .card-body li i { color: var(--rojo); }
+        /* GRILLA DE TARJETAS */
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
         
-        /* BOTONES ESTILO MARCA (CERO VERDE) */
-        .btn-card { display: block; background: var(--azul); color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700; transition: 0.3s; text-transform: uppercase; font-size: 0.9rem; border: 2px solid var(--azul); }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.06); border: 1px solid #eaeaea; display: flex; flex-direction: column; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); border-color: var(--azul); }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        
+        .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-body h3 { color: var(--azul); font-size: 1.3rem; margin-bottom: 10px; font-weight: 800; text-transform: uppercase; }
+        .card-body .destinos-lista { font-size: 0.9rem; color: #555; margin-bottom: 15px; font-weight: 600; flex-grow: 1; }
+        
+        /* ACORDEÓN PARA INCLUYE / NO INCLUYE */
+        details { background: #f9f9f9; padding: 12px; border-radius: 8px; border-left: 4px solid var(--azul); margin-bottom: 15px; }
+        summary { font-weight: 700; color: var(--azul); font-size: 0.9rem; cursor: pointer; outline: none; text-transform: uppercase; }
+        .detalles-contenido { margin-top: 15px; font-size: 0.85rem; }
+        .detalles-contenido h4 { color: var(--azul); margin-top: 10px; font-size: 0.9rem; }
+        .detalles-contenido ul { list-style: none; padding: 0; margin-bottom: 10px; }
+        .detalles-contenido ul li { margin-bottom: 5px; }
+        .nota-importante { color: var(--rojo); font-weight: bold; font-size: 0.8rem; display: block; margin-top: 10px; border-top: 1px dashed #ccc; padding-top: 10px; }
+
+        /* BOTONES DE TARJETAS */
+        .btn-card { display: block; background: var(--azul); color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 6px; font-weight: 700; transition: 0.3s; text-transform: uppercase; font-size: 0.85rem; margin-top: auto; border: 2px solid var(--azul); }
         .btn-card:hover { background: white; color: var(--azul); }
-        .btn-card-red { background: var(--rojo); border-color: var(--rojo); }
-        .btn-card-red:hover { background: white; color: var(--rojo); }
+        .btn-rojo { background: var(--rojo); border-color: var(--rojo); }
+        .btn-rojo:hover { background: white; color: var(--rojo); }
 
-        /* BANNER SEGUROS */
-        .banner-seguros { background: linear-gradient(135deg, var(--azul), #001a4d); border-radius: 20px; padding: 50px; color: white; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 30px; box-shadow: 0 15px 40px rgba(0,51,153,0.3); }
-        .banner-seguros-text { flex: 1; min-width: 300px; }
-        .banner-seguros-text h3 { font-size: 2.2rem; margin-bottom: 15px; color: var(--blanco); }
-        .banner-seguros-text p { font-size: 1.1rem; margin-bottom: 20px; color: var(--gris-claro); }
-        .banner-seguros .btn-quote { background: var(--rojo); font-size: 1.1rem; padding: 15px 30px; }
+        /* MARCAS DE SEGUROS */
+        .seguros-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; }
+        .seguro-tag { background: white; border: 2px solid var(--azul); color: var(--azul); padding: 10px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
 
-        /* NOSOTROS & TESTIMONIOS */
-        .nosotros-box { background: white; padding: 40px; border-radius: 20px; text-align: center; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--azul); }
+        /* SECCIONES INSTITUCIONALES (NOSOTROS, TESTIMONIOS, LEGAL, PAGOS) */
+        .nosotros-box { background: var(--gris-claro); padding: 40px; border-radius: 20px; text-align: center; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
         .nosotros-box p { font-size: 1.1rem; max-width: 900px; margin: 0 auto; color: #444; }
-        .mv-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .mv-card { background: var(--gris-claro); padding: 35px; border-radius: 20px; text-align: left; border-left: 5px solid var(--rojo); }
+        .mv-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
+        .mv-card { background: white; padding: 35px; border-radius: 20px; border-top: 5px solid var(--azul); box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: left; }
         .mv-card h3 { color: var(--azul); margin-bottom: 15px; text-transform: uppercase; font-size: 1.3rem; }
 
-        .testimonio-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid var(--rojo); }
-        .testimonio-card p { font-style: italic; color: #555; margin-bottom: 20px; line-height: 1.8; }
-        .testimonio-card h4 { color: var(--azul); font-weight: 700; margin-bottom: 5px; }
-        .testimonio-card span { font-size: 0.8rem; color: #888; font-weight: 600; text-transform: uppercase; }
+        .testimonio-card { background: var(--gris-claro); border-left: 5px solid var(--rojo); padding: 25px; border-radius: 0 20px 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+        .testimonio-card p { font-style: italic; color: #555; margin-bottom: 15px; }
+        .testimonio-card h4 { color: var(--azul); font-weight: 700; }
+        .testimonio-card span { font-size: 0.8rem; color: #888; }
 
-        /* GARANTÍA Y PAGOS */
-        .garantia-legal { background: white; border-radius: 20px; padding: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; border: 2px solid var(--gris-claro); }
-        .garantia-item i { font-size: 2.5rem; color: var(--azul); margin-bottom: 15px; }
-        .garantia-item h4 { margin-bottom: 10px; color: var(--azul); text-transform: uppercase; }
+        .garantia-legal { background: var(--gris-claro); border-radius: 25px; padding: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; border: 2px dashed #ccc; }
+        .garantia-item i { font-size: 3rem; color: var(--azul); margin-bottom: 15px; }
+        .garantia-item h4 { margin-bottom: 10px; color: var(--azul); }
 
-        /* FOOTER */
-        footer { background: #0a1128; color: white; padding: 80px 8% 40px; }
+        /* FOOTER Y BOTONES FLOTANTES */
+        footer { background: #0b132b; color: white; padding: 80px 8% 40px; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px; }
-        .footer-col h4 { color: var(--blanco); margin-bottom: 25px; border-left: 4px solid var(--rojo); padding-left: 15px; text-transform: uppercase; }
-        .footer-col p, .footer-col li { font-size: 0.9rem; color: #a0aab2; margin-bottom: 12px; list-style: none; display: flex; align-items: center; gap: 10px; }
-        .footer-col i { color: var(--rojo); }
-        .copy { text-align: center; border-top: 1px solid #1f2940; padding-top: 30px; font-size: 0.8rem; color: #636e72; }
- 
-        /* BOTONES FLOTANTES MARCA */
+        .footer-col h4 { color: var(--blanco); margin-bottom: 25px; border-left: 4px solid var(--rojo); padding-left: 15px; }
+        .footer-col p, .footer-col li { font-size: 0.9rem; color: #bdc3c7; margin-bottom: 12px; list-style: none; }
+        .copy { text-align: center; border-top: 1px solid #2d3436; padding-top: 30px; font-size: 0.8rem; color: #636e72; }
+
         .float-buttons { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; }
-        .btn-flotante { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white; box-shadow: 0 10px 25px rgba(0,0,0,0.3); cursor: pointer; transition: 0.3s; }
-        .btn-wa { background: var(--rojo); border: 2px solid white; } /* Reemplazo de verde por rojo corporativo */
-        .btn-wa:hover { transform: scale(1.1); background: #b30000; }
-        .btn-bot { background: var(--azul); border: 2px solid white; }
-        .btn-bot:hover { transform: scale(1.1); background: #002266; }
- 
+        .btn-flotante { width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; box-shadow: 0 10px 25px rgba(0,0,0,0.3); cursor: pointer; transition: 0.3s; }
+        .btn-wa { background: var(--rojo); } 
+        .btn-bot { background: var(--azul); }
+
         /* CHATBOT */
-        #helmy-bot-window { position: fixed; bottom: 105px; right: 30px; width: 340px; background: white; border-radius: 15px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); display: none; z-index: 1999; overflow: hidden; border: 2px solid var(--azul); }
-        .bot-header { background: var(--azul); color: white; padding: 15px 20px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; }
-        .bot-body { padding: 25px; background: var(--gris-claro); }
-        .bot-btn { display:block; width:100%; padding:12px; margin-bottom:10px; cursor:pointer; background: white; border: 2px solid var(--azul); border-radius: 8px; font-weight: bold; color: var(--azul); text-decoration: none; text-align: center; transition: 0.3s; }
-        .bot-btn:hover { background: var(--azul); color: white; }
-        .bot-btn-red { background: var(--rojo); border-color: var(--rojo); color: white; }
-        .bot-btn-red:hover { background: #b30000; border-color: #b30000; }
+        #helmy-bot-window { position: fixed; bottom: 110px; right: 30px; width: 320px; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); display: none; z-index: 1999; overflow: hidden; border-top: 8px solid var(--azul); }
+        .bot-btn { display:block; width:100%; padding:12px; margin-bottom:10px; cursor:pointer; background: var(--gris-claro); border: 1px solid #ccc; border-radius: 8px; font-weight: bold; color: var(--azul); text-decoration: none; text-align: center; box-sizing: border-box; }
+        .bot-btn-rojo { background: var(--rojo); color: white; border: none; }
     </style>
 </head>
 <body>
  
 <div class="top-bar">
-    <span><i class="fas fa-certificate"></i> Agencia Autorizada MINCETUR</span>
-    <span><i class="fas fa-plane-departure"></i> TU AVENTURA COMIENZA AQUI</span>
+    <span><i class="fas fa-certificate"></i> Agencia Registrada ante MINCETUR</span>
+    <span>Atención Nacional: 997 799 056 | Internacional: 925 807 384</span>
 </div>
  
 <header>
     <div class="logo"><img src="IMG-20230810-WA0065.jpg" alt="Helmy Viajes Perú"></div>
+    <nav class="main-nav">
+        <a href="#full-days">Full Days</a>
+        <a href="#nacionales">Nacionales</a>
+        <a href="#internacionales">Internacionales</a>
+        <a href="#europa-asia">Europa & Asia</a>
+        <a href="#cruceros">Cruceros</a>
+        <a href="#seguros">Seguros</a>
+    </nav>
     <div class="social-nav">
         <a href="https://facebook.com/helmyviajes"><i class="fab fa-facebook"></i></a>
         <a href="https://instagram.com/helmyviajes"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@_helmyviajes" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <!-- Whatsapp link top: usando el num principal -->
         <a href="https://wa.me/51925807384"><i class="fab fa-whatsapp"></i></a>
     </div>
 </header>
  
 <section class="hero">
     <h1>HELMY VIAJES PERÚ</h1>
-    <p>Seguridad, Respaldo y Experiencias Inolvidables</p>
+    <p style="font-size: 1.2rem; font-weight: 600;">Seguridad y Respaldo en cada uno de tus destinos</p>
 </section>
- 
+
 <div class="search-container">
     <div class="input-group">
         <label>¿Qué buscas?</label>
         <select id="tipo">
-            <option>Paquetes Nacionales</option>
+            <option>Full Days</option>
             <option>Vuelos Internacionales</option>
-            <option>Cruceros del Mundo</option>
+            <option>Cruceros</option>
             <option>Europa & Asia</option>
-            <option>Seguros de Viaje</option>
         </select>
     </div>
     <div class="input-group">
         <label>Destino</label>
-        <input type="text" id="destino-txt" placeholder="Ej: Punta Cana, Cusco, Madrid...">
+        <input type="text" id="destino-txt" placeholder="Ej: Punta Cana, Cusco...">
     </div>
     <div class="input-group">
         <label>Fecha Viaje</label>
@@ -160,174 +164,314 @@
     </div>
     <button class="btn-quote" onclick="enviarCotizacion()">Ver Ofertas Disponibles</button>
 </div>
-
-<!-- 1. NACIONALES Y FULL DAYS (VENTAS LOCALES) -->
-<section id="full-days">
+ 
+<!-- ==========================================
+     1. FULL DAYS (LÍNEA 997 799 056)
+     ========================================== -->
+<section id="full-days" class="bg-gris">
     <div class="section-header">
-        <h2>Destinos Nacionales & Full Days</h2>
+        <h2>Full Days & Escapadas</h2>
         <div></div>
-        <p>Conecta con la magia del Perú. Atención exclusiva al: 997 799 056</p>
+        <p>Salidas confirmadas. Atención y reservas: <strong>997 799 056</strong></p>
     </div>
     <div class="grid">
+        
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1544605910-a29285703f83?q=80&w=800&auto=format&fit=crop" alt="Paracas Ica">
+            <div class="card-body">
+                <h3>Paracas & Ica</h3>
+                <p class="destinos-lista">Islas Ballestas, Huacachina, Tubulares y más.</p>
+                <details>
+                    <summary>Ver Itinerario / Qué Incluye</summary>
+                    <div class="detalles-contenido">
+                        <h4>Incluye:</h4>
+                        <ul>
+                            <li>✅ Transporte turístico ida y vuelta</li>
+                            <li>✅ Guía de Turismo en español</li>
+                            <li>✅ Embarcación rápida para Islas Ballestas</li>
+                            <li>✅ Asistencia permanente</li>
+                        </ul>
+                        <h4>No Incluye:</h4>
+                        <ul>
+                            <li>❎ Pago de ingreso a ballestas + reserva</li>
+                            <li>❎ Almuerzo</li>
+                            <li>❎ Cualquier otro no mencionado en Incluye.</li>
+                        </ul>
+                        <span class="nota-importante">IMPORTANTE:<br>Precios por persona en soles. Precios no aplican para feriados: Semana Santa, Año Nuevo, Navidad, Fiestas Patrias. Incrementa el 20% a los servicios para estas fechas.</span>
+                    </div>
+                </details>
+                <a href="https://wa.me/51997799056?text=Hola,%20deseo%20cotizar%20el%20Full%20Day%20Paracas%20e%20Ica" class="btn-card" target="_blank">Cotizar Full Day</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1607590899451-92fbbd79d342?q=80&w=800&auto=format&fit=crop" alt="Líneas de Nazca">
+            <div class="card-body">
+                <h3>Sobrevuelo Nazca</h3>
+                <p class="destinos-lista">Sobrevuelo a las enigmáticas líneas de Nazca.</p>
+                <details><summary>Ver Itinerario / Qué Incluye</summary><div class="detalles-contenido"><h4>Incluye:</h4><ul><li>✅ [Escribir aquí lo que incluye]</li></ul><h4>No Incluye:</h4><ul><li>❎ [Escribir aquí lo que NO incluye]</li></ul></div></details>
+                <a href="https://wa.me/51997799056?text=Hola,%20deseo%20cotizar%20el%20Full%20Day%20Nazca" class="btn-card" target="_blank">Cotizar Full Day</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://i.postimg.cc/d0YQnGm9/DROMEDARIOHELMY.jpg" alt="Dromedarius">
+            <div class="card-body">
+                <h3>Dromedarius</h3>
+                <p class="destinos-lista">Paseo en camellos y aventura en el desierto.</p>
+                <details><summary>Ver Itinerario / Qué Incluye</summary><div class="detalles-contenido"><h4>Incluye:</h4><ul><li>✅ [Completar información]</li></ul></div></details>
+                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar Full Day</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?q=80&w=800&auto=format&fit=crop" alt="Churín">
+            <div class="card-body">
+                <h3>Baños de Churín</h3>
+                <p class="destinos-lista">Relajación total en aguas termales curativas.</p>
+                <details><summary>Ver Itinerario / Qué Incluye</summary><div class="detalles-contenido"><h4>Incluye:</h4><ul><li>✅ [Completar información]</li></ul></div></details>
+                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar Full Day</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=800&auto=format&fit=crop" alt="Antioquia">
+            <div class="card-body">
+                <h3>Antioquía</h3>
+                <p class="destinos-lista">El pueblo de colores y manzanas.</p>
+                <details><summary>Ver Itinerario / Qué Incluye</summary><div class="detalles-contenido"><h4>Incluye:</h4><ul><li>✅ [Completar información]</li></ul></div></details>
+                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar Full Day</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" alt="Cerro Azul">
+            <div class="card-body">
+                <h3>Cañete & Cerro Azul</h3>
+                <p class="destinos-lista">Deportes de aventura y playas del sur.</p>
+                <details><summary>Ver Itinerario / Qué Incluye</summary><div class="detalles-contenido"><h4>Incluye:</h4><ul><li>✅ [Completar información]</li></ul></div></details>
+                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar Full Day</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     2. NACIONALES (LÍNEA 997 799 056)
+     ========================================== -->
+<section id="nacionales">
+    <div class="section-header">
+        <h2>Destinos Nacionales</h2>
+        <div></div>
+        <p>Todo el Perú a tu alcance. Atención: <strong>997 799 056</strong></p>
+    </div>
+    <div class="grid">
+        
         <div class="card">
             <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=800&auto=format&fit=crop" alt="Cusco">
             <div class="card-body">
-                <span class="price-tag">Joyas del Perú</span>
-                <h3>Cusco Imperial </h3>
-                <ul>
-                    <li><i class="fas fa-check"></i> Boleto a Machu Picchu</li>
-                    <li><i class="fas fa-check"></i> Valle Sagrado y Montaña 7 Colores</li>
-                    <li><i class="fas fa-check"></i> Hoteles Céntricos + Traslados</li>
-                </ul>
-                <a href="https://wa.me/51997799056?text=Hola%20Helmy%20Viajes,%20deseo%20cotizar%20un%20paquete%20para%20CUSCO." class="btn-card"><i class="fab fa-whatsapp"></i> Cotizar Destino</a>
+                <h3>Sur Andino</h3>
+                <p class="destinos-lista">📍 Cusco, Arequipa.</p>
+                <details><summary>Ver detalles</summary><div class="detalles-contenido"><ul><li>✅ [Completar qué incluye tu paquete al sur]</li></ul></div></details>
+                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar</a>
             </div>
         </div>
+
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1544605910-a29285703f83?q=80&w=800&auto=format&fit=crop" alt="Huacachina">
+            <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?q=80&w=800&auto=format&fit=crop" alt="Playas del Norte">
             <div class="card-body">
-                <span class="price-tag">Salidas Diarias</span>
-                <h3>Paracas & Ica </h3>
-                <ul>
-                    <li><i class="fas fa-check"></i> Islas Ballestas + Huacachina</li>
-                    <li><i class="fas fa-check"></i> Buggies y Sandboarding</li>
-                    <li><i class="fas fa-check"></i> Degustación de Vinos y Piscos</li>
-                </ul>
-                <a href="https://wa.me/51997799056?text=Hola%20Helmy%20Viajes,%20deseo%20cotizar%20el%20Full%20Day%20ICA-PARACAS." class="btn-card"><i class="fab fa-whatsapp"></i> Solicitar Itinerario</a>
+                <h3>Playas del Norte</h3>
+                <p class="destinos-lista">📍 Tumbes, Punta Sal, Máncora.</p>
+                <details><summary>Ver detalles</summary><div class="detalles-contenido"><ul><li>✅ [Completar qué incluye]</li></ul></div></details>
+                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar</a>
             </div>
         </div>
+
         <div class="card">
-            <div style="width: 100%; height: 220px; overflow: hidden; background: #f0f0f0;">
-                <img src="https://i.postimg.cc/d0YQnGm9/DROMEDARIOHELMY.jpg" style="width: 100%; height: 100%; object-fit: contain;" alt="Dromedarios Helmy Viajes">
-            </div>
+            <img src="https://images.unsplash.com/photo-1607590899451-92fbbd79d342?q=80&w=800&auto=format&fit=crop" alt="Norte Histórico">
             <div class="card-body">
-                <span class="price-tag" style="background: var(--azul);">Exclusivo Helmy</span>
-                <h3>Dromedarius & Desierto</h3>
-                <ul>
-                    <li><i class="fas fa-check"></i> Paseo en Dromedarios (Camellos)</li>
-                    <li><i class="fas fa-check"></i> Uso de Piscina en el Desierto</li>
-                    <li><i class="fas fa-check"></i> Almuerzo incluido</li>
-                </ul>
-                <a href="https://wa.me/51997799056?text=Hola%20Helmy%20Viajes,%20deseo%20informacion%20del%20Full%20Day%20DROMEDARIUS." class="btn-card"><i class="fab fa-whatsapp"></i> Ver Detalles</a>
+                <h3>Ruta Moche</h3>
+                <p class="destinos-lista">📍 Chiclayo, Trujillo.</p>
+                <details><summary>Ver detalles</summary><div class="detalles-contenido"><ul><li>✅ [Completar qué incluye]</li></ul></div></details>
+                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar</a>
             </div>
         </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518182170546-076616fd4aa5?q=80&w=800&auto=format&fit=crop" alt="Selva">
+            <div class="card-body">
+                <h3>Amazonía Peruana</h3>
+                <p class="destinos-lista">📍 Tarapoto, Pucallpa, Iquitos.</p>
+                <details><summary>Ver detalles</summary><div class="detalles-contenido"><ul><li>✅ [Completar qué incluye]</li></ul></div></details>
+                <a href="https://wa.me/51997799056" class="btn-card" target="_blank">Cotizar</a>
+            </div>
+        </div>
+
     </div>
 </section>
 
-<!-- 2. INTERNACIONALES (VENTAS EXTERIOR) -->
-<section id="internacionales" style="background: var(--gris-claro);">
+<!-- ==========================================
+     3. INTERNACIONALES (LÍNEA 925 807 384)
+     ========================================== -->
+<section id="internacionales" class="bg-gris">
     <div class="section-header">
-        <h2>Destinos Internacionales Destacados</h2>
+        <h2>Destinos Internacionales</h2>
         <div></div>
-        <p>Los paraísos más solicitados. Atención exclusiva al: 925 807 384</p>
+        <p>Descubre el mundo. Atención exclusiva: <strong>925 807 384</strong></p>
     </div>
     <div class="grid">
+        
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800" alt="Cancún">
+            <img src="https://images.unsplash.com/photo-1583345229337-12b724581177?q=80&w=800&auto=format&fit=crop" alt="Colombia">
             <div class="card-body">
-                <span class="price-tag">Caribe All Inclusive</span>
-                <h3>Cancún Mágico 🇲🇽</h3>
-                <p>Playas de arena blanca, zonas arqueológicas mayas e increíble entretenimiento en resorts todo incluido para toda la familia.</p>
-                <a href="https://wa.me/51925807384?text=Hola%20Helmy%20Viajes,%20deseo%20cotizar%20un%20paquete%20a%20CANCUN." class="btn-card btn-card-red"><i class="fab fa-whatsapp"></i> Cotizar Cancún</a>
+                <h3>Colombia Mágica 🇨🇴</h3>
+                <p class="destinos-lista">📍 Cartagena, San Andrés, Medellín, Cali, Bogotá.</p>
+                <details><summary>Ver Paquetes / Incluye</summary><div class="detalles-contenido"><ul><li>✅ Vuelos + Hotel + Traslados (Completar info)</li></ul></div></details>
+                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Cotizar Colombia</a>
             </div>
         </div>
+
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1589561284191-246e6a6449bd?auto=format&fit=crop&w=800" alt="Quito">
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=800&auto=format&fit=crop" alt="Caribe">
             <div class="card-body">
-                <span class="price-tag">Sudamérica Histórica</span>
-                <h3>Quito Tradicional 🇪🇨</h3>
-                <p>Visita el centro histórico mejor preservado de América, sube al teleférico y tómate la foto oficial en la emblemática Mitad del Mundo.</p>
-                <a href="https://wa.me/51925807384?text=Hola%20Helmy%20Viajes,%20deseo%20cotizar%20un%20paquete%20a%20QUITO." class="btn-card btn-card-red"><i class="fab fa-whatsapp"></i> Cotizar Quito</a>
+                <h3>Paraíso Caribeño 🌴</h3>
+                <p class="destinos-lista">📍 Punta Cana, Santo Domingo, Aruba, Jamaica, Varadero, Havana.</p>
+                <details><summary>Ver Paquetes / Incluye</summary><div class="detalles-contenido"><ul><li>✅ Sistema All Inclusive (Completar info)</li></ul></div></details>
+                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Cotizar Caribe</a>
             </div>
         </div>
+
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=800&auto=format&fit=crop" alt="Punta Cana">
+            <img src="https://images.unsplash.com/photo-1619681123381-8b0907eef37b?q=80&w=800&auto=format&fit=crop" alt="Argentina">
             <div class="card-body">
-                <span class="price-tag">Paraíso Tropical</span>
-                <h3>Punta Cana 🇩🇴</h3>
-                <p>Relájate bajo las palmeras de República Dominicana. Hoteles 5 estrellas, barra libre, shows nocturnos y diversión garantizada.</p>
-                <a href="https://wa.me/51925807384?text=Hola%20Helmy%20Viajes,%20deseo%20cotizar%20un%20paquete%20a%20PUNTA%20CANA." class="btn-card btn-card-red"><i class="fab fa-whatsapp"></i> Cotizar Punta Cana</a>
+                <h3>Ruta Sudamericana Sur</h3>
+                <p class="destinos-lista">📍 Argentina (Buenos Aires, Mendoza, Iguazú), Chile (Santiago, Isla de Pascua).</p>
+                <details><summary>Ver Paquetes / Incluye</summary><div class="detalles-contenido"><ul><li>✅ Completar información</li></ul></div></details>
+                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Cotizar Sudamérica</a>
             </div>
         </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=800&auto=format&fit=crop" alt="Brasil">
+            <div class="card-body">
+                <h3>Brasil & Centroamérica</h3>
+                <p class="destinos-lista">📍 Río de Janeiro, Sao Paulo, Panamá, San José (Costa Rica).</p>
+                <details><summary>Ver Paquetes / Incluye</summary><div class="detalles-contenido"><ul><li>✅ Completar información</li></ul></div></details>
+                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Cotizar Destino</a>
+            </div>
+        </div>
+
     </div>
 </section>
- 
-<!-- 3. GRANDES VIAJES -->
-<section id="europa">
+
+<!-- ==========================================
+     4. EUROPA Y ASIA (LÍNEA 925 807 384)
+     ========================================== -->
+<section id="europa-asia">
     <div class="section-header">
         <h2>Grandes Viajes: Europa & Asia</h2>
         <div></div>
-        <p>Circuitos garantizados y diseñados para los viajeros más exigentes</p>
+        <p>Circuitos garantizados de larga distancia</p>
     </div>
     <div class="grid">
+        
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800" alt="Europa">
+            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800&auto=format&fit=crop" alt="Europa Clasica">
             <div class="card-body">
-                <span class="price-tag">Circuito 15 Días</span>
-                <h3>Europa Clásica 2026</h3>
-                <p>Recorre la majestuosidad de Madrid, París, Venecia, Florencia y Roma. Incluye vuelos internacionales, traslados y guías en español.</p>
-                <a href="https://wa.me/51925807384?text=Hola,%20me%20interesa%20el%20circuito%20EUROPA%20CLASICA." class="btn-card"><i class="fab fa-whatsapp"></i> Ver Programa Detallado</a>
+                <h3>Europa Clásica & Mediterráneo</h3>
+                <p class="destinos-lista">📍 Madrid, París, Ámsterdam, Roma, Venecia, Florencia, Milán, Bruselas, Londres.</p>
+                <details><summary>Ver Detalles del Circuito</summary><div class="detalles-contenido"><ul><li>✅ Hoteles categoría turista/primera</li><li>✅ Autocar de lujo con guía</li></ul></div></details>
+                <a href="https://wa.me/51925807384" class="btn-card" target="_blank">Cotizar Europa</a>
             </div>
         </div>
+
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1548231571-0082987a0da3?auto=format&fit=crop&w=800" alt="Tierra Santa">
+            <img src="https://images.unsplash.com/photo-1548231571-0082987a0da3?q=80&w=800&auto=format&fit=crop" alt="Asia y Medio Oriente">
             <div class="card-body">
-                <span class="price-tag">Experiencia Espiritual</span>
-                <h3>Tierra Santa & Egipto</h3>
-                <p>Una experiencia que te cambiará la vida recorriendo las raíces de la historia en Tel Aviv, Jerusalén, Belén y las pirámides de El Cairo.</p>
-                <a href="https://wa.me/51925807384?text=Hola,%20me%20interesa%20el%20circuito%20TIERRA%20SANTA." class="btn-card"><i class="fab fa-whatsapp"></i> Ver Programa Detallado</a>
+                <h3>Asia & Medio Oriente</h3>
+                <p class="destinos-lista">📍 Japón, China, Egipto.</p>
+                <details><summary>Ver Detalles del Circuito</summary><div class="detalles-contenido"><ul><li>✅ Vuelos transcontinentales</li><li>✅ Guías de habla hispana</li></ul></div></details>
+                <a href="https://wa.me/51925807384" class="btn-card" target="_blank">Cotizar Exóticos</a>
             </div>
         </div>
+
     </div>
 </section>
 
-<!-- 4. CRUCEROS (NUEVA SECCIÓN) -->
-<section id="cruceros" style="background: var(--gris-claro);">
+<!-- ==========================================
+     5. CRUCEROS (LÍNEA 925 807 384)
+     ========================================== -->
+<section id="cruceros" class="bg-gris">
     <div class="section-header">
         <h2>Cruceros por el Mundo</h2>
         <div></div>
-        <p>Despierta cada día en un destino diferente con lujo a bordo</p>
+        <p>Lujo, diversión y descanso navegando por los mejores mares</p>
     </div>
     <div class="grid">
+        
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?q=80&w=800&auto=format&fit=crop" alt="Crucero Caribe">
+            <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?q=80&w=800&auto=format&fit=crop" alt="Cruceros sin visa">
             <div class="card-body">
-                <span class="price-tag" style="background: var(--azul);">Royal Caribbean / MSC</span>
-                <h3>Cruceros por el Caribe</h3>
-                <p>Zarpa desde Miami o Panamá y recorre Las Bahamas, Jamaica y México. Comidas, entretenimiento y piscinas infinitas incluidas.</p>
-                <a href="https://wa.me/51925807384?text=Hola%20Helmy,%20quiero%20cotizar%20un%20CRUCERO%20POR%20EL%20CARIBE." class="btn-card btn-card-red"><i class="fab fa-whatsapp"></i> Cotizar Crucero</a>
+                <h3>Cruceros Sin Visa</h3>
+                <p class="destinos-lista">Salidas desde puertos accesibles en el Caribe y Sudamérica sin necesidad de visa americana.</p>
+                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Ver Rutas Sin Visa</a>
             </div>
         </div>
+
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1502758837130-9788e3650f00?q=80&w=800&auto=format&fit=crop" alt="Crucero Mediterraneo">
+            <img src="https://images.unsplash.com/photo-1502758837130-9788e3650f00?q=80&w=800&auto=format&fit=crop" alt="Cruceros Europa">
             <div class="card-body">
-                <span class="price-tag" style="background: var(--azul);">Costa Cruceros / NCL</span>
-                <h3>Islas Griegas y Mediterráneo</h3>
-                <p>Descubre la belleza de Santorini, Mykonos, Roma y Barcelona desde la comodidad de los barcos más imponentes del mundo.</p>
-                <a href="https://wa.me/51925807384?text=Hola%20Helmy,%20quiero%20cotizar%20un%20CRUCERO%20POR%20EL%20MEDITERRANEO." class="btn-card btn-card-red"><i class="fab fa-whatsapp"></i> Cotizar Crucero</a>
+                <h3>Salidas desde Europa</h3>
+                <p class="destinos-lista">Recorre las Islas Griegas, el Mediterráneo o los Fiordos Noruegos zarpando desde Europa.</p>
+                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Ver Rutas Europa</a>
             </div>
         </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1542314831-c6a4d14272ce?q=80&w=800&auto=format&fit=crop" alt="Cruceros USA">
+            <div class="card-body">
+                <h3>Salidas desde EE.UU.</h3>
+                <p class="destinos-lista">Zarpa desde Miami, Orlando o Nueva York hacia el Caribe y Las Bahamas (Requiere Visa).</p>
+                <a href="https://wa.me/51925807384" class="btn-card btn-rojo" target="_blank">Ver Rutas EE.UU.</a>
+            </div>
+        </div>
+
     </div>
 </section>
 
-<!-- 5. SEGUROS DE VIAJE (BANNER IMPACTANTE) -->
+<!-- ==========================================
+     6. SEGUROS DE VIAJE
+     ========================================== -->
 <section id="seguros">
-    <div class="banner-seguros">
-        <div class="banner-seguros-text">
-            <h3>Tu tranquilidad no es opcional</h3>
-            <p><strong>Seguros de Asistencia al Viajero Internacionales.</strong><br>
-            Cobertura ante emergencias médicas, pérdida de equipaje, cancelación de vuelos y más. Viaja con el respaldo que tu familia merece, a cualquier parte del mundo.</p>
-            <p style="font-size: 0.9rem; color: #ccc;">* Tarifas especiales por días, semanas o planes anuales corporativos.</p>
-        </div>
-        <div>
-            <a href="https://wa.me/51925807384?text=Hola%20Helmy,%20necesito%20cotizar%20un%20SEGURO%20DE%20VIAJE." class="btn-quote" style="text-decoration: none; display: inline-block;">
-                <i class="fas fa-shield-alt"></i> Cotizar Seguro Ahora
-            </a>
-        </div>
+    <div class="section-header">
+        <h2>Seguros de Asistencia al Viajero</h2>
+        <div></div>
+        <p>Tu tranquilidad no es opcional. Viaja protegido con las mejores compañías globales.</p>
+    </div>
+    
+    <div style="text-align: center; margin-bottom: 20px;">
+        <p style="max-width: 800px; margin: 0 auto; color: #555;">Contamos con coberturas integrales para emergencias médicas, pérdida de equipaje y cancelación de vuelos. <strong>Emitimos tu póliza en minutos.</strong></p>
+    </div>
+
+    <div class="seguros-grid">
+        <span class="seguro-tag">Travi Assistance</span>
+        <span class="seguro-tag">Assicard Assistance</span>
+        <span class="seguro-tag">Travel Care Assistance</span>
+        <span class="seguro-tag">Euroamerican Assistance</span>
+        <span class="seguro-tag">Global Assist Travel Protection</span>
+        <span class="seguro-tag">Passenger Assistance</span>
+        <span class="seguro-tag">United Assist</span>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="https://wa.me/51925807384?text=Hola,%20necesito%20cotizar%20un%20Seguro%20de%20Viaje." class="btn-card btn-rojo" style="display: inline-block; padding: 15px 40px; font-size: 1rem;" target="_blank"><i class="fas fa-shield-alt"></i> Cotizar Mi Seguro Ahora</a>
     </div>
 </section>
 
-<!-- 6. IDENTIDAD Y CORPORATIVO (CONÓCENOS) -->
-<section id="identidad" style="background: var(--gris-claro);">
+<!-- ==========================================
+     7. IDENTIDAD Y CORPORATIVO (Misión y Visión Restaurada)
+     ========================================== -->
+<section id="identidad" class="bg-gris">
     <div class="section-header">
         <h2>Conócenos</h2>
         <div></div>
@@ -342,12 +486,14 @@
         </div>
         <div class="mv-card">
             <h3><i class="fas fa-eye" style="color: var(--azul); margin-right: 10px;"></i> Nuestra Visión</h3>
-            <p>"Consolidarnos como la agencia de viajes de referencia a nivel nacional e internacional, proyectándonos al mundo a través de la constante exploración de diferentes destinos. Aspiramos a expandir nuestro legado de confianza y respaldo incondicional, liderando el sector mediante la adaptación tecnológica."</p>
+            <p>"Consolidarnos como la agencia de viajes de referencia a nivel nacional e internacional, proyectándonos al mundo a través de la constante exploración de diferentes destinos. Aspiramos a expandir nuestro legado de confianza y respaldo incondicional, liderando el sector mediante la adaptación tecnológica y la creación de las experiencias del futuro."</p>
         </div>
     </div>
 </section>
 
-<!-- 7. TESTIMONIOS -->
+<!-- ==========================================
+     8. TESTIMONIOS (Restaurados)
+     ========================================== -->
 <section id="testimonios">
     <div class="section-header">
         <h2>Pasajeros Satisfechos</h2>
@@ -358,23 +504,25 @@
         <div class="testimonio-card">
             <p>"La asesoría de Helmy Viajes para nuestras vacaciones en Punta Cana fue excelente. Todo salió a la perfección, los hoteles recomendados fueron increíbles. ¡Súper recomendados!"</p>
             <h4>Carlos Mendoza</h4>
-            <span><i class="fas fa-star" style="color:#f1c40f;"></i> Viajó al Caribe</span>
+            <span>Viajó al Caribe</span>
         </div>
         <div class="testimonio-card">
             <p>"Hicimos el tour de Cusco y Machu Picchu en familia. La organización, puntualidad y amabilidad de los guías hicieron que fuera la mejor experiencia de nuestras vidas."</p>
             <h4>Mariana Rojas</h4>
-            <span><i class="fas fa-star" style="color:#f1c40f;"></i> Viajó a Cusco</span>
+            <span>Viajó a Cusco</span>
         </div>
         <div class="testimonio-card">
             <p>"Atención de primera. Me ayudaron a gestionar de inmediato mis vuelos a Cancún y respondieron todas mis dudas de viaje a los pocos minutos. Excelente servicio."</p>
             <h4>Juan Diego Silva</h4>
-            <span><i class="fas fa-star" style="color:#f1c40f;"></i> Viajó a México</span>
+            <span>Viajó a México</span>
         </div>
     </div>
 </section>
  
-<!-- 8. GARANTÍA LEGAL -->
-<section style="background: var(--gris-claro);">
+<!-- ==========================================
+     9. GARANTÍA LEGAL Y RESPALDOS (Actualizado con Y Tú Qué Planes)
+     ========================================== -->
+<section class="bg-gris">
     <div class="garantia-legal">
         <div class="garantia-item">
             <i class="fas fa-id-card"></i>
@@ -389,82 +537,82 @@
         <div class="garantia-item">
             <i class="fas fa-shield-alt"></i>
             <h4>ALIANZAS Y RESPALDO</h4>
-            <p>MINCETUR, DIRCETUR, CÁMARA DE COMERCIO</p>
+            <p>MINCETUR, DIRCETUR, CÁMARA DE COMERCIO, Y TÚ QUÉ PLANES</p>
         </div>
     </div>
 </section>
  
-<!-- 9. PAGOS -->
+<!-- ==========================================
+     10. CUENTAS BANCARIAS (Restauradas)
+     ========================================== -->
 <section id="pagos">
     <div class="section-header"><h2>Cuentas para Reservas</h2><div></div></div>
     <div class="grid">
-        <div class="card" style="border-top: 8px solid var(--rojo);">
+        <div class="card" style="border-top: 8px solid #ff5f00;">
             <div class="card-body">
-                <h3 style="color: var(--rojo);">BCP - Helmy Viajes</h3>
+                <h3>BCP - Helmy viajes</h3>
                 <p><strong>Soles:</strong> 38036506599013</p>
                 <p><strong>Dólares:</strong> 38095203792107</p>
-                <p style="font-size: 0.8rem; color: #888;">* Cuentas de la representante legal</p>
+                <p style="font-size: 0.8rem; color: #888; margin-top: 15px;">* Cuentas de la representante legal</p>
             </div>
         </div>
-        <div class="card" style="border-top: 8px solid var(--azul);">
+        <div class="card" style="border-top: 8px solid #00ad3d;">
             <div class="card-body">
                 <h3>INTERBANK - Empresa</h3>
                 <p><strong>Titular:</strong> Helmy Viajes S.A.C.</p>
                 <p><strong>Dólares:</strong> 200-3004774970</p>
-                <p style="font-size: 0.8rem; color: #888;">* Cuenta jurídica empresarial</p>
+                <p style="font-size: 0.8rem; color: #888; margin-top: 15px;">* Cuenta jurídica empresarial</p>
             </div>
         </div>
     </div>
 </section>
- 
-<!-- FOOTER -->
+
+<!-- ==========================================
+     FOOTER ORIGINAL COMPLETO
+     ========================================== -->
 <footer>
     <div class="footer-grid">
         <div class="footer-col">
-            <img src="IMG-20230810-WA0065.jpg" style="height:60px; filter: brightness(0) invert(1); margin-bottom:20px;">
-            <p>"Tu tranquilidad es nuestra prioridad. En HELMY, transformamos cada destino en una experiencia fluida y memorable. Viaja con la confianza y el respaldo que solo nosotros te podemos ofrecer."</p>
+            <img src="IMG-20230810-WA0065.jpg" style="height:60px; filter: brightness(0) invert(1); margin-bottom:20px;" alt="Helmy Viajes Perú">
+            <p>"Tu tranquilidad es nuestra prioridad. En HELMY, transformamos cada destino en una experiencia fluida y memorable. Te brindamos el respaldo profesional y la seguridad integral que mereces, acompañándote con asesoría experta desde el primer contacto hasta tu retorno a casa. Viaja con la confianza y el respaldo que solo nosotros te podemos ofrecer.</p>
         </div>
         <div class="footer-col">
             <h4>Contacto Directo</h4>
-            <li><i class="fas fa-phone"></i> 997 799 056 (Nacional)</li>
-            <li><i class="fas fa-phone"></i> 925 807 384 (Internacional)</li>
-            <li><i class="fas fa-envelope"></i> helmyviajes@gmail.com</li>
+            <li><i class="fas fa-phone" style="margin-right: 10px;"></i> 925 807 384</li>
+            <li><i class="fas fa-phone" style="margin-right: 10px;"></i> 997 799 056</li>
+            <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> helmyviajes@gmail.com</li>
         </div>
         <div class="footer-col">
             <h4>Nuestras Redes</h4>
-            <li><i class="fab fa-facebook"></i> /helmyviajes</li>
-            <li><i class="fab fa-instagram"></i> @helmyviajes</li>
-            <li><i class="fab fa-tiktok"></i> @_helmyviajes</li>
+            <li><i class="fab fa-facebook" style="margin-right: 10px;"></i> /helmyviajes</li>
+            <li><i class="fab fa-instagram" style="margin-right: 10px;"></i> @helmyviajes</li>
         </div>
     </div>
     <div class="copy">
         &copy; 2026 Helmy Viajes Perú S.A.C. | Todos los derechos reservados. | RUC: 20602927238
     </div>
 </footer>
- 
-<!-- BOTONES FLOTANTES (AHORA EN COLORES DE MARCA, NO VERDES) -->
+
+<!-- ==========================================
+     BOTONES FLOTANTES Y HELMY-BOT (Restaurados)
+     ========================================== -->
 <div class="float-buttons">
     <div class="btn-flotante btn-bot" onclick="toggleBot()"><i class="fas fa-robot"></i></div>
-    <!-- Botón WA general dirige a línea internacional/principal por defecto -->
     <div class="btn-flotante btn-wa" onclick="window.open('https://wa.me/51925807384')"><i class="fab fa-whatsapp"></i></div>
 </div>
  
-<!-- CHATBOT HELMY -->
 <div id="helmy-bot-window">
-    <div class="bot-header">
-        <span>Helmy-Bot 🤖</span>
-        <span onclick="toggleBot()" style="cursor:pointer; font-size: 1.5rem; line-height: 1;">×</span>
+    <div style="background: var(--azul); color: white; padding: 20px; font-weight: 700; display: flex; justify-content: space-between;">
+        <span>Helmy-Bot 🤖</span><span onclick="toggleBot()" style="cursor:pointer; font-size: 1.5rem; line-height: 1;">×</span>
     </div>
-    <div class="bot-body">
+    <div style="padding: 25px;">
         <p style="font-size: 0.95rem; margin-bottom: 20px; line-height: 1.5; color: #444;">¡Hola! Qué gusto tenerte por aquí. ¿En qué te puedo ayudar al toque?</p>
         
-        <a href="https://api.whatsapp.com/send?phone=51925807384&text=Hola%20Helmy,%20soy%20una%20agencia%20de%20viajes%20y%20busco%20informacion%20sobre%20sus%20servicios." target="_blank" class="bot-btn">🤝 Soy Agencia de Viajes (B2B)</a>
+        <a href="https://api.whatsapp.com/send?phone=51925807384&text=Hola%20Helmy,%20soy%20una%20agencia%20de%20viajes%20y%20busco%20informacion%20sobre%20sus%20servicios." target="_blank" class="bot-btn">🤝 Soy Agencia de Viajes</a>
         
-        <a href="https://api.whatsapp.com/send?phone=51997799056&text=Hola,%20me%20gustaria%20cotizar%20un%20viaje%20Nacional." target="_blank" class="bot-btn">🇵🇪 Cotizar Destino Nacional</a>
-
-        <a href="https://api.whatsapp.com/send?phone=51925807384&text=Hola,%20me%20gustaria%20cotizar%20un%20viaje%20Internacional." target="_blank" class="bot-btn">✈️ Cotizar Destino Internacional</a>
+        <a href="https://api.whatsapp.com/send?phone=51925807384&text=Hola,%20me%20gustaria%20cotizar%20un%20viaje.%20Mi%20destino%20es:%20___%20y%20planeo%20viajar%20en%20la%20fecha:%20___%20con%20___%20personas." target="_blank" class="bot-btn">✈️ Cotizar un Viaje</a>
         
-        <a href="https://api.whatsapp.com/send?phone=51925807384" target="_blank" class="bot-btn bot-btn-red">👤 Hablar con un Asesor</a>
+        <a href="https://api.whatsapp.com/send?phone=51925807384" target="_blank" class="bot-btn bot-btn-rojo">👤 Hablar con Helmy</a>
     </div>
 </div>
  
