@@ -51,14 +51,12 @@
         .section-header div { width: 80px; height: 5px; background: var(--rojo); margin: 15px auto; }
         .section-header p { font-size: 1.1rem; color: #555; }
 
-        /* GRILLA DE TARJETAS (ESTRICTAMENTE CONTROLADA) */
+        /* GRILLA DE TARJETAS */
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
         
         .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.06); border: 1px solid #eaeaea; display: flex; flex-direction: column; transition: 0.3s; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); border-color: var(--azul); }
-        
-        /* REGLA MAESTRA PARA QUE NINGUNA IMAGEN SE DESORDENE */
-        .card img { width: 100%; height: 220px; object-fit: cover; object-position: center; display: block; }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
         
         .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
         .card-body h3 { color: var(--azul); font-size: 1.3rem; margin-bottom: 5px; font-weight: 800; text-transform: uppercase; }
@@ -94,6 +92,14 @@
         /* INSTITUCIONAL Y GARANTÍA */
         .nosotros-box { background: var(--gris-claro); padding: 40px; border-radius: 20px; text-align: center; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
         .nosotros-box p { font-size: 1.1rem; max-width: 900px; margin: 0 auto; color: #444; }
+        .mv-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
+        .mv-card { background: white; padding: 35px; border-radius: 20px; border-top: 5px solid var(--azul); box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: left; }
+        .mv-card h3 { color: var(--azul); margin-bottom: 15px; text-transform: uppercase; font-size: 1.3rem; }
+        
+        .testimonio-card { background: white; border-left: 5px solid var(--rojo); padding: 25px; border-radius: 0 20px 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .testimonio-card p { font-style: italic; color: #555; margin-bottom: 15px; }
+        .testimonio-card h4 { color: var(--azul); font-weight: 700; }
+        .testimonio-card span { font-size: 0.8rem; color: #888; }
         
         .garantia-legal { background: white; border-radius: 25px; padding: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; border: 2px dashed #ccc; }
         .garantia-item i { font-size: 3rem; color: var(--azul); margin-bottom: 15px; }
@@ -252,7 +258,8 @@
         </div>
 
         <div class="card">
-            <img src="https://i.postimg.cc/d0YQnGm9/DROMEDARIOHELMY.jpg" alt="Dromedarius">
+            <!-- Imagen de Dromedarius ajustada al 35% de posición[cite: 2] -->
+            <img src="https://i.postimg.cc/d0YQnGm9/DROMEDARIOHELMY.jpg" alt="Dromedarius" style="object-position: center 35%;">[cite: 2]
             <div class="card-body">
                 <h3>Dromedarius</h3>
                 <span class="duracion"><i class="fas fa-clock"></i> Full Day</span>
@@ -431,7 +438,7 @@
                     <div class="monto">$ 899.00</div>
                 </div>
                 <details>
-                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <summary>Itinerario y Details <i class="fas fa-chevron-down"></i></summary>
                     <div class="detalles-contenido">
                         <h4><i class="fas fa-check-circle" style="color: var(--azul);"></i> Incluye:</h4>
                         <ul>
@@ -454,7 +461,7 @@
                     <div class="monto">$1,599</div>
                 </div>
                 <details>
-                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <summary>Itinerario y Details <i class="fas fa-chevron-down"></i></summary>
                     <div class="detalles-contenido">
                         <h4>Incluye:</h4>
                         <ul>
@@ -477,7 +484,7 @@
                     <div class="monto">$ 799.00</div>
                 </div>
                 <details>
-                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <summary>Itinerario y Details <i class="fas fa-chevron-down"></i></summary>
                     <div class="detalles-contenido">
                         <h4>Incluye:</h4>
                         <ul>
@@ -511,7 +518,7 @@
                     <div class="monto">$ 1,850.00</div>
                 </div>
                 <details>
-                    <summary>Itinerario y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <summary>Itinerario y Details <i class="fas fa-chevron-down"></i></summary>
                     <div class="detalles-contenido">
                         <p>Madrid, París, Frankfurt, Roma, Barcelona y más.</p>
                     </div>
@@ -521,7 +528,7 @@
         </div>
 
         <div class="card">
-            <img src="RECIBE2027ENDUBAI.jpeg" alt="Recibe el 2027 en Dubái">
+            <img src="RECIBE2027ENDUBAI.jpeg" alt="Recibe el 2027 en Dubái" style="object-position: center 35%;">[cite: 2]
             <div class="card-body">
                 <h3>Recibe el 2027 en Dubái</h3>
                 <span class="duracion"><i class="fas fa-calendar-alt"></i> 6D/5N o 7D/6N</span>
@@ -530,7 +537,7 @@
                     <div class="monto">$1,599</div>
                 </div>
                 <details>
-                    <summary>Opciones y Detalles <i class="fas fa-chevron-down"></i></summary>
+                    <summary>Opciones y Details <i class="fas fa-chevron-down"></i></summary>
                     <div class="detalles-contenido">
                         <h4>Fechas Disponibles:</h4>
                         <ul>
